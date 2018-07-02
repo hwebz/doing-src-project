@@ -1,0 +1,62 @@
+.tcd__footer
+    .tcd__footer-row
+        .container
+            .row
+                .tcd__footer-column.col-12.col-lg-6.col-xl-3
+                    .tcd__footer-info
+                        a.tcd__footer-logo(href="#")
+                            img(src="https://www.mecantravel.com/images/mecan.svg", alt="Logo")
+                        p.tcd__footer-description= description
+                        ul.tcd__footer-socials
+                            each media in ['facebook', 'pinterest', 'google-plus', 'instagram', 'twitter']
+                                li
+                                    a(href="#")
+                                        span(class= media ? 'icon-' + media : '')
+                .tcd__footer-column.col-12.col-lg-6.col-xl-3
+                    .tcd__footer-hotel-list.tcd__hotel-list
+                        h4.tcd__footer-header= popular_hotel
+                        each val in [1, 2, 3]
+                            .tcd__hotel-item
+                                .tcd__hotel-thumbnail(style="background-image:url(img/banner.jpg)")
+                                .tcd__hotel-content
+                                    h3.tcd__hotel-title
+                                        a(href="#")= hotel_name
+                                    .tcd__hotel-stars
+                                        each val in [1, 2, 3, 4]
+                                            img(src="img/svg/star.svg", alt="Star")
+                                    .tcd__hotel-price
+                                        span= from_price
+                                        strong= hotel_price
+                                    .tcd__hotel-address
+                                        span.icon-maps-and-flags
+                                        span= hotel_address
+                .tcd__footer-column.col-12.col-lg-6.col-xl-3
+                    .tcd__footer-tags
+                        h4.tcd__footer-header= tag
+                        .tcd__footer-tags-wrapper
+                            each item in tags
+                                a(href="#").tcd__footer-tag= item
+                .tcd__footer-column.col-12.col-lg-6.col-xl-3
+                    .tcd__footer-company-info
+                        h4.tcd__footer-header= navigation[2]
+                        ul.tcd__footer-company-info-list
+                            each val, icon in {'placeholder2': company_address, 'old-typical-phone': company_phone, 'mail-black-envelope-symbol': company_email, 'internet': company_website}
+                                li.tcd__footer-company-info-item
+                                    span(class= icon ? 'icon-' + icon : '')
+                                    span= val
+    .tcd__footer-row.tcd__footer-row-darker
+        .container
+            .row
+                .tcd__footer-copyright.col-12.col-md-6
+                    p= copyright
+                    p= own_design
+                .tcd__footer-navigation.col-12.col-md-6
+                    ul
+                        each item in navigation
+                            li
+                                a(href="#")= item
+                    
+
+                 
+
+

@@ -1,0 +1,84 @@
+$pre: 'tcd__hotel';
+$parent: 'tcd__popular-hotels';
+$thumbnail-height: 100px;
+$star-size: 15px;
+
+.#{$pre}-list {
+    .#{$pre}-item {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        .#{$pre}-thumbnail {
+            width: 50%;
+            height: $thumbnail-height;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-right: 10px;
+        }
+
+        .#{$pre}-content {
+            .#{$pre}-title {
+                a {
+                    color: $primary-black;
+                    @extend %hoverable-link;
+                }
+            }
+
+            .#{$pre}-stars {
+                display: flex;
+                flex-direction: row;
+                img {
+                    width: $star-size;
+                    height: $star-size;
+                    margin: 0 2px;
+                }
+            }
+
+            .#{$pre}-price {
+                margin: 5px 0;
+                span {
+                    font-size: $small-font-size;
+                }
+
+                strong {
+                    display: inline-block;
+                    margin-left: 5px;
+                    color: $primary-yellow;
+                }
+            }
+
+            .#{$pre}-address {
+                font-size: $small-font-size;
+                span[class^="icon-"] {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+
+                span {
+
+                }
+            }
+        }
+        
+    }    
+}
+
+.#{$parent} {
+    @extend %block-padding;
+    .#{$parent}-title {
+        @extend %block-title;
+    }    
+
+    .#{$pre}-list {
+        .#{$pre}-item {
+            .#{$pre}-thumbnail {
+                width: 35%;
+
+                @include media-breakpoint-up(lg) {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}

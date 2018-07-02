@@ -1,0 +1,52 @@
+
+//Loading all the SCSS files
+
+/********************
+       BOOTSTRAP
+*********************/
+
+@import 'vendors/_bootstrap';
+
+/********************
+        BASE
+*********************/
+@import '_fonts';
+@import 'base/_css3-mixins';
+@import 'base/_variables';
+@import 'base/_base';
+@import 'base/_mixin';
+
+/********************
+        COMPONENTS
+*********************/
+
+@import 'components/_button';
+@import 'components/_form';
+
+
+/********************
+       LAYOUT
+*********************/
+
+@import 'layout/_header';
+@import 'layout/_footer';
+
+/********************
+        PAGE COMPONENTS
+*********************/
+
+@import 'pages/components/_hotel-list';
+@import 'pages/components/_contact';
+
+/********************
+       VENDORS
+*********************/
+
+@import '_icon-fonts';
+
+/*******************************
+    CUSTOM CHANGES TO AIRLINES
+********************************/
+
+@import '_custom'; // ONLY USE THIS FILE FOR CUSTOM CHANGES
+//       ^^^^^^^^ Custom changes in this file onyl

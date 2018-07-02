@@ -1,0 +1,65 @@
+$pre: 'tcd__contact';
+$message-box-height: 140px;
+
+$contact-desktop-padding: 120px 0;
+$contact-tablet-padding: 40px 0;
+$contact-mobile-padding: 0;
+
+.#{$pre} {
+    padding: $contact-mobile-padding;
+
+    .#{$pre}-form {
+        background: linear-gradient(60deg, $primary-yellow , $primary-red);
+        padding: 15px;
+
+        h2 {
+            color: $white;
+            margin-bottom: 15px;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 40px;
+            }
+        }
+
+        .form-group {
+            border-color: $white;
+
+            label,
+            .form-control {
+                color: $white;
+            }
+
+            textarea {
+                height: $message-box-height;
+                resize: none;
+            }
+        }
+
+        .btn {
+            margin-top: 0;
+
+            @include media-breakpoint-up(md) {
+                margin-top: 40px;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: 40px;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: $contact-tablet-padding;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: $contact-desktop-padding;
+    }
+}
+
+.tcd__big-bg {
+    @include media-breakpoint-up(sm) {
+        background: $white url(../img/contact-banner.png) no-repeat bottom left;
+        background-size: 100%;
+    }
+}

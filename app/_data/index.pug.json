@@ -1,0 +1,46 @@
+{
+  "navigation": [
+    "Sản phẩm",
+    "Tuyển dụng",
+    "Liên hệ",
+    "Giới thiệu"
+  ],
+  "register": "Đăng ký",
+  "login": "Đăng nhập",
+
+  "popular_hotel_sub": "Những khách sạn được nhiều người đặt",
+  "popular_hotel_title": "Khách sạn phổ biến",
+  "popular_hotel_offer": "Đề xuất cho bạn",
+
+  "contact_with_us": "Liên hệ với chúng tôi",
+  "contact_name": "Họ tên",
+  "contact_name_error": "Vui lòng nhập họ tên",
+  "contact_email": "Email",
+  "contact_subject": "Chủ đề",
+  "contact_message": "Nội dung",
+  "send_message": "Gửi tin nhắn",
+
+  "description": "Example cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
+  "popular_hotel": "Khách sạn phổ biến",
+  "tag": "Thẻ",
+  "hotel_name": "Grand Hotel",
+  "from_price": "chỉ từ",
+  "hotel_price": "450,000đ",
+  "hotel_address": "Hoàn Kiếm, Hà Nội",
+  "tags": [
+    "Hà Nội",
+    "Hoàn Kiếm",
+    "Đà Nẵng",
+    "Đà Lạt",
+    "Vịnh Hạ Long",
+    "Cát Bà",
+    "Sài Gòn",
+    "Mũi Né"
+  ],
+  "company_address": "tầng 5, tòa nhà Victoria, Nguyễn Chánh, Trung Hòa, Cầu Giấy, Hà Nội",
+  "company_phone": "+8493 725 0110",
+  "company_email": "admin@example.com",
+  "company_website": "www.example.com",
+  "copyright": "Bản quyền thuộc về Example © 2018.",
+  "own_design": "Bản quyền thiết kế của Example"
+}

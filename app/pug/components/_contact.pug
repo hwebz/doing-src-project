@@ -1,0 +1,25 @@
+mixin form-input(title, type, placeholder, error_message)
+    .form-group(class=error_message ? 'is-invalid' : '')
+        label= title
+        if type == 'textarea'
+            textarea.form-control(placeholder=placeholder ? placeholder : '', required)
+        else
+            input.form-control(type=type, placeholder=placeholder ? placeholder : '', required)
+    unless !error_message 
+        div.invalid-feedback= error_message
+
+.tcd__contact
+    .container
+        .row
+            .tcd__contact-form.col-12.col-md-9.offset-md-2.col-lg-6.offset-lg-5
+                form
+                    h2= contact_with_us
+                    .row
+                        .col-12.col-md-6
+                            +form-input(contact_name, "text", '', contact_name_error)
+                        .col-12.col-md-6
+                            +form-input(contact_email, "email")
+                    +form-input(contact_subject, "text")
+                    +form-input(contact_message, "textarea")
+                    button.btn.btn-primary(type="button")= send_message
+

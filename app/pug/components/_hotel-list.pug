@@ -1,0 +1,22 @@
+.tcd__popular-hotels
+    .container
+        .tcd__popular-hotels-title
+            p= popular_hotel_sub
+            h1= popular_hotel_title
+                span= popular_hotel_offer 
+        .tcd__hotel-list.row
+            each hotel in [1, 2, 3, 4, 5, 6]
+                .tcd__hotel-item.col-12.col-sm-6.col-lg-4
+                    .tcd__hotel-thumbnail(style="background-image:url(img/banner.jpg)")
+                    .tcd__hotel-content
+                        h3.tcd__hotel-title
+                            a(href="#")= hotel_name
+                        .tcd__hotel-stars
+                            each val in [1, 2, 3, 4]
+                                img(src="img/svg/star.svg", alt="Star")
+                        .tcd__hotel-price
+                            span= from_price
+                            strong= hotel_price
+                        .tcd__hotel-address
+                            span.icon-maps-and-flags
+                            span= hotel_address

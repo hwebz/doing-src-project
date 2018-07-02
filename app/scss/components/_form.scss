@@ -1,0 +1,28 @@
+.form-group {
+    border: 2px solid $primary-black;
+    @extend %rounded-input;
+    label {
+        font-size: $small-font-size;
+        display: block;
+        margin: 5px;
+    }
+
+    .form-control {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+        padding-top: 0;
+        background-color: transparent !important;
+    }
+
+    + .invalid-feedback {
+        color: $white;
+        margin: -10px 0 10px 0;
+    }
+    
+    &.is-invalid {
+        + .invalid-feedback {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+
+$small-btn-padding: 3px 6px;
+$big-btn-padding: 10px 20px;
+
+@mixin button-size($size, $padding) {
+    @include btn-maker($white, $primary-yellow, $primary-yellow, $padding);
+
+    @if $size {
+        box-shadow: 2px 4px 10px $shadow-button;
+        @extend %tcd-bold;
+    } @else {
+        box-shadow: none;
+        @extend %tcd-light;
+    }
+
+    &:hover,
+    &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active:focus,
+    .show > &.dropdown-toggle {
+        @include btn-maker($white, $secondary-yellow, $secondary-yellow, $padding);
+    }
+
+    &:focus, &.focus,
+    &:not(:disabled):not(.disabled):active:focus, &:not(:disabled):not(.disabled).active:focus,
+    .show > &.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem $secondary-yellow;
+    }
+}
+
+.btn {
+    &.btn-primary {
+        @include button-size(true, $big-btn-padding);
+
+        &.small {
+            @include button-size(false, $small-btn-padding);
+        }
+    }
+}

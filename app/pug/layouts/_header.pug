@@ -1,0 +1,18 @@
+.tcd__header
+    .container
+        .tcd__header-content.navbar
+            a.tcd__header-logo.navbar-brand(href="#")
+                img(src="https://www.mecantravel.com/images/mecan.svg", alt="Logo")
+            button.navbar-toggler(type="button")
+                span.navbar-toggler-icon
+            .tcd__header-navigation
+                button.navbar-toggler(type="button")
+                    span.icon-cancel-music
+                ul.navbar-nav
+                    each item in navigation
+                        li.nav-item
+                            a.nav-link(href="#")= item
+                    li.nav-item
+                        button.btn.btn-primary.small= register
+                    li.nav-item
+                        button.btn.btn-primary.small= login
