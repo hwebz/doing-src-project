@@ -7,6 +7,7 @@
 
 @import 'vendors/_bootstrap';
 @import 'vendors/_slick';
+@import 'vendors/_daterangepicker';
 
 /********************
         BASE
@@ -23,6 +24,7 @@
 
 @import 'components/_button';
 @import 'components/_form';
+@import 'components/_daterangepicker';
 
 
 /********************
@@ -35,6 +37,7 @@
 /********************
         PAGE COMPONENTS
 *********************/
+@import 'pages/components/_search-form';
 @import 'pages/components/_tour-list';
 @import 'pages/components/_introduction';
 @import 'pages/components/_hotel-list';

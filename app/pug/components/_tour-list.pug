@@ -4,7 +4,7 @@
             p= tour_list_sub
             h1= tour_list_title
                 span= popular_hotel_offer
-        .tcd__tour-list-slider
+        .tcd__tour-list-slider.initializing
             each tour in [0, 1, 2, 3, 4, 5]
                 .tcd__tour-list-slide(style="background-image: url(" + tour_list_thumbnails[tour] + ")")
                     span.tcd__tour-list-discount= tour_list_discount

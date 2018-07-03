@@ -1,0 +1,93 @@
+.daterangepicker {
+    @extend %tcd-light;
+    
+    .calendar-table {
+        tr {
+            th, td {
+                font-size: $body-font-size;
+                height: 32px;
+
+                &.active:not(.off) {
+                    background-color: $primary-yellow;
+                    border-radius: 5px;
+
+                    &.start-date {
+                        position: relative;
+                        &:after {
+                            content: '';
+                            border: 15px solid transparent;
+                            border-left-width: 10px;
+                            border-left-color: $primary-yellow;
+                            position: absolute;
+                            right: -23px;
+                            top: 0;
+                        }
+                    }
+
+                    &.end-date {
+                        position: relative;
+                        &:after {
+                            content: '';
+                            border: 15px solid transparent;
+                            border-right-width: 10px;
+                            border-right-color: $primary-yellow;
+                            position: absolute;
+                            left: -24px;
+                            top: 0;
+                        }
+                    }
+                }
+
+                &.in-range:not(.active):not(.off) {
+                    background-color: $inrange-dates;
+                }
+            }
+        }
+
+        thead {
+            tr:last-child th {
+                padding-top: 20px;
+            }
+
+            tr {
+                th {
+
+                    &.month {
+                        @extend %tcd-light;
+                    }
+
+                    &.prev, &.next {
+                        background-color: $primary-yellow;
+
+                        &:after {
+                            font-family: 'icomoon' !important;
+                            content: "\e916";
+                            color: $white;
+                            display: inline-block;
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+
+                    &.prev:after {
+                        @include transform(translate(-2px, 0) rotateZ(-180deg));
+                    }
+                }
+            }
+        }
+    }
+
+    .drp-calendar {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: $horizontal-header-date;
+            top: 50px;
+            left: 0;
+        }
+    }
+}

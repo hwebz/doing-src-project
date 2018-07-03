@@ -1,0 +1,71 @@
+include ../mixins/_mixins
+
+.tcd__search-form
+    .tcd__search-form-tabs
+        .container
+            .tcd__search-form-tabs-wrapper
+                a.tcd__search-form-tab.active(href="#tcd__flight")
+                    span.icon-departures
+                    h4= flight_tab
+                a.tcd__search-form-tab(href="#tcd__tour")
+                    span.icon-itinerary
+                    h4= tour_tab
+    .tcd__search-form-tab-contents
+        .container
+            #tcd__flight.tcd__search-form-tab-content.active
+                ul.tcd__search-form-flight-types
+                    li.active
+                        a(href="#")
+                            strong= return_flight
+                    li
+                        a(href="#")
+                            strong= oneway_flight
+                form.tcd__search-form-flight-form(action="#", method="POST")
+                    .tcd__search-form-field.small-field
+                        +form-input(from, "text", '', from_error, from_info, true)
+                        .tcd__search-form-dropdown-results
+                            .arrow-icon
+                            each val, icon in {'maps-and-flags': result_location, 'appartment': result_city, 'takeoff': result_airport, 'departures': result_airport2}
+                                a.tcd__search-form-dropdown-item(href="#")
+                                    span(class=icon ? 'icon-' + icon : '')
+                                    span= val
+
+                    .tcd__search-form-field.small-field
+                        +form-input(to, "text", '', '', to_info)
+                    .tcd__search-form-field.daterange-picker
+                        +form-input(flight_date, "text", '', '', flight_date_info)
+                    .tcd__search-form-field.big-field
+                        +form-input(passenger, "text", '', '', passenger_info)
+                        .tcd__search-form-dropdown-results
+                            .arrow-icon
+                            .tcd__search-form-ticket-types
+                                h4= ticket_type
+                                ul
+                                    each ticket in tickets
+                                        li.active
+                                            a(href="#")= ticket
+                            .tcd__search-form-passengers
+                                h4= passenger
+                                .tcd__search-form-passengers-wrapper
+                                    each val, age in {"(18+)": paxs[0], "(12-17)": paxs[1],"(2-11)": paxs[2],"(<2)": paxs[3]}
+                                        .tcd__search-form-pax
+                                            p
+                                                span= val
+                                                small= age
+                                            .tcd__search-form-pax-selector
+                                                button.btn.btn-primary.minus(type="button")= minus
+                                                p= zero
+                                                button.btn.btn-primary.plus(type="button")= plus
+                    .tcd__search-form-btn
+                        button.btn.btn-primary.tcd__search-btn(type="submit")= search_form_btn
+            #tcd__tour.tcd__search-form-tab-content
+                ul.tcd__search-form-tour-introduction
+                    h3= tour_introduction
+                    p= tour_description
+                form.tcd__search-form-tour-form(action="#", method="POST")
+                    .tcd__search-form-field.big-field
+                        +form-input(tour_destination, "text", '', '', tour_place)
+                    .tcd__search-form-field
+                        +form-input(tour_date, "text", '', '', tour_date_value)
+                    .tcd__search-form-btn
+                        button.btn.btn-primary.tcd__search-btn(type="submit")= tour_btn

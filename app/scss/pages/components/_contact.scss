@@ -33,6 +33,14 @@ $contact-mobile-padding: 0;
                 height: $message-box-height;
                 resize: none;
             }
+
+            + .invalid-feedback {
+                color: $white;
+            }
+
+            &.is-invalid {
+                border-color: $white;
+            }
         }
 
         .btn {

@@ -1,12 +1,4 @@
-mixin form-input(title, type, placeholder, error_message)
-    .form-group(class=error_message ? 'is-invalid' : '')
-        label= title
-        if type == 'textarea'
-            textarea.form-control(placeholder=placeholder ? placeholder : '', required)
-        else
-            input.form-control(type=type, placeholder=placeholder ? placeholder : '', required)
-    unless !error_message 
-        div.invalid-feedback= error_message
+include ../mixins/_mixins
 
 .tcd__contact
     .container

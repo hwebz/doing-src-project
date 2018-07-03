@@ -16,13 +16,20 @@
     }
 
     + .invalid-feedback {
-        color: $white;
+        color: $primary-red;
         margin: -10px 0 10px 0;
     }
     
     &.is-invalid {
+        border-color: $primary-red;
         + .invalid-feedback {
             display: block;
+        }
+    }
+
+    &.has-toggle {
+        .form-control {
+            width: 80% !important;
         }
     }
 }

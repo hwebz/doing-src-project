@@ -67,9 +67,11 @@ gulp.task('browserSync', function () {
 gulp.task('scripts', function () {
     var vendors = gulp.src([
             'app/js/vendors/jquery-3.3.1.slim.min.js',
+            'app/js/vendors/moment.min.js',
             'app/js/vendors/popper.min.js',
             'app/js/vendors/bootstrap.min.js',
-            'app/js/vendors/slick.min.js'
+            'app/js/vendors/slick.min.js',
+            'app/js/vendors/daterangepicker.min.js'
         ])
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(plumber({

@@ -1,0 +1,317 @@
+$pre: 'tcd__search-form';
+$search-tab-icons-size: 45px;
+$search-btn-height: 65px;
+$pax-selector-height: 35px;
+
+%form-fields {
+    display: flex;
+    flex-direction: row;
+
+    .#{$pre}-field {
+        flex-grow: 1;
+        min-width: 20%;
+        margin: 0 7px;
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &.small-field {
+            min-width: 20%;
+        }
+
+        &.big-field {
+            min-width: 26%;
+        }
+
+        .form-group {
+            background-color: $white;
+            border-color: $white;
+            box-shadow: 2px 4px 10px $shadow-button;
+            label {
+    
+            }
+    
+            input {
+                @extend %tcd-bold;
+                font-size: $heading-3;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    
+        .btn-toggle-flight {
+            padding: 3px 7px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            @include transform(rotateZ(90deg));
+
+            span {
+                font-size: $small-font-size;
+            }
+        }
+    }
+
+    .#{$pre}-btn {
+        margin-left: 7px;
+    }
+
+    .btn:not(.btn-toggle-flight) {
+        width: 100%;
+        min-height: $search-btn-height;
+    }
+}
+
+.#{$pre} {
+    .#{$pre}-tabs {
+        .#{$pre}-tabs-wrapper {
+            display: flex;
+            flex-direction: row;
+            border-top-left-radius: 100px;
+            overflow: hidden;
+
+            .#{$pre}-tab {
+                width: 50%;
+                padding: 15px;
+                color: $white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                span[class^='icon-'] {
+                    font-size: $search-tab-icons-size;
+                    color: $primary-yellow;
+                }
+
+                h4 {
+                    margin-left: 10px;
+                    color: $primary-black;
+                    margin-bottom: 0;
+                }
+
+                &.active {
+                    background-color: $search-form-active-tab;
+
+                    span[class^='icon-'],
+                    h4 {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }    
+    .#{$pre}-tab-contents {
+        @include background-degree(60deg, $search-form-start-color , $search-form-end-color);
+        padding: 20px 0;
+
+        .#{$pre}-tab-content {
+            display: none;
+            // flight tab content
+            .#{$pre}-flight-types {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 15px;
+                li {
+                    margin-right: 15px;
+
+                    &:last-child() {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        color: $white;
+                        background-color: $slide-info-bg;
+                        padding: 7px 15px;
+                        @extend %hoverable-link
+                    }
+
+                    &.active {
+                        a {
+                            background-color: $primary-yellow;
+                        }
+                    }
+                }
+            }
+            .#{$pre}-flight-form {
+                @extend %form-fields;
+            }
+
+            // tour tab content
+            .#{$pre}-tour-introduction {
+                color: $white;
+                h3 {
+
+                }
+
+                p {
+
+                }
+            }
+            .#{$pre}-tour-form {
+                @extend %form-fields;
+
+                .#{$pre}-field {
+                    flex-grow: initial;
+                }
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .#{$pre}-dropdown-results {
+            position: absolute;
+            top: $search-btn-height * 1.2;
+            left: 0;
+            background-color: $white;
+            box-shadow: 2px 4px 10px $shadow-button;
+            width: 100%;
+            z-index: 3;
+
+            @include media-breakpoint-up(sm) {
+                width: 400px;
+            }
+
+            .arrow-icon {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    border: 10px solid transparent;
+                    border-bottom-color: $white;
+                    position: absolute;
+                    top: -20px;
+                    left: 30px;
+                    display: inline-block;
+                }
+            }
+
+            .#{$pre}-dropdown-item {
+                padding: 5px 10px;
+                display: block;
+                color: $primary-black;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+
+                span[class^='icon-'] {
+                    margin-right: 10px;
+                }
+
+                span {
+
+                }
+
+                &:hover {
+                    background-color: $primary-yellow;
+                    color: $white;
+                }
+            }
+
+            .#{$pre}-ticket-types {
+                padding: 15px;
+                border-bottom: 1px solid $horizontal-header-date;
+                
+                h4 {
+                    margin-bottom: 15px;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    li {
+                        margin-right: 10px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            background-color: $slide-info-bg;
+                            padding: 5px 10px;
+                            color: $white;
+                        }
+
+                        &.active {
+                            a {
+                                background-color: $primary-yellow;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .#{$pre}-passengers {
+                padding: 15px;
+                h4 {
+                    margin-bottom: 15px;
+                }
+
+                .#{$pre}-passengers-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .#{$pre}-pax {
+                        width: 50%;
+                        padding: 0 10px;
+                        margin-bottom: 15px;
+
+                        &:nth-last-child(1),
+                        &:nth-last-child(2) {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            span {
+                                
+                            }
+                            small {
+                                margin-left: 5px;
+                            }
+                        }
+    
+    
+                        .#{$pre}-pax-selector {
+                            position: relative;
+                            min-height: $pax-selector-height;
+                            border: 1px solid $horizontal-header-date;
+
+                            .btn {
+                                position: absolute;
+                                display: inline-block;
+                                padding: 5px;
+                                width: 30px;
+                                min-height: auto;
+                                top: 0;
+                                box-shadow: none;
+                                border-radius: 0;
+
+                                &.plus {
+                                    right: 0;
+                                }
+    
+                                &.minus {
+                                    left: 0;
+                                }
+                            }
+
+                            p {
+                                margin: 0;
+                                text-align: center;
+                                line-height: $pax-selector-height;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

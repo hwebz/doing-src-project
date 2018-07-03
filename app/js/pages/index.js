@@ -12,6 +12,8 @@ $(document).ready(function() {
     var tourList = $('.tcd__tour-list');
     var tourListSlider = tourList.find('.tcd__tour-list-slider'); 
 
+    var daterangepicker = $(".daterange-picker .form-control");
+
     // Toggle Menu
     if (isDefined(toggleButton)) toggleButton.on('click', function() {
         var $this = $(this);
@@ -49,7 +51,47 @@ $(document).ready(function() {
                   }
                 }
               ]
+        }).promise().done(function() {
+            $(this).removeClass('initializing');
         });
+    }
+
+    // Date range picker
+    if (isDefined(daterangepicker)) {
+        daterangepicker.daterangepicker({
+            "autoApply": true,
+            "startDate": moment(),
+            "endDate": moment().add(2, 'd'),
+            locale: {
+                format: 'DD/MM/YYYY',
+                "daysOfWeek": [
+                    "CN",
+                    "T2",
+                    "T3",
+                    "T4",
+                    "T5",
+                    "T6",
+                    "T7"
+                ],
+                "monthNames": [
+                    "Th01",
+                    "Th02",
+                    "Th03",
+                    "Th04",
+                    "Th05",
+                    "Th06",
+                    "Th07",
+                    "Th08",
+                    "Th09",
+                    "Th10",
+                    "th11",
+                    "Th12"
+                ],
+                "firstDay": 1
+            }
+        }, function(start, end, label) {
+          console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        })
     }
 
 });
