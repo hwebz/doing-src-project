@@ -8,6 +8,22 @@
   "register": "Đăng ký",
   "login": "Đăng nhập",
 
+  "introduction_sub": "Đặt chuyến bay và tour chưa bao giờ dễ dàng hơn",
+  "introduction_title": "Những lý do để chọn chúng tôi",
+
+  "introduction_comment": [
+    "Những đánh giá tích cực từ khách hàng",
+    "Tìm chuyến bay và tour phù hợp nhất. Tham khảo những ý kiến đánh giá từ khách hàng đã đặt và trải nghiệm."
+  ],
+  "introduction_price": [
+    "Đảm bảo giá luôn tốt nhất",
+    "Example luôn cố gắng mang lại giá tốt nhất. Nếu bạn tìm được giá thấp hơn, chúng tôi sẽ hoàn lại phần chênh lệch cho bạn."
+  ],
+  "introduction_support": [
+    "Hỗ trợ khách hàng 24/7",
+    "Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ cho bạn"
+  ],
+
   "popular_hotel_sub": "Những khách sạn được nhiều người đặt",
   "popular_hotel_title": "Khách sạn phổ biến",
   "popular_hotel_offer": "Đề xuất cho bạn",

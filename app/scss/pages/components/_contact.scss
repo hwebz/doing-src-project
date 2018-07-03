@@ -9,7 +9,7 @@ $contact-mobile-padding: 0;
     padding: $contact-mobile-padding;
 
     .#{$pre}-form {
-        background: linear-gradient(60deg, $primary-yellow , $primary-red);
+        @include background-degree(60deg, $primary-yellow , $primary-red);
         padding: 15px;
 
         h2 {

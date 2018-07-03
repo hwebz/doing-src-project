@@ -1,0 +1,14 @@
+.tcd__introduction
+    .tcd__introduction-title
+        .container
+            p= introduction_sub
+            h1= introduction_title
+    .tcd__introduction-content
+        .container
+            ul.tcd__introduction-reasons
+                each val, icon in {'conversation': introduction_comment, 'money': introduction_price, 'support': introduction_support}
+                    li
+                        span(class=val ? 'icon-' + icon : '')
+                        .tcd__introduction-reason
+                            h2= val[0]
+                            p= val[1]

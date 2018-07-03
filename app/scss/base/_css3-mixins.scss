@@ -54,7 +54,6 @@
   /// @param {Color} $endColor [#999999] - End Color
   
   @mixin background-horizontal($startColor: #3C3C3C, $endColor: #999999) {
-      background-color: $startColor;
       background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
       background-image: -webkit-linear-gradient(left, $startColor, $endColor);
       background-image:    -moz-linear-gradient(left, $startColor, $endColor);
@@ -63,6 +62,20 @@
       background-image:         linear-gradient(left, $startColor, $endColor);
       filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
   }
+
+  /// Background Degree
+  /// @param {Color} $startColor [#3C3C3C] - Start Color
+  /// @param {Color} $endColor [#999999] - End Color
+  
+  @mixin background-degree($degree: 60deg, $startColor: #3C3C3C, $endColor: #999999) {
+    background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient($degree, $startColor, $endColor);
+    background-image:    -moz-linear-gradient($degree, $startColor, $endColor);
+    background-image:     -ms-linear-gradient($degree, $startColor, $endColor);
+    background-image:      -o-linear-gradient($degree, $startColor, $endColor);
+    background-image:         linear-gradient($degree, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
+}
   
   
   /// Background Horizontal - inverse direction

@@ -1,0 +1,65 @@
+$pre: 'tcd__introduction';
+$introduction-desktop-padding: 140px 0;
+$introduction-mobile-padding: 50px 0;
+$icon-size-desktop: 60px;
+$icon-size-mobile: 40px;
+
+.#{$pre} {
+    @extend %block-padding;
+
+    .#{$pre}-title {
+        @extend %block-title;
+    } 
+
+    .#{$pre}-content {
+        @include block-padding($introduction-mobile-padding, $introduction-desktop-padding);
+        background: $white url(../img/introduction-bg.jpg) no-repeat center center;
+        background-size: cover;
+        position: relative;
+
+        .#{$pre}-reasons {
+            position: relative;
+            z-index: 1;
+            li {
+                color: $white;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                span[class^='icon-'] {
+                    font-size: $icon-size-mobile;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: $icon-size-desktop;
+                    }
+                }
+
+                .#{$pre}-reason {
+                    margin-left: 15px;
+                    max-width: 500px;
+                    
+                    h2 {
+
+                    }
+
+                    p {
+
+                    }
+
+                    @include media-breakpoint-up(sm) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        &:before {
+            @include background-horizontal($primary-black , transparent);
+            @extend %pdusedo-element;
+        }
+    }
+}
