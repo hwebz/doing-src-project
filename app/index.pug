@@ -1,7 +1,8 @@
 extends pug/layouts/_index
 
 block main_content
+    include pug/components/_tour-list
+    include pug/components/_introduction
     .tcd__big-bg
-        include pug/components/_introduction
         include pug/components/_hotel-list
         include pug/components/_contact

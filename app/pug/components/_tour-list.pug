@@ -1,0 +1,18 @@
+.tcd__tour-list
+    .container
+        .tcd__tour-list-title
+            p= tour_list_sub
+            h1= tour_list_title
+                span= popular_hotel_offer
+        .tcd__tour-list-slider
+            each tour in [0, 1, 2, 3, 4, 5]
+                .tcd__tour-list-slide(style="background-image: url(" + tour_list_thumbnails[tour] + ")")
+                    span.tcd__tour-list-discount= tour_list_discount
+                    .tcd__tour-list-info
+                        .tcd__tour-list-price
+                            span= from_price
+                            strong= tour_list_price
+                        h1= tour_list_destination
+                        p= tour_list_description
+                        .tcd__tour-list-btn
+                            a(href="#").btn.btn-primary= tour_list_button

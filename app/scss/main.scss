@@ -6,6 +6,7 @@
 *********************/
 
 @import 'vendors/_bootstrap';
+@import 'vendors/_slick';
 
 /********************
         BASE
@@ -34,7 +35,7 @@
 /********************
         PAGE COMPONENTS
 *********************/
-
+@import 'pages/components/_tour-list';
 @import 'pages/components/_introduction';
 @import 'pages/components/_hotel-list';
 @import 'pages/components/_contact';

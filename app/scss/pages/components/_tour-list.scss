@@ -1,0 +1,92 @@
+$pre: 'tcd__tour-list';
+$slide-height: 500px;
+$discount-size: 50px;
+$badget-left: 30px;
+
+.#{$pre} {
+    @extend %block-padding;
+
+    .#{$pre}-title {
+        @extend %block-title;
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 20px;
+        }
+    }     
+
+    .#{$pre}-slider {
+        .#{$pre}-slide {
+            min-height: $slide-height;
+            position: relative;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            outline: none;
+
+            .#{$pre}-discount {
+                position: absolute;
+                top: -$discount-size/2;
+                left: $badget-left;
+                width: $discount-size;
+                height: $discount-size;
+                background-color: $primary-yellow;
+                border-radius: 50%;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .#{$pre}-info {
+                background-color: $slide-info-bg;
+                color: $white;
+                padding: 40px 15px 15px 15px;
+                position: relative;
+
+                .#{$pre}-price {
+                    position: absolute;
+                    top: -25px;
+                    left: $badget-left;
+                    background-color: $white;
+                    color: $primary-black;
+                    padding: 5px 10px;
+                    span {
+                        font-size: $small-font-size;
+                    }
+
+                    strong {
+                        color: $primary-yellow;
+                        margin-left: 5px;
+                        font-size: $heading-2;
+                    }
+                }
+
+                h1 {
+
+                }
+
+                p {
+
+                }
+
+                .#{$pre}-btn {
+                    text-align: center;
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                margin: 0 7px;
+            }
+        }
+
+        @include slick-controls($primary-black, $white);
+
+        @include media-breakpoint-up(sm) {
+            padding: 0 30px;
+        }
+    }
+}

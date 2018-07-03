@@ -55,6 +55,57 @@
     height: 100%;
 }
 
+@mixin slick-controls($color, $backgroundColor) {
+    .slick-arrow {
+        width: $slick-arrow-size;
+        height: $slick-arrow-size;
+        @include transform(rotateY(0deg) translateY(-$slick-arrow-size/2) scale(0.7));
+        z-index: 2;
+
+        &:before {
+            font-family: 'icomoon' !important;
+            content: "\e916";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid $color;
+            color: $color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $backgroundColor;
+            @include opacity(1);
+        }
+
+        &.slick-prev {
+            @include transform(rotateY(-180deg) translateY(-$slick-arrow-size/2) scale(0.7));
+            left: -$slick-arrow-size/2;
+            z-index: 2;
+
+            @include media-breakpoint-up(sm) {
+                @include transform(rotateY(-180deg) translateY(-$slick-arrow-size/2));
+                left: -25px;
+            }
+        }
+
+        &.slick-next {
+            right: -$slick-arrow-size/2;
+            
+            @include media-breakpoint-up(sm) {
+                right: -25px;
+            }
+        }
+
+        @include media-breakpoint-up(sm) {
+            @include transform(rotateY(0deg) translateY(-$slick-arrow-size/2));
+        }
+    }
+
+    .slick-list {
+        padding-top: 25px;
+    }
+}
+
 @mixin btn-maker($color, $bg-color, $border-color, $padding) {
     color: $color;
     background-color: $bg-color;
