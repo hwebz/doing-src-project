@@ -1,28 +1,21 @@
 $pre: 'tcd__search-form';
-$search-tab-icons-size: 45px;
+$search-tab-icons-size-desktop: 45px;
+$search-tab-icons-size-mobile: 25px;
 $search-btn-height: 65px;
 $pax-selector-height: 35px;
+$tab-radius: 100px;
 
 %form-fields {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     .#{$pre}-field {
-        flex-grow: 1;
-        min-width: 20%;
-        margin: 0 7px;
+        min-width: 100%;
         position: relative;
 
         &:first-child {
             margin-left: 0;
-        }
-
-        &.small-field {
-            min-width: 20%;
-        }
-
-        &.big-field {
-            min-width: 26%;
         }
 
         .form-group {
@@ -54,10 +47,28 @@ $pax-selector-height: 35px;
                 font-size: $small-font-size;
             }
         }
+
+        @include media-breakpoint-up(sm) {
+            margin: 0 7px;
+            flex-grow: 1;
+            min-width: 20%;
+        }
     }
 
     .#{$pre}-btn {
-        margin-left: 7px;
+        min-width: 100%;
+
+        @include media-breakpoint-up(sm) {
+            margin-left: 7px;
+            min-width: auto;
+            &.small-field {
+                min-width: 20%;
+            }
+    
+            &.big-field {
+                min-width: 26%;
+            }
+        }
     }
 
     .btn:not(.btn-toggle-flight) {
@@ -67,11 +78,16 @@ $pax-selector-height: 35px;
 }
 
 .#{$pre} {
+    margin-top: -55px;
+    z-index: 3;
+    position: relative;
     .#{$pre}-tabs {
         .#{$pre}-tabs-wrapper {
             display: flex;
             flex-direction: row;
-            border-top-left-radius: 100px;
+            border-top-left-radius: $tab-radius;
+            border-top-right-radius: $tab-radius;
+            background-color: $white;
             overflow: hidden;
 
             .#{$pre}-tab {
@@ -84,8 +100,12 @@ $pax-selector-height: 35px;
                 justify-content: center;
 
                 span[class^='icon-'] {
-                    font-size: $search-tab-icons-size;
+                    font-size: $search-tab-icons-size-mobile;
                     color: $primary-yellow;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: $search-tab-icons-size-desktop;
+                    }
                 }
 
                 h4 {
@@ -173,6 +193,7 @@ $pax-selector-height: 35px;
             box-shadow: 2px 4px 10px $shadow-button;
             width: 100%;
             z-index: 3;
+            display: none;
 
             @include media-breakpoint-up(sm) {
                 width: 400px;
@@ -313,5 +334,9 @@ $pax-selector-height: 35px;
                 }
             }
         }
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin-top: -75px;
     }
 }

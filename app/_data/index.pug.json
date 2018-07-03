@@ -8,6 +8,18 @@
   "register": "Đăng ký",
   "login": "Đăng nhập",
 
+  "discover": "Khám phá",
+  "vietnam": "Việt Nam",
+  "discover_now": "Khám phá ngay",
+  "banners": [
+    "img/banner.jpg",
+    "img/slide-2.jpg",
+    "img/slide-3.jpg",
+    "img/slide-4.jpg",
+    "img/slide-5.jpg",
+    "img/slide-6.jpg"
+  ],
+
   "flight_tab": "Chuyến bay",
   "tour_tab": "Tour",
   "return_flight": "Khứ hồi",

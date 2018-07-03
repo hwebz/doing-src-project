@@ -1,0 +1,10 @@
+.tcd__banner
+    .tcd__banner-slider.initializing
+        each slide in [0, 1, 2, 3, 4, 5]
+            .tcd__banner-slide(style="background-image: url('" + banners[slide] + "')")
+                .container
+                    .tcd__banner-text
+                        h1= discover
+                        h2= vietnam
+                    .tcd__banner-btn
+                        button.btn.btn-primary(type="button")= discover_now

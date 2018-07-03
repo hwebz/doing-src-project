@@ -1,0 +1,62 @@
+$pre: 'tcd__banner';
+
+.#{$pre} {
+    overflow: hidden;
+    .#{$pre}-slider {
+        .#{$pre}-slide {
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .#{$pre}-text {
+                color: $white;
+                margin-bottom: 25px;
+                
+                h1 {
+                    font-size: $banner-big-text-mobile;
+                    text-transform: uppercase;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: $banner-big-text-desktop;
+                    }
+                }
+
+                h2 {
+                    @extend %tcd-pacifico;
+                    font-size: $banner-small-text-mobile;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: $banner-small-text-desktop;
+                    }
+                }
+            }
+
+            .#{$pre}-btn {
+                text-align: center;
+            }
+
+            @include media-breakpoint-up(sm) {
+                height: 100vh;
+            }
+        }
+
+        @include slick-controls($white, transparent);
+
+        .slick-arrow {
+            &.slick-prev {
+                left: 15px;
+            }
+
+            &.slick-next {
+                right: 15px;
+            }
+        }
+
+        .slick-list {
+            padding: 0;
+        }
+    }
+}

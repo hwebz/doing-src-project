@@ -12,6 +12,9 @@ $(document).ready(function() {
     var tourList = $('.tcd__tour-list');
     var tourListSlider = tourList.find('.tcd__tour-list-slider'); 
 
+    var banner = $('.tcd__banner');
+    var bannerSlider = banner.find('.tcd__banner-slider');
+
     var daterangepicker = $(".daterange-picker .form-control");
 
     // Toggle Menu
@@ -51,6 +54,20 @@ $(document).ready(function() {
                   }
                 }
               ]
+        }).promise().done(function() {
+            $(this).removeClass('initializing');
+        });
+    }
+
+    if (isDefined(tourListSlider)) {
+        bannerSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            infinite: true,
+            dot: false,
+            arrows: true,
         }).promise().done(function() {
             $(this).removeClass('initializing');
         });
