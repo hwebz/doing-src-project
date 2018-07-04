@@ -1,0 +1,34 @@
+{
+    "navigation": [
+      "Sản phẩm",
+      "Tuyển dụng",
+      "Liên hệ",
+      "Giới thiệu"
+    ],
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+
+    "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
+    "popular_hotel": "Khách sạn phổ biến",
+    "tag": "Thẻ",
+    "hotel_name": "Grand Hotel",
+    "from_price": "chỉ từ",
+    "hotel_price": "450,000đ",
+    "hotel_address": "Hoàn Kiếm, Hà Nội",
+    "tags": [
+        "Hà Nội",
+        "Hoàn Kiếm",
+        "Đà Nẵng",
+        "Đà Lạt",
+        "Vịnh Hạ Long",
+        "Cát Bà",
+        "Sài Gòn",
+        "Mũi Né"
+    ],
+    "company_address": "tầng 5, tòa nhà Victoria, Nguyễn Chánh, Trung Hòa, Cầu Giấy, Hà Nội",
+    "company_phone": "+8493 725 0110",
+    "company_email": "admin@tachudu.com",
+    "company_website": "www.tachudu.com",
+    "copyright": "Bản quyền thuộc về TaChuDu © 2018.",
+    "own_design": "Bản quyền thiết kế của TaChuDu"
+}

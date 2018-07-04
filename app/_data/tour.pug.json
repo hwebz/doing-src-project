@@ -1,0 +1,179 @@
+{
+    "navigation": [
+      "Sản phẩm",
+      "Tuyển dụng",
+      "Liên hệ",
+      "Giới thiệu"
+    ],
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+
+    "ms_title": "Chọn điểm đến nơi bạn muốn khám phá",
+    "ms_sub": "Hàng trăm ngàn tour đang chờ đón bạn",
+    "ms_at": "Tại",
+    "ms_location": "Hanoi, Vietnam",
+    "ms_departure": "Ngày khởi hành",
+    "ms_date": "21 Th06 2018",
+    "ms_btn": "Tìm kiếm",
+    "result_location": "Hanoi, Vietnam",
+    "result_city": "Thành phố Hà Nội (HAN), Việt Nam",
+    "result_airport": "Sân bay Nội Bài (NIA), Hà Nội, Việt Nam",
+    "result_airport2": "Sân bay Phú Hưng (HBN), Hà Nội, Việt Nam",
+
+    "adv_title": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
+    "minus": "-",
+    "adv_discount": "45",
+    "adv_utils": [
+        "Trả tiền trước",
+        "Đặt vé gia đình"
+    ],
+    "adv_price": "950000",
+    "adv_per": "/người",
+    "adv_btn": "Chi tiết",
+    "dong": "đ",
+    "percent": "%",
+
+    "promo_title": "Giảm giá các chuyến đi tới <span>50%</span> vào mùa hè 2018!",
+    "promo_separator": "/",
+    "promo_location1": "Đà Nẵng 5N4D chỉ",
+    "promo_location1_price": "3500000",
+    "promo_btn": "Chi tiết",
+    "promo_location2": "Phan Thiết 4N3D chỉ",
+    "promo_location2_price": "4200000", 
+
+    "filters": "Điều kiện lọc",
+    "tour_duration": "Thời lượng tour:",
+    "tour_deuration_value": "12 - 100+ ngày",
+    "tour_provider": "Hãng cung cấp tour:",
+    "tour_provider_value1": "TrustPilot",
+    "tour_provider_value2": "Viator",
+    "tour_age": "Độ tuổi:",
+    "tour_age_value": "18 - 39 tuổi",
+
+    "activity": "Hoạt động",
+    "activities": [
+        "Truyền thống",
+        "Biển",
+        "Lễ hội",
+        "Sự kiện ngoài trời"
+    ],
+    "activities_sub": [
+        "Gia đình",
+        "Khám phá",
+        "Thức ăn & chế biến",
+        "Lịch sử",
+        "Chế biến rượu",
+        "Lễ hội",
+        "Trò chơi"
+    ],
+
+    "duration": "Thời lượng tour",
+    "start": "3 ngày",
+    "end": "100+ ngày",
+
+    "provider": "Hãng cung cấp tour",
+    "providers": [
+        "TripAdvisor",
+        "TrustPilot",
+        "Viator",
+        "TouristLink"
+    ],
+    "provider_logos": [
+        "img/providers/tripadvisor.png",
+        "img/providers/trustpilot.png",
+        "img/providers/viator.png",
+        "img/providers/touristlink.png"
+    ],
+
+    "age": "Độ tuổi",
+    "ages": [
+        "< 18 tuổi",
+        "18 - 39 tuổi",
+        "40 - 49 tuổi",
+        "50 - 59 tuổi",
+        "60+ tuổi",
+        "Gia đình"
+    ], 
+
+    "result_title": "Tour tại Hanoi, Vietnam",
+    "result_sub": "từ ngày 22 Th06 2018",
+    "result_found": "Tìm thấy 55 tours",
+    "sort_options": [
+        "Giá (Thấp tới Cao)",
+        "Giá (Cao tới Thấp)",
+        "Tên (A tới Z)",
+        "Tên (Z tới A)"
+    ],
+
+    "item_title": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
+    "item_scores": [
+         "4.2",
+         "4.8",
+         "3.5",
+         "3.1",
+         "2.5" 
+    ],
+    "item_texts": [
+        "Tốt",
+        "Tuyệt Vời",
+        "Khá Tốt",
+        "Trung Bình",
+        "Dưới Trung Bình"
+    ],
+    "item_reviews": [
+        "150 đánh giá",
+        "420 đánh giá",
+        "453 đánh giá",
+        "143 đánh giá",
+        "87 đánh giá"
+    ],
+    "item_comment": "\"Cảnh quan trên cầu tuyệt vời. Không khí và con người rất hài lòng\"",
+    "item_labels": [
+        "Điểm đến",
+        "Điểm đi",
+        "Độ tuổi",
+        "Bao gồm",
+        "Phương tiện",
+        "Hãng cung cấp"
+    ],
+    "item_values": [
+        "12 điểm nổi tiếng tại 10 tỉnh thành",
+        "TP Hà Nội",
+        "18 - 39 tuổi",
+        "Khách sạn, nhà hàng, vé vào cửa",
+        "Máy bay, xe khách",
+        "TripAdvisor"
+    ], 
+    "item_discount": "-45%",
+    "item_old_price": "5,600,000đ",
+    "item_price": "4,500,000đ",
+    "item_days": "5 ngày",
+    "item_price_per_day": "950,000đ/ngày",
+    "item_included": "giá đã bao gồm thuế và phí",
+    "item_included2": "giá tốt nhất cho gia đình",
+    "item_btn": "Chi tiết",
+
+    "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
+    "popular_hotel": "Khách sạn phổ biến",
+    "tag": "Thẻ",
+    "hotel_name": "Grand Hotel",
+    "from_price": "chỉ từ",
+    "hotel_price": "450,000đ",
+    "hotel_address": "Hoàn Kiếm, Hà Nội",
+    "tags": [
+        "Hà Nội",
+        "Hoàn Kiếm",
+        "Đà Nẵng",
+        "Đà Lạt",
+        "Vịnh Hạ Long",
+        "Cát Bà",
+        "Sài Gòn",
+        "Mũi Né"
+    ],
+    "company_address": "tầng 5, tòa nhà Victoria, Nguyễn Chánh, Trung Hòa, Cầu Giấy, Hà Nội",
+    "company_phone": "+8493 725 0110",
+    "company_email": "admin@tachudu.com",
+    "company_website": "www.tachudu.com",
+    "copyright": "Bản quyền thuộc về TaChuDu © 2018.",
+    "own_design": "Bản quyền thiết kế của TaChuDu"
+}

@@ -1,5 +1,5 @@
 mixin form-input(title, type, placeholder, error_message, value, isToggleBtn)
-    .form-group(class=error_message ? 'is-invalid' : '')(class=isToggleBtn ? 'has-toggle' : '')
+    .form-group(class={'is-invalid': error_message, 'has-toggle': isToggleBtn})
         label= title
         if type == 'textarea'
             textarea.form-control(placeholder=placeholder ? placeholder : '', required, value=value ? value : '')

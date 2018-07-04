@@ -1,0 +1,164 @@
+$pre: 'tcd__modify-search';
+$oldPre: 'tcd__search-form';
+$adv: 'tcd__adv';
+
+$banner-height: 380px;
+$banner-background-image: '../img/slide-4.jpg';
+$modify-search-desktop-padding: 50px 0;
+$modify-search-mobile-padding: 20px 0;
+$modify-search-form-desktop-padding: 20px;
+$modify-search-form-mobile-padding: 15px;
+$big-field: 40%;
+$btn-field: 20%;
+$price-font-size: 28px;
+$discount-size: 70px;
+
+
+.#{$pre} {
+    background: $white url($banner-background-image) no-repeat center center;
+    background-size: cover;
+    padding: $modify-search-mobile-padding;
+    min-height: $banner-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .#{$oldPre}-tab-content {
+        background-color: $white;
+        padding: $modify-search-form-mobile-padding;
+        display: flex;
+        flex-direction: column;
+
+        .#{$oldPre}-wrapper {
+            min-width: 70%;
+            .#{$oldPre}-tour-introduction {
+                color: $primary-black;
+            }
+    
+            .#{$oldPre}-tour-form {
+                .#{$oldPre}-field {
+                    .form-group {
+                        margin-bottom: 10px;
+                    }
+    
+                    &.big-field {
+                        flex-grow: 1;
+                        @include media-breakpoint-up(lg) {
+                            min-width: $big-field;
+                            flex-grow: initial;
+                        }
+                    }
+                }
+    
+                .#{$oldPre}-btn {
+                    flex-grow: 1;
+                    margin-left: 0;
+                    @include media-breakpoint-up(md) {
+                        min-width: $btn-field;
+                        flex-grow: initial;
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+
+        .#{$adv} {
+            margin-top: 10px;
+            @include media-breakpoint-up(lg) {
+                margin-top: 0;
+            }
+        }
+
+        @include media-breakpoint-up(sm) {
+            padding: $modify-search-form-desktop-padding;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            flex-grow: 1;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: $modify-search-desktop-padding;
+    }
+}
+
+.#{$adv} {
+    @include background-degree(-60deg, $search-form-start-color , $search-form-end-color);
+    color: $white;
+    padding: 15px;
+
+    h4 {
+        
+    }
+
+    .#{$adv}-content {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+
+        .#{$adv}-discount {
+            @extend %tcd-pacifico;
+            background-color: $blue;
+            width: $discount-size;
+            height: $discount-size;
+            border-radius: 50%;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $price-font-size;
+            margin-right: 10px;
+
+            span {
+                &:first-child,
+                &:last-child {
+                    font-size: $body-font-size;
+                }
+            }
+        }  
+
+        .#{$adv}-info {
+            width:calc(100% - 80px);
+            position: relative;
+
+            ul {
+                margin-top: 10px;
+                li {
+                    font-size: $small-font-size;
+
+                    &:before {
+                        content: '-';
+                        display: inline-block;
+                        margin-right: 3px;
+                    }
+                }
+            }
+
+            .#{$adv}-price {
+                @extend %tcd-pacifico;
+                font-size: $price-font-size;
+                line-height: 1;
+                margin: -7px 0 0 0;
+
+                span {
+                    font-size: $body-font-size;
+                }
+            }  
+        } 
+
+        .btn {
+            position: absolute;
+            bottom: 35px;
+            right: 0;
+            padding: 5px 10px;
+
+
+            @include media-breakpoint-up(xl) {
+                bottom: 0;
+                padding: 5px 25px;
+            }
+        }
+    }   
+}

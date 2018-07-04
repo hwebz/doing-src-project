@@ -128,221 +128,221 @@ $tab-radius: 100px;
     .#{$pre}-tab-contents {
         @include background-degree(60deg, $search-form-start-color , $search-form-end-color);
         padding: 20px 0;
+    }
 
-        .#{$pre}-tab-content {
-            display: none;
-            // flight tab content
-            .#{$pre}-flight-types {
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 18px;
-                li {
-                    margin-right: 15px;
+    @include media-breakpoint-up(sm) {
+        margin-top: -75px;
+    }
+}
 
-                    &:last-child() {
-                        margin-right: 0;
-                    }
+.#{$pre}-tab-content {
+    display: none;
+    // flight tab content
+    .#{$pre}-flight-types {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 18px;
+        li {
+            margin-right: 15px;
 
-                    a {
-                        color: $white;
-                        background-color: $slide-info-bg;
-                        padding: 7px 15px;
-                        @extend %hoverable-link
-                    }
-
-                    &.active {
-                        a {
-                            background-color: $primary-yellow;
-                        }
-                    }
-                }
-            }
-            .#{$pre}-flight-form {
-                @extend %form-fields;
+            &:last-child() {
+                margin-right: 0;
             }
 
-            // tour tab content
-            .#{$pre}-tour-introduction {
+            a {
                 color: $white;
-                h3 {
-                    margin: 0;
-                }
-
-                p {
-
-                }
-            }
-            .#{$pre}-tour-form {
-                @extend %form-fields;
-
-                .#{$pre}-field {
-                    flex-grow: initial;
-                }
+                background-color: $slide-info-bg;
+                padding: 7px 15px;
+                @extend %hoverable-link
             }
 
             &.active {
-                display: block;
+                a {
+                    background-color: $primary-yellow;
+                }
             }
         }
+    }
+    .#{$pre}-flight-form {
+        @extend %form-fields;
+    }
 
-        .#{$pre}-dropdown-results {
+    // tour tab content
+    .#{$pre}-tour-introduction {
+        color: $white;
+        h3 {
+            margin: 0;
+        }
+
+        p {
+
+        }
+    }
+    .#{$pre}-tour-form {
+        @extend %form-fields;
+
+        .#{$pre}-field {
+            flex-grow: initial;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.#{$pre}-dropdown-results {
+    position: absolute;
+    top: $search-btn-height * 1.2;
+    left: 0;
+    background-color: $white;
+    box-shadow: 2px 4px 10px $shadow-button;
+    width: 100%;
+    z-index: 3;
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+        width: 400px;
+    }
+
+    .arrow-icon {
+        position: relative;
+
+        &:before {
+            content: '';
+            border: 10px solid transparent;
+            border-bottom-color: $white;
             position: absolute;
-            top: $search-btn-height * 1.2;
-            left: 0;
-            background-color: $white;
-            box-shadow: 2px 4px 10px $shadow-button;
-            width: 100%;
-            z-index: 3;
-            display: none;
+            top: -20px;
+            left: 30px;
+            display: inline-block;
+        }
+    }
 
-            @include media-breakpoint-up(sm) {
-                width: 400px;
-            }
+    .#{$pre}-dropdown-item {
+        padding: 5px 10px;
+        display: block;
+        color: $primary-black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
 
-            .arrow-icon {
-                position: relative;
+        span[class^='icon-'] {
+            margin-right: 10px;
+        }
 
-                &:before {
-                    content: '';
-                    border: 10px solid transparent;
-                    border-bottom-color: $white;
-                    position: absolute;
-                    top: -20px;
-                    left: 30px;
-                    display: inline-block;
+        span {
+
+        }
+
+        &:hover {
+            background-color: $primary-yellow;
+            color: $white;
+        }
+    }
+
+    .#{$pre}-ticket-types {
+        padding: 15px;
+        border-bottom: 1px solid $horizontal-header-date;
+        
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            li {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
                 }
-            }
 
-            .#{$pre}-dropdown-item {
-                padding: 5px 10px;
-                display: block;
-                color: $primary-black;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 100%;
-
-                span[class^='icon-'] {
-                    margin-right: 10px;
-                }
-
-                span {
-
-                }
-
-                &:hover {
-                    background-color: $primary-yellow;
+                a {
+                    background-color: $slide-info-bg;
+                    padding: 5px 10px;
                     color: $white;
                 }
-            }
 
-            .#{$pre}-ticket-types {
-                padding: 15px;
-                border-bottom: 1px solid $horizontal-header-date;
-                
-                h4 {
-                    margin-bottom: 15px;
-                }
-
-                ul {
-                    display: flex;
-                    flex-direction: row;
-                    li {
-                        margin-right: 10px;
-
-                        &:last-child {
-                            margin-right: 0;
-                        }
-
-                        a {
-                            background-color: $slide-info-bg;
-                            padding: 5px 10px;
-                            color: $white;
-                        }
-
-                        &.active {
-                            a {
-                                background-color: $primary-yellow;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .#{$pre}-passengers {
-                padding: 15px;
-                h4 {
-                    margin-bottom: 15px;
-                }
-
-                .#{$pre}-passengers-wrapper {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-
-                    .#{$pre}-pax {
-                        width: 50%;
-                        padding: 0 10px;
-                        margin-bottom: 15px;
-
-                        &:nth-last-child(1),
-                        &:nth-last-child(2) {
-                            margin-bottom: 0;
-                        }
-
-                        p {
-                            span {
-                                
-                            }
-                            small {
-                                margin-left: 5px;
-                            }
-                        }
-    
-    
-                        .#{$pre}-pax-selector {
-                            position: relative;
-                            min-height: $pax-selector-height;
-                            border: 1px solid $horizontal-header-date;
-
-                            .btn {
-                                position: absolute;
-                                display: inline-block;
-                                padding: 5px;
-                                width: 30px;
-                                min-height: auto;
-                                top: 0;
-                                box-shadow: none;
-                                border-radius: 0;
-
-                                &.plus {
-                                    right: 0;
-                                }
-    
-                                &.minus {
-                                    left: 0;
-                                }
-
-                                &.disabled {
-                                    pointer-events: none;
-                                    background-color: $horizontal-header-date;
-                                    border-color: $horizontal-header-date;
-                                }
-                            }
-
-                            p {
-                                margin: 0;
-                                text-align: center;
-                                line-height: $pax-selector-height;
-                            }
-                        }
+                &.active {
+                    a {
+                        background-color: $primary-yellow;
                     }
                 }
             }
         }
     }
 
-    @include media-breakpoint-up(sm) {
-        margin-top: -75px;
+    .#{$pre}-passengers {
+        padding: 15px;
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        .#{$pre}-passengers-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .#{$pre}-pax {
+                width: 50%;
+                padding: 0 10px;
+                margin-bottom: 15px;
+
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    margin-bottom: 0;
+                }
+
+                p {
+                    span {
+                        
+                    }
+                    small {
+                        margin-left: 5px;
+                    }
+                }
+
+
+                .#{$pre}-pax-selector {
+                    position: relative;
+                    min-height: $pax-selector-height;
+                    border: 1px solid $horizontal-header-date;
+
+                    .btn {
+                        position: absolute;
+                        display: inline-block;
+                        padding: 5px;
+                        width: 30px;
+                        min-height: auto;
+                        top: 0;
+                        box-shadow: none;
+                        border-radius: 0;
+
+                        &.plus {
+                            right: 0;
+                        }
+
+                        &.minus {
+                            left: 0;
+                        }
+
+                        &.disabled {
+                            pointer-events: none;
+                            background-color: $horizontal-header-date;
+                            border-color: $horizontal-header-date;
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        text-align: center;
+                        line-height: $pax-selector-height;
+                    }
+                }
+            }
+        }
     }
 }
