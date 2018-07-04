@@ -1,6 +1,7 @@
 
 $small-btn-padding: 0 5px;
 $big-btn-padding: 5px 25px;
+$bigger-btn-padding: 15px 30px;
 
 @mixin button-size($size, $padding) {
     @include btn-maker($white, $primary-yellow, $primary-yellow, $padding);
@@ -32,6 +33,11 @@ $big-btn-padding: 5px 25px;
 
         &.small {
             @include button-size(false, $small-btn-padding);
+        }
+
+        &.big {
+            @include button-size(false, $bigger-btn-padding);
+            @extend %tcd-bold;
         }
     }
 }

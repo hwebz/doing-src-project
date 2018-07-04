@@ -24,11 +24,10 @@ $thumbnail-width: 95px;
                     margin: 0 auto 20px;
                     display: block;
                     text-align: center;
-                    display: none;
                     
                     img {
                         max-height: $logo-height-mobile;
-                        display: none;
+                        //display: none;
 
                         @include media-breakpoint-up(md) {
                             max-height: $logo-height-desktop;
