@@ -57,7 +57,7 @@
 
 @mixin slick-controls($color, $backgroundColor) {
     .slick-arrow {
-        width: $slick-arrow-size;
+        width: $slick-arrow-size - 10px;
         height: $slick-arrow-size;
         @include transform(rotateY(0deg) translateY(-$slick-arrow-size/2) scale(0.7));
         z-index: 2;
@@ -67,7 +67,7 @@
             content: "\e916";
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: 10px;
             border: 2px solid $color;
             color: $color;
             display: flex;
@@ -75,6 +75,7 @@
             justify-content: center;
             background-color: $backgroundColor;
             @include opacity(1);
+            font-size: $small-font-size;
         }
 
         &.slick-prev {

@@ -68,6 +68,7 @@ gulp.task('browserSync', function () {
 gulp.task('scripts', function () {
     var vendors = gulp.src([
             'app/js/vendors/jquery-3.3.1.slim.min.js',
+            'app/js/vendors/jquery.ba-throttle-debounce.min.js',
             'app/js/vendors/moment.min.js',
             'app/js/vendors/popper.min.js',
             'app/js/vendors/bootstrap.min.js',

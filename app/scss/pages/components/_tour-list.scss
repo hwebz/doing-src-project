@@ -2,16 +2,21 @@ $pre: 'tcd__tour-list';
 $slide-height: 500px;
 $discount-size: 50px;
 $badget-left: 30px;
+$tour-desktop-padding: 75px 0 40px 0;
 
 .#{$pre} {
-    @extend %block-padding;
+    padding: $mobile-padding;
+
+    @include media-breakpoint-up(md) {
+        padding: $tour-desktop-padding;
+    }
 
     .#{$pre}-title {
         @extend %block-title;
         margin-bottom: 0;
 
         @include media-breakpoint-up(sm) {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     }     
 
@@ -84,6 +89,29 @@ $badget-left: 30px;
         }
 
         @include slick-controls($primary-black, $white);
+
+        .slick-arrow {
+            &.slick-prev {
+                left: -20px;
+
+                @include media-breakpoint-up(sm) {
+                    left: -40px;
+                }
+            }
+
+            &.slick-next {
+                right: -20px;
+
+                @include media-breakpoint-up(sm) {
+                    right: -40px;
+                }
+            }
+
+            &:before {
+                color: $gray;
+                border-color: $gray;
+            }
+        }
 
     }
 }

@@ -9,7 +9,7 @@ $contact-mobile-padding: 0;
     padding: $contact-mobile-padding;
 
     .#{$pre}-form {
-        @include background-degree(60deg, $search-form-start-color , $search-form-end-color);
+        @include background-degree(60deg, $contact-box-start-color , $contact-box-end-color);
         padding: 15px;
         width: 100%;
         margin: auto 0 auto auto;

@@ -20,6 +20,7 @@ $star-size: 12px;
 
         .#{$pre}-content {
             .#{$pre}-title {
+                margin-bottom: 5px;
                 a {
                     color: $primary-black;
                     @extend %hoverable-link;

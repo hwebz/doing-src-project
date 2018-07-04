@@ -1,7 +1,7 @@
 $pre: 'tcd__introduction';
 $introduction-desktop-padding: 140px 0;
 $introduction-mobile-padding: 50px 0;
-$icon-size-desktop: 60px;
+$icon-size-desktop: 40px;
 $icon-size-mobile: 40px;
 
 .#{$pre} {
@@ -10,10 +10,6 @@ $icon-size-mobile: 40px;
     .#{$pre}-title {
         @extend %block-title;
         margin-bottom: 20px;
-
-        @include media-breakpoint-up(sm) {
-            margin-bottom: 30px;
-        }
     } 
 
     .#{$pre}-content {

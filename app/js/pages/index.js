@@ -97,7 +97,7 @@ $(document).ready(function() {
             autoplaySpeed: 5000,
             infinite: true,
             dot: false,
-            arrows: false,
+            arrows: true,
             responsive: [
                 {
                   breakpoint: 1200,
@@ -294,5 +294,19 @@ $(document).ready(function() {
                 paxSelectorAction($this, '.plus', '.minus', false, val);
             });
         }
+    }
+
+    // Header scrolling
+    if (isDefined(header)) {
+        $(window).on('scroll orientationchange', $.debounce(5, function() {
+            var $this = $(this);
+            var scrollTop = $(window).scrollTop();
+            var fixedHeight = 150;
+            if (scrollTop > fixedHeight) {
+                header.addClass('scroll-down');
+            } else {
+                header.removeClass('scroll-down');
+            }
+        }));
     }
 });

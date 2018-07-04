@@ -1,13 +1,18 @@
 $pre: 'tcd__header';
 $logo-height-mobile: 50px;
-$logo-height-desktop: 90px;
+$logo-height-desktop: 100px;
+$logo-height-scroll: 40px;
 $header-zIndex: 9999;
+$header-height-desktop: 120px;
+$header-height-mobile: 60px;
+$header-height-scroll: 50px;
 
 .#{$pre} {
-    height: 60px;
+    height: $header-height-mobile;
     display: flex;
     align-items: center;
     position: relative;
+    @include transition(all 0.3s ease-in-out);
 
     &:before {
         position: absolute;
@@ -26,6 +31,7 @@ $header-zIndex: 9999;
         .#{$pre}-logo {
             img {
                 max-height: $logo-height-mobile;
+                @include transition(all 0.3s ease-in-out);
                 //display: none;
                 
                 @include media-breakpoint-up(md) {
@@ -135,7 +141,7 @@ $header-zIndex: 9999;
     }
 
     @include media-breakpoint-up(lg) {
-        height: 120px;
+        height: $header-height-desktop;
         position: fixed;
         top: 0;
         left: 0;
@@ -145,6 +151,18 @@ $header-zIndex: 9999;
 
         &:before {
             @include opacity(.5);
+        }
+    }
+
+    &.scroll-down {
+        height: $header-height-scroll;
+
+        .#{$pre}-content {
+            .#{$pre}-logo {
+                img {
+                    max-height: $logo-height-scroll;
+                }
+            }
         }
     }
 }
