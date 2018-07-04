@@ -322,6 +322,12 @@ $tab-radius: 100px;
                                 &.minus {
                                     left: 0;
                                 }
+
+                                &.disabled {
+                                    pointer-events: none;
+                                    background-color: $horizontal-header-date;
+                                    border-color: $horizontal-header-date;
+                                }
                             }
 
                             p {

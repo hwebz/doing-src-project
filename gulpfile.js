@@ -13,6 +13,7 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var pug = require('gulp-pug');
+var gs		= require('gulp-selectors');
 var browserSync = require('browser-sync').create();
 
 var paths = {
@@ -150,18 +151,6 @@ gulp.task('pages', function () {
         })
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({ stream: true }));
-        // .pipe(plumber({
-        //     errorHandler: function (error) {
-        //         console.log(error.message);
-        //         this.emit('end');
-        //     }
-        // }))
-        // .pipe(fileinclude({
-        //     prefix: '@@',
-        //     basepath: '@file'
-        // }))
-        // .pipe(gulp.dest('dist/'))
-        // .pipe(browserSync.reload({ stream: true }));
 
 });
 
@@ -169,6 +158,12 @@ gulp.task('fonts', function () {
     return gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'))
         .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('mcn', function() {
+    return gulp.src(['dist/**/*.css', 'dist/**/*.js', 'dist/**/*.html'])
+        .pipe(gs.run())
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('watch', ['browserSync'], function () {

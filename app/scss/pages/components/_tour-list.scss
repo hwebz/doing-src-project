@@ -44,7 +44,7 @@ $badget-left: 30px;
             .#{$pre}-info {
                 background-color: $slide-info-bg;
                 color: $white;
-                padding: 40px 15px 15px 15px;
+                padding: 40px 30px 15px 30px;
                 position: relative;
 
                 .#{$pre}-price {
@@ -85,9 +85,6 @@ $badget-left: 30px;
 
         @include slick-controls($primary-black, $white);
 
-        @include media-breakpoint-up(sm) {
-            padding: 0 30px;
-        }
     }
 }
 

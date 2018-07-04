@@ -2,6 +2,41 @@ function isDefined(element) {
     return typeof element !== 'undefined' && element.length > 0;
 }
 
+function checkPaxs(context, plusBtn, minusBtn, current) {
+    debugger;
+    if (context) {
+        if (current == 0) {
+            context.parent().find(minusBtn).addClass('disabled');
+        } else {
+            context.parent().find(minusBtn).removeClass('disabled');
+        }
+    } else {
+        $(minusBtn).each(function(idx, item) {
+            $this = $(item);
+            var cur = parseInt($this.parent().find('>p').text(), 10);
+            if (cur == 0) {
+                $this.addClass('disabled');
+            } else {
+                $this.removeClass('disabled');
+            }
+        })
+    }
+}
+
+function paxSelectorAction(context, plusBtn, minusBtn, isIncrement, label) {
+    var current = parseInt(label.text(), 10);
+    if (!isNaN(current)) {
+        if (isIncrement) {
+            current += 1;
+        } else if (!isIncrement && current > 0) {
+            current -= 1;
+        }
+        label.text(current);
+    }
+
+    checkPaxs(context, plusBtn, minusBtn, current);
+}
+
 $(document).ready(function() {
 
     var body = $('body');
@@ -32,6 +67,14 @@ $(document).ready(function() {
     var searchForm = $(searchFormClass);
     var searchFormTabs = searchForm.find(searchFormTabsClass);
 
+    // Toggle flight from <-> to
+    var flightToggleBtnClass = '.btn-toggle-flight';
+    var flightToggleBtn = $(flightToggleBtnClass);
+
+    // pax selectors
+    var paxSelectorsClass = '.tcd__search-form-pax';
+    var paxSelectors = $(paxSelectorsClass);
+
     // Toggle Menu
     if (isDefined(toggleButton)) toggleButton.on('click', function() {
         var $this = $(this);
@@ -54,7 +97,7 @@ $(document).ready(function() {
             autoplaySpeed: 5000,
             infinite: true,
             dot: false,
-            arrows: true,
+            arrows: false,
             responsive: [
                 {
                   breakpoint: 1200,
@@ -206,4 +249,50 @@ $(document).ready(function() {
         });
     }
 
+    // Flight toggle from <-> to
+    if (isDefined(flightToggleBtn)) {
+        flightToggleBtn.on('click', function(e) {
+            e.preventDefault;
+            var $this = $(this);
+            var fromElement = $($this.attr('data-from-element'));
+            var toElement = $($this.attr('data-to-element'));
+
+            if (isDefined(fromElement) && isDefined(toElement)) {
+                var fromInput = fromElement.find('.form-control');
+                var toInput = toElement.find('.form-control');
+                var val = {
+                    from: fromInput.val(),
+                    to: toInput.val()
+                }
+
+                if (isDefined(fromInput) && isDefined(toInput)) {
+                    fromInput.val(val.to);
+                    toInput.val(val.from);
+                }
+            }
+
+            return false;
+        })
+    }
+
+    // pax selectors
+    if (isDefined(paxSelectors)) {
+        var plusBtn = paxSelectors.find('.plus');
+        var minusBtn = paxSelectors.find('.minus');
+
+        if (isDefined(plusBtn) && isDefined(minusBtn)) {
+            checkPaxs(null, '.plus', '.minus', 0);
+            plusBtn.on('click', function() {
+                var $this = $(this);
+                var val = $this.parent().find('> p');
+                paxSelectorAction($this, '.plus', '.minus', true, val);
+            });
+
+            minusBtn.on('click', function() {
+                var $this = $(this);
+                var val = $this.parent().find('> p');
+                paxSelectorAction($this, '.plus', '.minus', false, val);
+            });
+        }
+    }
 });

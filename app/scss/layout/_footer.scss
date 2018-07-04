@@ -3,6 +3,8 @@ $hotel-list: 'tcd__hotel';
 $icon-size: 30px;
 $logo-height-mobile: 90px;
 $logo-height-desktop: 120px;
+$thumbnail-height: 90px;
+$thumbnail-width: 95px;
 
 .#{$pre} {
     background-color: $secondary-red;
@@ -22,10 +24,11 @@ $logo-height-desktop: 120px;
                     margin: 0 auto 20px;
                     display: block;
                     text-align: center;
-                    //display: none;
+                    display: none;
                     
                     img {
                         max-height: $logo-height-mobile;
+                        display: none;
 
                         @include media-breakpoint-up(md) {
                             max-height: $logo-height-desktop;
@@ -34,7 +37,7 @@ $logo-height-desktop: 120px;
                 }
 
                 .#{$pre}-description {
-    
+                    font-size: $small-font-size;
                 }
 
                 .#{$pre}-socials {
@@ -78,15 +81,8 @@ $logo-height-desktop: 120px;
                 .#{$hotel-list}-item {
 
                     .#{$hotel-list}-thumbnail {
-                        width: 35%;
-
-                        @include media-breakpoint-up(sm) {
-                            width: 25%;
-                        }
-
-                        @include media-breakpoint-up(xl) {
-                            width: 50%;
-                        }
+                        width: $thumbnail-width;
+                        height: $thumbnail-height;
                     }
 
                     .#{$hotel-list}-content {

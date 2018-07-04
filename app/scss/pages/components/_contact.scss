@@ -9,8 +9,10 @@ $contact-mobile-padding: 0;
     padding: $contact-mobile-padding;
 
     .#{$pre}-form {
-        @include background-degree(60deg, $primary-yellow , $primary-red);
+        @include background-degree(60deg, $search-form-start-color , $search-form-end-color);
         padding: 15px;
+        width: 100%;
+        margin: auto 0 auto auto;
 
         h2 {
             color: $white;
@@ -53,6 +55,7 @@ $contact-mobile-padding: 0;
 
         @include media-breakpoint-up(md) {
             padding: 40px;
+            width: 610px;
         }
     }
 

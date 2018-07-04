@@ -8,5 +8,5 @@ mixin form-input(title, type, placeholder, error_message, value, isToggleBtn)
     if error_message 
         div.invalid-feedback= error_message
     if isToggleBtn
-        button.btn.btn-primary.btn-toggle-flight(type="button")
+        button.btn.btn-primary.btn-toggle-flight(type="button", data-from-element="#flight-from", data-to-element="#flight-to")
             span.icon-sort

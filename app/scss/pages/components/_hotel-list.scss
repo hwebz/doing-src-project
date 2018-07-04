@@ -1,7 +1,8 @@
 $pre: 'tcd__hotel';
 $parent: 'tcd__popular-hotels';
-$thumbnail-height: 100px;
-$star-size: 15px;
+$thumbnail-height: 90px;
+$thumbnail-width: 95px;
+$star-size: 12px;
 
 .#{$pre}-list {
     .#{$pre}-item {
@@ -9,7 +10,7 @@ $star-size: 15px;
         flex-direction: row;
         margin-bottom: 10px;
         .#{$pre}-thumbnail {
-            width: 50%;
+            width: $thumbnail-width;
             height: $thumbnail-height;
             background-size: cover;
             background-repeat: no-repeat;
@@ -31,7 +32,7 @@ $star-size: 15px;
                 img {
                     width: $star-size;
                     height: $star-size;
-                    margin: 0 2px;
+                    margin: 0 1px;
                 }
             }
 
@@ -68,17 +69,5 @@ $star-size: 15px;
     @extend %block-padding;
     .#{$parent}-title {
         @extend %block-title;
-    }    
-
-    .#{$pre}-list {
-        .#{$pre}-item {
-            .#{$pre}-thumbnail {
-                width: 35%;
-
-                @include media-breakpoint-up(lg) {
-                    width: 30%;
-                }
-            }
-        }
-    }
+    }  
 }

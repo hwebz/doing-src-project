@@ -21,7 +21,7 @@ include ../mixins/_mixins
                         a(href="#")
                             strong= oneway_flight
                 form.tcd__search-form-flight-form(action="#", method="POST")
-                    .tcd__search-form-field.small-field.have-dropdown
+                    #flight-from.tcd__search-form-field.small-field.have-dropdown
                         +form-input(from, "text", '', from_error, from_info, true)
                         .tcd__search-form-dropdown-results
                             .arrow-icon
@@ -30,7 +30,7 @@ include ../mixins/_mixins
                                     span(class=icon ? 'icon-' + icon : '')
                                     span= val
 
-                    .tcd__search-form-field.small-field.have-dropdown
+                    #flight-to.tcd__search-form-field.small-field.have-dropdown
                         +form-input(to, "text", '', '', to_info)
                         .tcd__search-form-dropdown-results
                             .arrow-icon
@@ -47,8 +47,8 @@ include ../mixins/_mixins
                             .tcd__search-form-ticket-types
                                 h4= ticket_type
                                 ul
-                                    each ticket in tickets
-                                        li.active
+                                    each ticket, idx in {0: tickets[0], 1: tickets[1]}
+                                        li(class=idx == 0 ? 'active' : '')
                                             a(href="#")= ticket
                             .tcd__search-form-passengers
                                 h4= passenger

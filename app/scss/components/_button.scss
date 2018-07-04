@@ -1,6 +1,6 @@
 
-$small-btn-padding: 3px 6px;
-$big-btn-padding: 10px 20px;
+$small-btn-padding: 0 5px;
+$big-btn-padding: 5px 25px;
 
 @mixin button-size($size, $padding) {
     @include btn-maker($white, $primary-yellow, $primary-yellow, $padding);

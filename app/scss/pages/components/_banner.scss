@@ -4,12 +4,15 @@ $pre: 'tcd__banner';
     overflow: hidden;
     .#{$pre}-slider {
         .#{$pre}-slide {
-            height: calc(100vh - 60px);
+            height: 350px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
 
             .#{$pre}-text {
                 color: $white;
@@ -43,7 +46,11 @@ $pre: 'tcd__banner';
             }
 
             @include media-breakpoint-up(sm) {
-                height: 100vh;
+                height: 550px;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 745px;
             }
         }
 
@@ -51,11 +58,19 @@ $pre: 'tcd__banner';
 
         .slick-arrow {
             &.slick-prev {
-                left: 15px;
+                left: 10px;
+
+                @include media-breakpoint-up(sm) {
+                    left: 25px;
+                }
             }
 
             &.slick-next {
-                right: 15px;
+                right: 10px;
+
+                @include media-breakpoint-up(sm) {
+                    right: 25px;
+                }
             }
         }
 
