@@ -1,5 +1,8 @@
 .daterangepicker {
     @extend %tcd-light;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 2px 4px 10px $shadow-button;
     
     .calendar-table {
         tr {
@@ -22,6 +25,10 @@
                             right: -23px;
                             top: 0;
                         }
+
+                        &.end-date:after {
+                            display: none;
+                        }
                     }
 
                     &.end-date {
@@ -34,6 +41,10 @@
                             position: absolute;
                             left: -24px;
                             top: 0;
+                        }
+
+                        &.start-date:after {
+                            display: none;
                         }
                     }
                 }
@@ -86,8 +97,16 @@
             height: 1px;
             width: 100%;
             background-color: $horizontal-header-date;
-            top: 50px;
+            top: 55px;
             left: 0;
+        }
+
+        &.left {
+            padding: 15px;
+        }
+
+        &.right {
+            padding: 15px;
         }
     }
 }

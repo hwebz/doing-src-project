@@ -21,7 +21,7 @@ include ../mixins/_mixins
                         a(href="#")
                             strong= oneway_flight
                 form.tcd__search-form-flight-form(action="#", method="POST")
-                    .tcd__search-form-field.small-field
+                    .tcd__search-form-field.small-field.have-dropdown
                         +form-input(from, "text", '', from_error, from_info, true)
                         .tcd__search-form-dropdown-results
                             .arrow-icon
@@ -30,11 +30,17 @@ include ../mixins/_mixins
                                     span(class=icon ? 'icon-' + icon : '')
                                     span= val
 
-                    .tcd__search-form-field.small-field
+                    .tcd__search-form-field.small-field.have-dropdown
                         +form-input(to, "text", '', '', to_info)
+                        .tcd__search-form-dropdown-results
+                            .arrow-icon
+                            each val, icon in {'maps-and-flags': result_location, 'appartment': result_city, 'takeoff': result_airport, 'departures': result_airport2}
+                                a.tcd__search-form-dropdown-item(href="#")
+                                    span(class=icon ? 'icon-' + icon : '')
+                                    span= val
                     .tcd__search-form-field.daterange-picker
                         +form-input(flight_date, "text", '', '', flight_date_info)
-                    .tcd__search-form-field.big-field
+                    .tcd__search-form-field.big-field.have-dropdown
                         +form-input(passenger, "text", '', '', passenger_info)
                         .tcd__search-form-dropdown-results
                             .arrow-icon
@@ -63,9 +69,15 @@ include ../mixins/_mixins
                     h3= tour_introduction
                     p= tour_description
                 form.tcd__search-form-tour-form(action="#", method="POST")
-                    .tcd__search-form-field.big-field
+                    .tcd__search-form-field.big-field.have-dropdown
                         +form-input(tour_destination, "text", '', '', tour_place)
-                    .tcd__search-form-field
+                        .tcd__search-form-dropdown-results
+                            .arrow-icon
+                            each val, icon in {'maps-and-flags': result_location, 'appartment': result_city, 'takeoff': result_airport, 'departures': result_airport2}
+                                a.tcd__search-form-dropdown-item(href="#")
+                                    span(class=icon ? 'icon-' + icon : '')
+                                    span= val
+                    .tcd__search-form-field.single-daterange-picker
                         +form-input(tour_date, "text", '', '', tour_date_value)
                     .tcd__search-form-btn
                         button.btn.btn-primary.tcd__search-btn(type="submit")= tour_btn

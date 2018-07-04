@@ -135,7 +135,7 @@ $tab-radius: 100px;
             .#{$pre}-flight-types {
                 display: flex;
                 flex-direction: row;
-                margin-bottom: 15px;
+                margin-bottom: 18px;
                 li {
                     margin-right: 15px;
 
@@ -165,7 +165,7 @@ $tab-radius: 100px;
             .#{$pre}-tour-introduction {
                 color: $white;
                 h3 {
-
+                    margin: 0;
                 }
 
                 p {

@@ -1,6 +1,8 @@
 $pre: 'tcd__footer';
 $hotel-list: 'tcd__hotel';
 $icon-size: 30px;
+$logo-height-mobile: 90px;
+$logo-height-desktop: 120px;
 
 .#{$pre} {
     background-color: $secondary-red;
@@ -17,11 +19,17 @@ $icon-size: 30px;
 
             .#{$pre}-info {
                 .#{$pre}-logo {
-                    max-width: 200px;
                     margin: 0 auto 20px;
                     display: block;
+                    text-align: center;
+                    display: none;
+                    
                     img {
-                        width: 100%;
+                        max-height: $logo-height-mobile;
+
+                        @include media-breakpoint-up(md) {
+                            max-height: $logo-height-desktop;
+                        }
                     }
                 }
 

@@ -1,4 +1,6 @@
 $pre: 'tcd__header';
+$logo-height-mobile: 50px;
+$logo-height-desktop: 90px;
 
 .#{$pre} {
     height: 60px;
@@ -21,9 +23,13 @@ $pre: 'tcd__header';
         padding: 0;
 
         .#{$pre}-logo {
-            max-width: 200px;
+            display: none;
             img {
-                width: 100%;
+                max-height: $logo-height-mobile;
+
+                @include media-breakpoint-up(md) {
+                    max-height: $logo-height-desktop;
+                }
             }
         }
         
