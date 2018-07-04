@@ -1,6 +1,7 @@
 $pre: 'tcd__header';
 $logo-height-mobile: 50px;
 $logo-height-desktop: 90px;
+$header-zIndex: 9999;
 
 .#{$pre} {
     height: 60px;
@@ -130,7 +131,7 @@ $logo-height-desktop: 90px;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 10;
+        z-index: $header-zIndex;
         @include transform(translate3d(0, 0, 0));
 
         &:before {
