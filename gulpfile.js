@@ -143,7 +143,7 @@ gulp.task('pages', function () {
     .pipe(data(function (file) {
             return JSON.parse(fs.readFileSync(paths.data + path.basename(file.path) + '.json'))
         }))
-        .pipe(pug())
+        .pipe(pug({ pretty: true }))
         .on('error', function (err) {
             process.stderr.write(err.message + '\n');
             this.emit('end');
