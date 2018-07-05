@@ -55,6 +55,12 @@
     height: 100%;
 }
 
+%ellipse-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @mixin slick-controls($color, $backgroundColor) {
     .slick-arrow {
         width: $slick-arrow-size - 10px;

@@ -33,7 +33,7 @@
     "dong": "đ",
     "percent": "%",
 
-    "promo_title": "Giảm giá các chuyến đi tới <span>50%</span> vào mùa hè 2018!",
+    "promo_title": "Giảm giá các chuyến đi tới <span>50</span><small>%</small> vào mùa hè 2018!",
     "promo_separator": "/",
     "promo_location1": "Đà Nẵng 5N4D chỉ",
     "promo_location1_price": "3500000",
@@ -42,13 +42,17 @@
     "promo_location2_price": "4200000", 
 
     "filters": "Điều kiện lọc",
-    "tour_duration": "Thời lượng tour:",
-    "tour_deuration_value": "12 - 100+ ngày",
-    "tour_provider": "Hãng cung cấp tour:",
-    "tour_provider_value1": "TrustPilot",
-    "tour_provider_value2": "Viator",
-    "tour_age": "Độ tuổi:",
-    "tour_age_value": "18 - 39 tuổi",
+    "tour_conditions_labels": [
+        "Thời lượng tour:",
+        "Hãng cung cấp tour:",
+        "Độ tuổi:"
+    ],
+    "tour_coditions_values": [
+        "12 - 100+ ngày",
+        "TrustPilot",
+        "18 - 39 tuổi"
+    ],
+    "tour_remove": "x",
 
     "activity": "Hoạt động",
     "activities": [

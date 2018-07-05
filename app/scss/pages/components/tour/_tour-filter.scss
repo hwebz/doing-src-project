@@ -1,0 +1,163 @@
+$pre: 'tcd__tour-filters';
+$checkbox-size: 15px;
+$block-bottom-distance: 25px;
+$sub-items-distance: 20px;
+$list-item-distance: 15px;
+$list-item-distance-small: 10px;
+
+.#{$pre} {
+    .#{$pre}-block {
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: $block-bottom-distance;
+        margin-bottom: $block-bottom-distance;
+        
+        h3 {
+            margin-bottom: 15px;
+        }
+        .#{$pre}-content {
+            // conditions
+            .#{$pre}-condition {
+                margin-bottom: 25px;
+                h4 {
+                    margin-bottom: 7px;
+                }
+
+                p {
+                    margin-left: $sub-items-distance;
+                    flex-direction: row;
+                    @extend %ellipse-text;
+                    margin-bottom: 0;
+
+                    a {
+                        background-color: $primary-red;
+                        margin-right: 7px;
+                        color: $white;
+                        display: inline-block;
+                        padding: 2px 5px;
+                        border-radius: 3px;
+                        line-height: 1;
+                    }
+
+                    span {
+
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            // activities
+            .#{$pre}-activity {
+                margin-bottom: $list-item-distance;
+
+                h4 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    a[class^='icon-'] {
+                        @include transform(rotateZ(-90deg));
+                        color: $primary-black;
+                        @extend %hoverable-link;
+                        @include transition(all 0.3s ease-in-out);
+
+                        &.expanded {
+                            @include transform(rotateZ(90deg));
+                        }
+                    }
+                }
+
+                .#{$pre}-sub-activities {
+                    margin-left: $sub-items-distance;
+                    li {
+                        margin-top: 5px;
+                    }
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            // duration
+            ##{$pre}-duration {
+
+            }
+
+            // providers
+            .#{$pre}-providers {
+                li {
+                    margin-bottom: $list-item-distance-small;
+                }
+            }
+
+            .#{$pre}-ages {
+                li {
+                    margin-bottom: $list-item-distance-small;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }    
+}
+
+.tcd__checkbox {
+    position: relative;
+    cursor: pointer;
+    label {
+        padding-left: 25px;
+        position: relative;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            @include transform(translate(0, -50%));
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border: 1px solid $primary-black;
+            border-radius: 2px;
+        }
+
+        span {
+
+        }
+
+        img {
+            display: inline-block;
+            max-height: 20px;
+        }
+    }
+
+    input {
+        @include opacity(0);
+        visibility: hidden;
+        position: absolute;
+
+        &:checked + label {
+            &:before {
+                font-family: 'icomoon' !important;
+                content: "\e905";
+                color: $white;
+                font-size: $small-font-size - 2px;
+                background-color: $primary-yellow;
+                border-color: $primary-yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

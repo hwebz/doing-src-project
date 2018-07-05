@@ -223,9 +223,7 @@ $tab-radius: 100px;
         padding: 5px 10px;
         display: block;
         color: $primary-black;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @extend %ellipse-text;
         width: 100%;
 
         span[class^='icon-'] {

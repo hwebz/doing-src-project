@@ -1,0 +1,124 @@
+$pre: 'tcd__tour-results';
+$wrap: 'tcd__tour-results-wrapper';
+
+.#{$wrap} {
+    @extend %block-padding;
+    background-color: $results-background;
+}
+
+.#{$pre} {
+    .#{$pre}-title {
+        h1 {
+            span {
+
+            }
+        }
+    }
+    .#{$pre}-head {
+        p {
+
+        }
+
+        select {
+
+        }
+    }
+
+    .#{$pre}-list {
+        .#{$pre}-card {
+            .#{$pre}-thumbnail {
+                .#{$pre}-thumb {
+    
+                }
+
+                .#{$pre}-map {
+    
+                }
+            }
+
+            .#{$pre}-info {
+                .#{$pre}-title {
+    
+                }
+
+                .#{$pre}-stars {
+    
+                }
+
+                .#{$pre}-reviews {
+                    .reviews-score {
+
+                    }
+
+                    .reviews-info {
+                        
+                    }
+                }
+
+                .#{$pre}-comment {
+                    p {
+
+                    }
+                }
+
+                .#{$pre}-detail-info {
+                    .detail-info-label {
+                        p {
+
+                        }
+                    }
+
+                    .detail-info-text {
+                        p {
+
+                        }
+                    }
+                }
+            }
+
+            .#{$pre}-price-info {
+                .#{$pre}-discount {
+                
+                }
+
+                .#{$pre}-price {
+                    p {
+
+                    }
+
+                    h3 {
+
+                    }
+                }
+
+                .#{$pre}-duration {
+                    h3 {
+
+                    }
+
+                    p {
+
+                    }
+                }
+
+                .#{$pre}-included {
+                    p {
+                        span[class^='icon-'] {
+
+                        }
+
+                        span:last-child {
+
+                        }
+                    }
+                }
+
+                .#{$pre}-btn {
+                    .btn {
+
+                    }
+                }
+            }
+        }
+    }
+}

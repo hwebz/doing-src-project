@@ -1,4 +1,5 @@
 
+$small-light-btn-padding: 2px 15px;
 $small-btn-padding: 0 5px;
 $big-btn-padding: 5px 25px;
 $bigger-btn-padding: 15px 30px;
@@ -38,6 +39,11 @@ $bigger-btn-padding: 15px 30px;
         &.big {
             @include button-size(false, $bigger-btn-padding);
             @extend %tcd-bold;
+        }
+
+        &.small-light {
+            @include button-size(false, $small-light-btn-padding);
+            box-shadow: 2px 4px 10px $shadow-button;
         }
     }
 }

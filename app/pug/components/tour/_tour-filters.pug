@@ -1,0 +1,48 @@
+.tcd__tour-filters.col-12.col-lg-3
+    .tcd__tour-filters-block
+        h3= filters
+        .tcd__tour-filters-content
+            each i in [0, 1, 2]
+                .tcd__tour-filters-condition
+                    h4= tour_conditions_labels[i]
+                    p
+                        a(href="#")= tour_remove
+                        span= tour_coditions_values[i]
+    .tcd__tour-filters-block
+        h3= activity
+        .tcd__tour-filters-content
+            each i in [0, 1, 2, 3]
+                .tcd__tour-filters-activity
+                    h4= activities[i]
+                        a.icon-right-thin-chevron(href="#", class={'expanded': i == 0})
+                    if i == 0
+                        ul.tcd__tour-filters-sub-activities
+                            each j in [0, 1, 2, 3, 4, 5, 6]
+                                li.tcd__checkbox
+                                    input(type="checkbox", id="tour-sub-activity-" + j)
+                                    label(for="tour-sub-activity-" + j)= activities_sub[j]
+    .tcd__tour-filters-block
+        h3= duration
+        .tcd__tour-filters-content
+            #tcd__tour-filters-duration= start
+    .tcd__tour-filters-block
+        h3= provider
+        .tcd__tour-filters-content
+            ul.tcd__tour-filters-providers
+                each i in [0, 1, 2, 3]
+                    li.tcd__checkbox
+                        input(type="checkbox", id="tour-provider-" + i, checked=(i == 0) ? true : false)
+                        label(for="tour-provider-" + i)
+                            span= providers[i]
+                            img(src=provider_logos[i])
+    .tcd__tour-filters-block
+        h3= age
+        .tcd__tour-filters-content
+            ul.tcd__tour-filters-ages
+                each i in [0, 1, 2, 3, 4, 5]
+                    li.tcd__checkbox
+                        input(type="checkbox", id="tour-age-" + i, checked=(i == 0) ? true : false)
+                        label(for="tour-age-" + i)
+                            span= ages[i]
+
+    

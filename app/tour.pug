@@ -2,3 +2,9 @@ extends pug/layouts/_index
 
 block main_content
     include pug/components/tour/_modify-search
+    include pug/components/tour/_advs
+    .tcd__tour-results-wrapper
+        .container
+            .row
+                include pug/components/tour/_tour-filters
+                include pug/components/tour/_tour-results
