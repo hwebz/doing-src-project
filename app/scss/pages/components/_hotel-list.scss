@@ -22,7 +22,7 @@ $star-size: 12px;
             width: calc(100% - 105px);
             .#{$pre}-title {
                 margin-bottom: 5px;
-                @extend %ellipse-text;
+                
                 a {
                     color: $primary-black;
                     @extend %hoverable-link;
