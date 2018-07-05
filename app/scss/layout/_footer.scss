@@ -28,7 +28,7 @@ $contact-icon-size: $heading-2;
                     
                     img {
                         max-height: $logo-height-mobile;
-                        display: none;
+                        //display: none;
 
                         @include media-breakpoint-up(md) {
                             max-height: $logo-height-desktop;

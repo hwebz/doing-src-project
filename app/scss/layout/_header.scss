@@ -32,10 +32,14 @@ $header-height-scroll: 50px;
             img {
                 max-height: $logo-height-mobile;
                 @include transition(all 0.3s ease-in-out);
-                display: none;
+                //display: none;
                 
                 @include media-breakpoint-up(md) {
                     max-height: $logo-height-desktop;
+                }
+
+                &.mobile {
+                    display: none;
                 }
             }
         }
@@ -161,6 +165,15 @@ $header-height-scroll: 50px;
             .#{$pre}-logo {
                 img {
                     max-height: $logo-height-scroll;
+
+                    &.desktop {
+                        display: none;
+                    }
+
+                    &.mobile {
+                        display: inline-block;
+
+                    }
                 }
             }
         }
