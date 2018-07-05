@@ -1,50 +1,56 @@
 .tcd__tour-results.col-12.col-lg-9
     .tcd__tour-results-title
+        button.navbar-toggler(type="button")
+            span.navbar-toggler-icon.black
         h1=result_title
             span= result_sub
     .tcd__tour-results-head
         p= result_found
-        select.form-control
-            each option in sort_options
-                option= option
+        .sort-options
+            select.form-control
+                each option in sort_options
+                    option= option
     .tcd__tour-results-list
-        .tcd__tour-results-card
-            .tcd__tour-results-card-thumbnail
-                .tcd__tour-results-card-thumb(style="background-image: url(img/slide-2.jpg)")
-                .tcd__tour-results-card-map(style="background-image: url(img/slide-2.jpg)")
-            .tcd__tour-results-card-info
-                h3.tcd__tour-results-card-title= item_title
-                .tcd__tour-results-card-stars
-                    each val in [1, 2, 3, 4]
-                        img(src="img/svg/star.svg", alt="Star")
-                .tcd__tour-results-card-reviews
-                    strong.reviews-score= item_scores[0]
-                    .reviews-info
-                        p= item_texts[0]
-                        span= item_reviews[0]
-                .tcd__tour-results-card-comment
-                    p= item_comment
-                .tcd__tour-results-card-detail-info
-                    .detail-info-label
-                        each label in item_labels
-                            p= label
-                    .detail-info-text
-                        each val in item_values
-                            p= val
-            .tcd__tour-results-card-price-info
-                span.tcd__tour-results-card-discount= item_discount
-                .tcd__tour-results-card-price
-                    p= item_old_price
-                    h3= item_price
-                .tcd__tour-results-card-duration
-                    h3= item_days
-                    p= item_price_per_day
-                .tcd__tour-results-card-included
-                    p
-                        span.icon-checked
-                        span= item_included
-                    p
-                        span.icon-checked
-                        span= item_included2
-                .tcd__tour-results-card-btn
-                    button.btn.btn-primary(type="button")= item_btn
+        each i in [0, 1, 2, 3, 4]
+            .tcd__tour-results-card
+                .tcd__tour-results-card-thumbnail
+                    .tcd__tour-results-card-thumb(style="background-image: url(img/slide-2.jpg)")
+                    .tcd__tour-results-card-map(style="background-image: url(img/map.jpg)")
+                .tcd__tour-results-card-info
+                    h3.tcd__tour-results-card-title= item_title
+                    .tcd__tour-results-card-stars
+                        each val in [1, 2, 3, 4]
+                            img(src="img/svg/star.svg", alt="Star")
+                    .tcd__tour-results-card-reviews
+                        strong.reviews-score(class=item_score_classes[i])= item_scores[i]
+                        .reviews-info
+                            p= item_texts[i]
+                            span= item_reviews[i]
+                    .tcd__tour-results-card-comment
+                        p= item_comment
+                    .tcd__tour-results-card-detail-info
+                        .detail-info-label
+                            each label in item_labels
+                                p= label
+                        .detail-info-text
+                            each val in item_values
+                                p= val
+                .tcd__tour-results-card-price-info
+                    span.tcd__tour-results-card-discount= item_discount
+                    .tcd__tour-results-card-price
+                        p= item_old_price
+                        h3= item_price
+                    .tcd__tour-results-card-duration
+                        h3= item_days
+                        p= item_price_per_day
+                    .tcd__tour-results-card-included
+                        p
+                            span.icon-checked
+                            span= item_included
+                        p
+                            span.icon-checked
+                            span= item_included2
+                    .tcd__tour-results-card-btn
+                        button.btn.btn-primary(type="button")= item_btn
+        button.btn.btn-primary.tcd__more(type="button")= item_more
+        

@@ -117,6 +117,13 @@
          "3.1",
          "2.5" 
     ],
+    "item_score_classes": [
+        "perfect",
+        "excellent",
+        "good",
+        "accepted",
+        "bad" 
+    ],
     "item_texts": [
         "Tốt",
         "Tuyệt Vời",
@@ -156,6 +163,7 @@
     "item_included": "giá đã bao gồm thuế và phí",
     "item_included2": "giá tốt nhất cho gia đình",
     "item_btn": "Chi tiết",
+    "item_more": "Tải thêm tour...",
 
     "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
     "popular_hotel": "Khách sạn phổ biến",

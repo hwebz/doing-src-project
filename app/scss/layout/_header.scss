@@ -34,29 +34,25 @@ $header-height-scroll: 50px;
                 @include transition(all 0.3s ease-in-out);
                 //display: none;
                 
-                @include media-breakpoint-up(md) {
+                @include media-breakpoint-up(lg) {
                     max-height: $logo-height-desktop;
                 }
 
                 &.mobile {
-                    display: none;
+                    display: inline-block;
+
+                    @include media-breakpoint-up(lg) {
+                        display: none;
+                    }
                 }
-            }
-        }
-        
-        .navbar-toggler {
-            border-color: transparent;
-            position: absolute;
-            right: 0;
-            outline: none;
-            padding: 0;
 
-            @include media-breakpoint-up(lg) {
-                display: none;
-            }
+                &.desktop {
+                    display: none;
 
-            .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+                    @include media-breakpoint-up(lg) {
+                        display: inline-block;
+                    }
+                }
             }
         }
 
@@ -164,18 +160,44 @@ $header-height-scroll: 50px;
         .#{$pre}-content {
             .#{$pre}-logo {
                 img {
-                    max-height: $logo-height-scroll;
-
                     &.desktop {
-                        display: none;
+                        @include media-breakpoint-up(lg) {
+                            display: none;
+                        }
                     }
 
                     &.mobile {
-                        display: inline-block;
+                        @include media-breakpoint-up(lg) {
+                            display: inline-block;
+                        }
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        max-height: $logo-height-scroll;
 
                     }
                 }
             }
+        }
+    }
+}
+
+.navbar-toggler {
+    border-color: transparent;
+    position: absolute;
+    right: 0;
+    outline: none;
+    padding: 0;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+        &.black {
+            background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
         }
     }
 }

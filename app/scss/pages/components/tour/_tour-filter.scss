@@ -6,6 +6,25 @@ $list-item-distance: 15px;
 $list-item-distance-small: 10px;
 
 .#{$pre} {
+    @extend %fixed-element;
+    background-color: $white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: visible;
+    left: -100vw;
+    @include transition(left 0.3s ease-in-out);
+
+    &.active {
+        left: 0;
+    }
+
+    .navbar-toggler {
+        top: 15px;
+        right: 15px;
+    }
+
     .#{$pre}-block {
         border-bottom: 1px solid $light-gray;
         padding-bottom: $block-bottom-distance;
@@ -105,7 +124,16 @@ $list-item-distance-small: 10px;
             padding-bottom: 0;
             border: none;
         }
-    }    
+    }   
+    
+    @include media-breakpoint-up(lg) {
+        position: relative;
+        background-color: transparent;
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        left: auto;
+    }
 }
 
 .tcd__checkbox {

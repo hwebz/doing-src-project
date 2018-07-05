@@ -1,110 +1,266 @@
 $pre: 'tcd__tour-results';
 $wrap: 'tcd__tour-results-wrapper';
 
+$thumbnail-size: 255px;
+$price-width: 175px;
+$bottom-distance: 15px;
+$star-size: 12px;
+$score-size: 30px;
+
 .#{$wrap} {
     @extend %block-padding;
     background-color: $results-background;
 }
 
+select {
+    appearance: none;
+    padding-right: 35px !important;
+    background: $white url('../img/chevron-down.png') 96% / 8% no-repeat;
+}
+
 .#{$pre} {
     .#{$pre}-title {
-        h1 {
-            span {
+        position: relative;
+        .navbar-toggler {
+            right: 0;
+            top: 0;
+            color: $primary-black;
 
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+
+        h1 {
+            padding-bottom: $bottom-distance;
+            border-bottom: 1px solid $horizontal-header-date;
+            margin-bottom: $bottom-distance;
+            padding-right: 40px;
+
+            @include media-breakpoint-up(lg) {
+                padding-right: 0;
+            }
+
+            span {
+                font-size: $body-font-size;
+                @extend %tcd-light;
+                margin-left: 5px;
             }
         }
     }
     .#{$pre}-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+margin-bottom: $bottom-distance;
         p {
-
+            margin: 0;
         }
-
-        select {
-
-        }
+        .sort-options {
+            text-align: right;
+         }
     }
 
     .#{$pre}-list {
         .#{$pre}-card {
-            .#{$pre}-thumbnail {
-                .#{$pre}-thumb {
-    
+            background-color: $white;
+            box-shadow: 2px 4px 10px $shadow-button;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+
+            .#{$pre}-card-thumbnail {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                min-height: 300px;
+                
+                .#{$pre}-card-thumb,
+                .#{$pre}-card-map {
+                    width: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
                 }
 
-                .#{$pre}-map {
-    
+                .#{$pre}-card-thumb {
+                    height: 66%
+                }
+
+                .#{$pre}-card-map {
+                    height: 34%;
+                }   
+
+                @include media-breakpoint-up(sm) {
+                    width: 50%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    width: $thumbnail-size;
                 }
             }
 
-            .#{$pre}-info {
-                .#{$pre}-title {
-    
+            .#{$pre}-card-info {
+                flex-grow: 1;
+                padding: 20px 15px;
+                width: 100%;
+
+                .#{$pre}-card-title {
+                    margin-bottom: 0;
                 }
 
-                .#{$pre}-stars {
-    
+                .#{$pre}-card-stars {
+                    img {
+                        width: $star-size;
+                        height: $star-size;
+                        margin: 0 2px;
+                    }
                 }
 
-                .#{$pre}-reviews {
+                .#{$pre}-card-reviews {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 8px;
                     .reviews-score {
+                        width: $score-size;
+                        height: $score-size;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                        color: $white;
 
+                        &.excellent {
+                            background-color: $review-excellent;
+                        }
+
+                        &.perfect {
+                            background-color: $review-perfect;
+                        }
+
+                        &.good {
+                            background-color: $review-good;
+                        }
+
+                        &.accepted {
+                            background-color: $review-accepted;
+                        }
+
+                        &.bad {
+                            background-color: $review-bad;
+                        }
                     }
 
                     .reviews-info {
-                        
-                    }
-                }
-
-                .#{$pre}-comment {
-                    p {
-
-                    }
-                }
-
-                .#{$pre}-detail-info {
-                    .detail-info-label {
                         p {
+                            margin: 0;
+                            line-height: 0.8;
+                        }
 
+                        span {
+                            font-size: $small-font-size;
+                            color: $gray;
+                        }
+                    }
+                }
+
+                .#{$pre}-card-comment {
+                    margin-top: 5px;
+                    p {
+                        @extend %tcd-light-italic;
+                    }
+                }
+
+                .#{$pre}-card-detail-info {
+                    display: flex;
+                    flex-direction: row;
+                    .detail-info-label {
+                        flex-grow: 1;
+                        p {
+                            margin-bottom: 5px;
+                            text-transform: uppercase;
+                            color: $gray;
                         }
                     }
 
                     .detail-info-text {
+                        flex-grow: 1;
                         p {
-
+                            margin-bottom: 5px;
                         }
                     }
                 }
+
+                @include media-breakpoint-up(sm) {
+                    width: 50%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    width: auto;
+                }
             }
 
-            .#{$pre}-price-info {
-                .#{$pre}-discount {
-                
+            .#{$pre}-card-price-info {
+                padding: 20px 15px;
+                border-top: 1px solid $horizontal-header-date;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .#{$pre}-card-discount {
+                    position: absolute;
+                    top: -10px;
+                    right: -40px;
+                    @include transform(rotateZ(45deg));
+                    background-color: $primary-red;
+                    color: $white;
+                    padding: 20px 40px 2px 40px;
+                    display: inline-block;
                 }
 
-                .#{$pre}-price {
+                .#{$pre}-card-price {
                     p {
-
+                        font-size: $small-font-size;
+                        text-decoration: line-through;
+                        margin-bottom: 0;
                     }
 
                     h3 {
-
+                        color: $primary-yellow;
+                        margin-bottom: 0;
                     }
                 }
 
-                .#{$pre}-duration {
+                .#{$pre}-card-duration {
+                    box-shadow: 0 0 4px $shadow-button;
+                    padding: 10px;
+                    text-align: center;
+                    margin: 15px 0;
                     h3 {
-
+                        margin-bottom: 0;
                     }
 
                     p {
-
+                        color: $gray;
+                        font-size: $small-font-size;
+                        margin: 0;
                     }
                 }
 
-                .#{$pre}-included {
+                .#{$pre}-card-included {
                     p {
+                        font-size: $small-font-size;
+                        text-align: right;
+                        margin: 0;
+
                         span[class^='icon-'] {
-
+                            margin-right: 5px;
+                            font-size: $small-font-size - 2px;
                         }
 
                         span:last-child {
@@ -113,11 +269,34 @@ $wrap: 'tcd__tour-results-wrapper';
                     }
                 }
 
-                .#{$pre}-btn {
-                    .btn {
+                .#{$pre}-card-btn {
+                    flex-grow: 1;
+                    position: relative;
+                    margin-top: $bottom-distance;
 
+                    .btn {
+                        width: 100%;
+
+                        @include media-breakpoint-up(md) {
+                            position: absolute;
+                            bottom: 0;
+                        }
                     }
                 }
+
+                @include media-breakpoint-up(md) {
+                    width: $price-width;
+                    border-top: 0;
+                    border-left: 1px solid $horizontal-header-date;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include media-breakpoint-up(md) {
+                flex-wrap: nowrap;
             }
         }
     }

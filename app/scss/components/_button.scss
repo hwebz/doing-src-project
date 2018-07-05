@@ -45,5 +45,11 @@ $bigger-btn-padding: 15px 30px;
             @include button-size(false, $small-light-btn-padding);
             box-shadow: 2px 4px 10px $shadow-button;
         }
+
+        &.tcd__more {
+            @extend %tcd-light;
+            margin: 30px auto 0;
+            display: block;
+        }
     }
 }
