@@ -61,6 +61,24 @@
     text-overflow: ellipsis;
 }
 
+@mixin initializing($height, $width) {
+    height: $height;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: $width;
+        height: 100%;
+        background: $white url('../img/ajax-loader.gif') no-repeat center center;
+        @include opacity(0.9);
+        @include transform(translate(-50%, 0));
+        z-index: 2;
+    }
+}
+
 @mixin slick-controls($color, $backgroundColor) {
     .slick-arrow {
         width: $slick-arrow-size - 10px;

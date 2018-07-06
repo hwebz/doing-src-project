@@ -6,7 +6,7 @@ $banner-height: 380px;
 $banner-background-image: '../img/slide-4.jpg';
 $modify-search-desktop-padding: 50px 0;
 $modify-search-mobile-padding: 20px 0;
-$modify-search-form-desktop-padding: 20px;
+$modify-search-form-desktop-padding: 12px 10px 12px 20px;
 $modify-search-form-mobile-padding: 15px;
 $big-field: 40%;
 $btn-field: 20%;
@@ -33,6 +33,13 @@ $discount-size: 70px;
             min-width: 70%;
             .#{$oldPre}-tour-introduction {
                 color: $primary-black;
+                h3 {
+                    margin-top: 10px;
+                }
+                p {
+                    margin-bottom: 5px;
+                    font-size: $small-font-size;
+                }
             }
     
             .#{$oldPre}-tour-form {
@@ -62,10 +69,16 @@ $discount-size: 70px;
             }
         }
 
-        .#{$adv} {
+        .#{$adv}-slider {
             margin-top: 10px;
+            flex-grow: 1;
+            overflow: hidden;
             @include media-breakpoint-up(lg) {
                 margin-top: 0;
+            }
+
+            &.initializing {
+                @include initializing(134px, 101%);
             }
         }
 
@@ -90,7 +103,7 @@ $discount-size: 70px;
     padding: 9px;
 
     h4 {
-        
+        margin-bottom: 5px;
     }
 
     .#{$adv}-content {

@@ -7,11 +7,12 @@ $separator-font-size: 20px;
 
 .#{$pre} {
     @include background-degree(-60deg, $search-form-start-color , $search-form-end-color);
-    padding: 15px 0;
+    padding: 10px 0;
     .#{$pre}-wrapper {
         display: flex;
         flex-direction: column;
         margin-top: -15px;
+        padding: 5px 0;
         .#{$pre}-block {
             color: $white;
             display: flex;

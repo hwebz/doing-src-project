@@ -8,13 +8,14 @@
                 .tcd__tour-filters-condition
                     h4= tour_conditions_labels[i]
                     p
-                        a(href="#")= tour_remove
+                        a(href="#")
+                            span.icon-cancel-music
                         span= tour_coditions_values[i]
     .tcd__tour-filters-block
         h3= activity
         .tcd__tour-filters-content
             each i in [0, 1, 2, 3]
-                .tcd__tour-filters-activity
+                .tcd__tour-filters-activity.toggle-collapse
                     h4= activities[i]
                         a.icon-right-thin-chevron(href="#", class={'expanded': i == 0})
                     if i == 0

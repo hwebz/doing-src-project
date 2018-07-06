@@ -117,19 +117,5 @@ $tour-desktop-padding: 75px 0 40px 0;
 }
 
 .initializing {
-    height: $slide-height + 25px;
-    position: relative;
-
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 95%;
-        height: 100%;
-        background: $white url('../img/ajax-loader.gif') no-repeat center center;
-        @include opacity(0.9);
-        @include transform(translate(-50%, 0));
-        z-index: 2;
-    }
+    @include initializing($slide-height + 25px, 95%);
 }

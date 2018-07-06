@@ -59,6 +59,12 @@ margin-bottom: $bottom-distance;
         }
         .sort-options {
             text-align: right;
+
+            select {
+                height: 32px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
          }
     }
 
@@ -158,11 +164,12 @@ margin-bottom: $bottom-distance;
                         p {
                             margin: 0;
                             line-height: 0.8;
+                            margin-top: 2px;
                         }
 
                         span {
                             font-size: $small-font-size;
-                            color: $gray;
+                            color: $dark-gray;
                         }
                     }
                 }
@@ -182,7 +189,7 @@ margin-bottom: $bottom-distance;
                         p {
                             margin-bottom: 5px;
                             text-transform: uppercase;
-                            color: $gray;
+                            color: $dark-gray;
                         }
                     }
 
@@ -246,7 +253,7 @@ margin-bottom: $bottom-distance;
                     }
 
                     p {
-                        color: $gray;
+                        color: $dark-gray;
                         font-size: $small-font-size;
                         margin: 0;
                     }

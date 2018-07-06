@@ -20,22 +20,24 @@ include ../../mixins/_mixins
                         +form-input(ms_departure, "text", '', '', ms_date)
                     .tcd__search-form-btn
                         button.btn.btn-primary.tcd__search-btn(type="submit")= ms_btn
-            .tcd__adv
-                h4= adv_title
-                .tcd__adv-content
-                    .tcd__adv-discount
-                        p
-                            span= minus
-                            span= adv_discount
-                            span= percent
-                    .tcd__adv-info
-                        ul
-                            each util in adv_utils
-                                li= util
-                        h3.tcd__adv-price= adv_price
-                            span= dong
-                            span= adv_per
-                        button.btn.btn-primary.small-light(type="button")= adv_btn
+            .tcd__adv-slider.initializing
+                each i in [0, 1, 2, 3]
+                    .tcd__adv
+                        h4= adv_title
+                        .tcd__adv-content
+                            .tcd__adv-discount
+                                p
+                                    span= minus
+                                    span= adv_discount
+                                    span= percent
+                            .tcd__adv-info
+                                ul
+                                    each util in adv_utils
+                                        li= util
+                                h3.tcd__adv-price= adv_price
+                                    span= dong
+                                    span= adv_per
+                                button.btn.btn-primary.small-light(type="button")= adv_btn
 
 
 

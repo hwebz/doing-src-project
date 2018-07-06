@@ -1,20 +1,22 @@
 .tcd__advs
     .container
-        .tcd__advs-wrapper
-            .tcd__advs-block
-                h3!= promo_title
-                span.tcd__advs-separator= promo_separator
-            .tcd__advs-block
-                h3= promo_location1
-                    span= promo_location1_price
-                    small= dong
-                .tcd__advs-btn
-                    button.btn.btn-primary.small-light(type="button")= promo_btn
-                span.tcd__advs-separator= promo_separator
-            .tcd__advs-block
-                h3= promo_location2
-                    span= promo_location2_price
-                    small= dong
-                .tcd__advs-btn
-                    button.btn.btn-primary.small-light(type="button")= promo_btn
+        .tcd__advs-slider
+            each i in [0, 1, 2, 3]
+                .tcd__advs-wrapper
+                    .tcd__advs-block
+                        h3!= promo_title
+                        span.tcd__advs-separator= promo_separator
+                    .tcd__advs-block
+                        h3= promo_location1
+                            span= promo_location1_price
+                            small= dong
+                        .tcd__advs-btn
+                            button.btn.btn-primary.small-light(type="button")= promo_btn
+                        span.tcd__advs-separator= promo_separator
+                    .tcd__advs-block
+                        h3= promo_location2
+                            span= promo_location2_price
+                            small= dong
+                        .tcd__advs-btn
+                            button.btn.btn-primary.small-light(type="button")= promo_btn
         
