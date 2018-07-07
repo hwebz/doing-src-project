@@ -159,6 +159,22 @@ function getCenterPoint() {
     }
 }
 
+function advSlider(element) {
+    if (isDefined(element)) {
+        element.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            infinite: true,
+            dot: false,
+            arrows: false,
+        }).promise().done(function () {
+            $(this).removeClass('initializing');
+        });
+    }
+}
+
 function initMap(mapId, zoom) {
     google.maps.event.addDomListener(window, 'load', function() {
         var mark = getCenterPoint();

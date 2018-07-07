@@ -1,23 +1,7 @@
-function advSlider(element) {
-    if (isDefined(element)) {
-        element.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            infinite: true,
-            dot: false,
-            arrows: false,
-        }).promise().done(function () {
-            $(this).removeClass('initializing');
-        });
-    }
-}
-
 $(document).ready(function () {
     var body = $('body');
-    var resultsClass = '.tcd__tour-results-wrapper';
-    var filterClass = '.tcd__tour-filters';
+    var resultsClass = '.tcd__results-wrapper';
+    var filterClass = '.tcd__filters';
     var results = $(resultsClass);
     var toggleButton = results.find('.navbar-toggler');
 
@@ -27,7 +11,7 @@ $(document).ready(function () {
     var toggleCollapseClass = '.toggle-collapse';
     var toggleBtnClass = '.icon-right-thin-chevron';
     var toggleCollapse = $(toggleCollapseClass).find(toggleBtnClass);
-    var dropdownClasses = '.tcd__tour-filters-sub-activities';
+    var dropdownClasses = '.tcd__filters-sub-activities';
 
     var durationRangeSlider = $('#tcd__tour-filters-duration');
 

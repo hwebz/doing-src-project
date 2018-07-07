@@ -1,0 +1,17 @@
+$pre: 'tcd__modify-search';
+$oldPre: 'tcd__search-form';
+
+$flight-tab-content-padding: 20px 10px 12px 20px;
+
+.#{$pre} {
+    .#{$oldPre}-tab-content {
+        padding: $flight-tab-content-padding;
+        .form-group + .invalid-feedback {
+            margin-bottom: 0;
+        }
+
+        .#{$oldPre}-wrapper {
+            margin: 0 auto;
+        }
+    }
+}

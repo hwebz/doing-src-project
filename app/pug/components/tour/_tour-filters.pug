@@ -1,47 +1,47 @@
-.tcd__tour-filters.col-12.col-lg-3
+.tcd__filters.col-12.col-lg-3
     button.navbar-toggler(type="button")
         span.icon-cancel-music
-    .tcd__tour-filters-block
+    .tcd__filters-block
         h3= filters
-        .tcd__tour-filters-content
+        .tcd__filters-content
             each i in [0, 1, 2]
-                .tcd__tour-filters-condition
+                .tcd__filters-condition
                     h4= tour_conditions_labels[i]
                     p
                         a(href="#")
                             span.icon-cancel-music
                         span= tour_coditions_values[i]
-    .tcd__tour-filters-block
+    .tcd__filters-block
         h3= activity
-        .tcd__tour-filters-content
+        .tcd__filters-content
             each i in [0, 1, 2, 3]
-                .tcd__tour-filters-activity.toggle-collapse
+                .tcd__filters-activity.toggle-collapse
                     h4= activities[i]
                         a.icon-right-thin-chevron(href="#", class={'expanded': i == 0})
                     if i == 0
-                        ul.tcd__tour-filters-sub-activities
+                        ul.tcd__filters-sub-activities
                             each j in [0, 1, 2, 3, 4, 5, 6]
                                 li.tcd__checkbox
                                     input(type="checkbox", id="tour-sub-activity-" + j)
                                     label(for="tour-sub-activity-" + j)= activities_sub[j]
-    .tcd__tour-filters-block
+    .tcd__filters-block
         h3= duration
-        .tcd__tour-filters-content
-            #tcd__tour-filters-duration= start
-    .tcd__tour-filters-block
+        .tcd__filters-content
+            #tcd__filters-duration= start
+    .tcd__filters-block
         h3= provider
-        .tcd__tour-filters-content
-            ul.tcd__tour-filters-providers
+        .tcd__filters-content
+            ul.tcd__filters-providers
                 each i in [0, 1, 2, 3]
                     li.tcd__checkbox
                         input(type="checkbox", id="tour-provider-" + i, checked=(i == 0) ? true : false)
                         label(for="tour-provider-" + i)
                             span= providers[i]
                             img(src=provider_logos[i])
-    .tcd__tour-filters-block
+    .tcd__filters-block
         h3= age
-        .tcd__tour-filters-content
-            ul.tcd__tour-filters-ages
+        .tcd__filters-content
+            ul.tcd__filters-ages
                 each i in [0, 1, 2, 3, 4, 5]
                     li.tcd__checkbox
                         input(type="checkbox", id="tour-age-" + i, checked=(i == 0) ? true : false)

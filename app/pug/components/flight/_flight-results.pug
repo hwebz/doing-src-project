@@ -1,0 +1,128 @@
+.tcd__results.col-12.col-lg-9
+    .tcd__results-title
+        button.navbar-toggler(type="button")
+            span.navbar-toggler-icon.black
+        h1=result_title
+            span= result_sub
+    .tcd__results-head
+        p= result_found
+        .sort-options
+            select.form-control
+                each option in sort_options
+                    option= option
+    .tcd__results-list
+        each i in [0, 1, 2, 3]
+            .tcd__results-card.type-2(class={'active': (i == 0 || i == 3)})
+                .tcd__results-card-wrapper
+                    .tcd__results-brand
+                        img(src=airline_images[i])
+                        h4= airline_names[i]
+                        p= airline_codes[i]
+                    .tcd__results-info
+                        .tcd__results-column-info
+                            h2= airline_departure_time
+                            p= airline_departure
+                            p= airline_departure_code
+                        .tcd__results-info-center
+                            span= airline_duration
+                            img(src="img/svg/airplane.svg")
+                            span= airline_stop
+                        .tcd__results-column-info
+                            h2= airline_arrival_time
+                            p= airline_arrival
+                            p= airline_arrival_code
+                    .tcd__results-price
+                        h3= airline_price
+                            span= airline_per
+                        p
+                            span.icon-checked
+                            span= airline_tax
+                        .tcd__results-btns
+                            a(href="#")= airline_detail
+                            button.btn.btn-primary(type="button")= airline_btn
+                .tcd__results-detail(class={'active': (i == 0 || i == 3)})
+                    .tcd__results-detail-card
+                        .tcd__results-detail-brand
+                            img(src=airline_images[i])
+                            h4= airline_names[i]
+                            p= airline_codes_types[i]
+                        .tcd__results-detail-info
+                            .tcd__results-detail-vertical-line
+                                span
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_departure_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_departure
+                                        span= airline_departure_code
+                                    p= airline_departure_airport
+                            .tcd__results-detail-info-middle
+                                p= airline_duration_first
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_arrival_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_arrival
+                                        span= airline_arrival_code
+                                    p= airline_arrival_airport
+                        .tcd__results-detail-utils
+                            ul
+                                each util in airline_utils
+                                    li= util
+                    .tcd__results-detail-stopover
+                        p= airline_transit_label
+                            strong= airline_transit_location
+                            span= airline_transit_label2
+                            strong= airline_transit_duration
+                    .tcd__results-detail-card
+                        .tcd__results-detail-brand
+                            img(src=airline_images[i])
+                            h4= airline_names[i]
+                            p= airline_codes_types[i]
+                        .tcd__results-detail-info
+                            .tcd__results-detail-vertical-line
+                                span
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_departure_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_departure
+                                        span= airline_departure_code
+                                    p= airline_departure_airport
+                            .tcd__results-detail-info-middle
+                                p= airline_duration_first
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_arrival_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_arrival
+                                        span= airline_arrival_code
+                                    p= airline_arrival_airport
+                        .tcd__results-detail-utils
+                            ul
+                                each util in airline_utils
+                                    li= util
+        .tcd__pagination
+            ul
+                li.tcd__pagination-prev-all
+                    a(href="#")
+                        each i in [0, 1]
+                            span.icon-right-thin-chevron
+                li.tcd__pagination-prev
+                    a(href="#")
+                        span.icon-right-thin-chevron
+                each i in [0, 1, 2, 3]
+                    li(class=(i == 0) ? 'active' : '')
+                        a(href="#")
+                            span= pagination[i]
+                li.tcd__pagination-next
+                        a(href="#")
+                            span.icon-right-thin-chevron
+                li.tcd__pagination-next-all
+                    a(href="#")
+                        each i in [0, 1]
+                            span.icon-right-thin-chevron

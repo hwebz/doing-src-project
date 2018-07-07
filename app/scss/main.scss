@@ -46,10 +46,13 @@
 @import 'pages/components/_hotel-list';
 @import 'pages/components/_contact';
 
+@import 'pages/components/_filters';
+@import 'pages/components/_results';
+
 @import 'pages/components/tour/_modify-search';
 @import 'pages/components/tour/_advs';
-@import 'pages/components/tour/_tour-filter';
-@import 'pages/components/tour/_tour-results';
+
+@import 'pages/components/flight/_modify-search';
 
 /********************
        VENDORS

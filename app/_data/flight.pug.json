@@ -8,6 +8,162 @@
     "register": "Đăng ký",
     "login": "Đăng nhập",
 
+    "flight_tab": "Chuyến bay",
+    "tour_tab": "Tour",
+    "return_flight": "Khứ hồi",
+    "oneway_flight": "Một chiều",
+    "from": "Từ",
+    "to": "Tới",
+    "flight_date": "Ngày bay",
+    "passenger": "Hành khách",
+    "from_info": "Hanoi (HAN)",
+    "to_info": "Kuala Lumpur (KUL)",
+    "flight_date_info": "22 Th06 - 28 Th06 2018",
+    "passenger_info": "1 người lớn, 2 trẻ em, Phổ thông",
+    "search_form_btn": "Tìm chuyến bay",
+    "from_error": "Vui lòng chọn điểm khởi hành",
+    "tour_introduction": "Chọn điểm đến bạn muốn khám phá",
+    "tour_description": "Hàng trăm ngàn tour thú vị đang chờ đón bạn",
+    "tour_destination": "Tại",
+    "tour_place": "Hanoi, Vietnam",
+    "tour_date": "Ngày khởi hành",
+    "tour_date_value": "21 Th06 2018",
+    "tour_btn": "Tìm kiếm",
+    "result_location": "Hanoi, Vietnam",
+    "result_city": "Thành phố Hà Nội (HAN), Việt Nam",
+    "result_airport": "Sân bay Nội Bài (NIA), Hà Nội, Việt Nam",
+    "result_airport2": "Sân bay Phú Hưng (HBN), Hà Nội, Việt Nam",
+    "ticket_type": "Loại vé",
+    "tickets": [
+        "Phổ thông",
+        "Thương gia"
+    ],
+    "paxs": [
+        "Người lớn",
+        "Trưởng thành",
+        "Trẻ em",
+        "Sơ sinh"
+    ],
+    "plus": "+",
+    "minus": "-",
+    "zero": "0",
+
+    "filters": "Điều kiện lọc",
+    "flight_conditions_labels": [
+        "Chặng bay:",
+        "Hãng hàng không:",
+        "Tiện ích:"
+    ],
+    "flight_coditions_values": [
+        "1+ stops",
+        "Vietjet Air",
+        "Thức ăn miễn phí"
+    ],
+    "tour_remove": "x",
+
+    "stop": "Chặng bay",
+    "stops": [
+        "Nonstop",
+        "1+ stop(s)"
+    ],
+
+    "duration": "Thời gian bay",
+
+    "airline": "Hãng cung cấp tour",
+    "airlines": [
+        "Malindo Air",
+        "Vietjet Air",
+        "Vietnam Airlines"
+    ],
+    "airline_logos": [
+        "img/svg/OD.svg",
+        "img/svg/VJ.svg",
+        "img/svg/VN.svg"
+    ],
+
+    "departire_time": "Giờ khởi hành",
+    "arrival_time": "Giờ hạ cánh",
+
+    "util": "Tiện ích",
+    "utils": [
+        "Hành lý xách tay",
+        "Thức ăn miễn phí",
+        "Màn hình giải trí tại chỗ",
+        "WiFi",
+        "Cổng sạc điện thoại"
+    ], 
+
+    "result_title": "Hanoi tới Kuala Lumpur",
+    "result_sub": "vào ngày 22 Th06 2018",
+    "result_found": "Tìm thấy 45 chuyến bay",
+    "sort_options": [
+        "Giá (Thấp tới Cao)",
+        "Giá (Cao tới Thấp)",
+        "Tên (A tới Z)",
+        "Tên (Z tới A)"
+    ],
+
+    "airline_names": [
+        "Vietnam Airlines",
+        "Malindo Air",
+        "Vietjet Air",
+        "Vietnam Airlines"
+    ],
+    "airline_codes": [
+        "VN315",
+        "OD572",
+        "VJ915",
+        "VN340"
+    ],
+    "airline_codes_types": [
+        "Phổ thông - VN315",
+        "Thương gia - OD572",
+        "Phổ thông - VJ915",
+        "Thương gia - VN340"
+    ],
+    "airline_images": [
+        "img/svg/VN.svg",
+        "img/svg/OD.svg",
+        "img/svg/VJ.svg",
+        "img/svg/VN.svg"
+    ],
+    "airline_departure_time": "11:40",
+    "airline_arrival_time": "13:55",
+    "airline_departure": "Hanoi",
+    "airline_departure_airport": "Noi Bai International Airport",
+    "airline_departure_code": "(HAN)",
+    "airline_arrival": "Kuala Lumpur",
+    "airline_arrival_airport": "Kuala Lumpur International Airport",
+    "airline_arrival_code": "(KUL)",
+    "airline_departure_date": "22 Th06 2018",
+    "airline_duration_first": "1h 0m",
+    "airline_duration_second": "2h 50m",
+    "airline_transit_label": "Nối chuyến tại: ",
+    "airline_transit_location": "Ho Chi Minh",
+    "airline_transit_label2": " - Thời gian chờ: ",
+    "airline_transit_duration": "1h 10m",
+    "airline_utils": [
+        "Hành lý xách tay (7kg)",
+        "Miễn phí đồ ăn",
+        "Màn hình giải trí tại chỗ",
+        "Cổng sạc điện thoại"
+    ],
+    "airline_duration": "3h 15m",
+    "airline_stop": "nonstop",
+    "airline_price": "4,500,000đ",
+    "airline_per": "/người",
+    "airline_tax": "giá đã bao gồm thuế và phí",
+    "airline_detail": "Chi tiết",
+    "airline_btn": "Chọn",
+    "pagination": [
+        "1",
+        "2",
+        "3",
+        "4"
+    ],
+
+    "modal_description": "5 Ngày 4 Đêm - <strong>4,500,000đ</strong>",
+
     "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
     "popular_hotel": "Khách sạn phổ biến",
     "tag": "Thẻ",

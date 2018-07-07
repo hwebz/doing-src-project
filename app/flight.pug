@@ -1,0 +1,9 @@
+extends pug/layouts/_index
+
+block main_content
+    include pug/components/flight/_modify-search
+    .tcd__results-wrapper
+        .container
+            .row
+                include pug/components/flight/_flight-filters
+                include pug/components/flight/_flight-results

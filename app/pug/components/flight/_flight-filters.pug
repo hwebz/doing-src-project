@@ -1,0 +1,55 @@
+.tcd__filters.col-12.col-lg-3
+    button.navbar-toggler(type="button")
+        span.icon-cancel-music
+    .tcd__filters-block
+        h3= filters
+        .tcd__filters-content
+            each i in [0, 1, 2]
+                .tcd__filters-condition
+                    h4= flight_conditions_labels[i]
+                    p
+                        a(href="#")
+                            span.icon-cancel-music
+                        span= flight_coditions_values[i]
+    .tcd__filters-block
+        h3= stop
+        .tcd__filters-content
+            ul.tcd__filters-ages
+                each i in [0, 1]
+                    li.tcd__checkbox
+                        input(type="checkbox", id="flight-age-" + i, checked=(i == 1) ? true : false)
+                        label(for="flight-age-" + i)
+                            span= stops[i]
+    .tcd__filters-block
+        h3= duration
+        .tcd__filters-content
+            #tcd__flight-filters-duration
+    .tcd__filters-block
+        h3= airline
+        .tcd__filters-content
+            ul.tcd__filters-providers
+                each i in [0, 1, 2]
+                    li.tcd__checkbox
+                        input(type="checkbox", id="flight-airline-" + i, checked=(i == 1) ? true : false)
+                        label(for="flight-airline-" + i)
+                            span= airlines[i]
+                            img(src=airline_logos[i])
+    .tcd__filters-block
+        h3= departire_time
+        .tcd__filters-content
+            #tcd__flight-filters-departure
+    .tcd__filters-block
+        h3= arrival_time
+        .tcd__filters-content
+            #tcd__flight-filters-arrival
+    .tcd__filters-block
+        h3= util
+        .tcd__filters-content
+            ul.tcd__filters-ages
+                each i in [0, 1, 2, 3, 4]
+                    li.tcd__checkbox
+                        input(type="checkbox", id="flight-util-" + i, checked=(i == 1) ? true : false)
+                        label(for="flight-util-" + i)
+                            span= utils[i]
+
+    
