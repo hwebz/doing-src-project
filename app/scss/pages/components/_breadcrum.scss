@@ -1,0 +1,20 @@
+$pre: 'tcd__breadcrum';
+
+.#{$pre} {
+    padding: 25px 0;
+    @include background-degree(-60deg, $search-form-start-color , $search-form-end-color);
+    ul {
+        display: flex;
+        flex-direction: row;
+        li {
+            a {
+                color: $white;  
+                @extend %hoverable-link;
+                span {
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}

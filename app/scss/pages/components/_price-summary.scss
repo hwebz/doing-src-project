@@ -1,0 +1,21 @@
+$pre: 'tcd__price-summary';
+$adv: 'tcd__adv';
+
+.#{$pre} {
+    .#{$adv}-slider {
+        .#{$adv} {
+            .#{$adv}-content {
+                .#{$adv}-info {
+                    .#{$adv}-price {
+                        font-size: $heading-3;
+                        line-height: 2;
+
+                        span {
+                            font-size: $small-font-size;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

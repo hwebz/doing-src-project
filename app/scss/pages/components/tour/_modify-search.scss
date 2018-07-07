@@ -110,6 +110,7 @@ $discount-size: 70px;
         display: flex;
         flex-direction: row;
         flex-grow: 1;
+        position: relative;
 
         .#{$adv}-discount {
             @extend %tcd-pacifico;
@@ -134,7 +135,6 @@ $discount-size: 70px;
 
         .#{$adv}-info {
             width:calc(100% - 80px);
-            position: relative;
 
             ul {
                 margin-top: 5px;

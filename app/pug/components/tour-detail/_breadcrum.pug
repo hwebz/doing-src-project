@@ -1,0 +1,9 @@
+.tcd__breadcrum
+    .container
+        ul
+            each i in [0, 1, 2, 3]
+                li
+                    a(href="#")= breadcrums[i]
+                        if i != 3
+                            span= breadcrum_arrow
+            

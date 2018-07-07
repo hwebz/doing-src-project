@@ -143,55 +143,6 @@ margin-bottom: $bottom-distance;
                     }
                 }
 
-                .#{$pre}-card-reviews {
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 8px;
-                    .reviews-score {
-                        width: $score-size;
-                        height: $score-size;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 10px;
-                        border-radius: 5px;
-                        color: $white;
-
-                        &.excellent {
-                            background-color: $review-excellent;
-                        }
-
-                        &.perfect {
-                            background-color: $review-perfect;
-                        }
-
-                        &.good {
-                            background-color: $review-good;
-                        }
-
-                        &.accepted {
-                            background-color: $review-accepted;
-                        }
-
-                        &.bad {
-                            background-color: $review-bad;
-                        }
-                    }
-
-                    .reviews-info {
-                        p {
-                            margin: 0;
-                            line-height: 0.8;
-                            margin-top: 2px;
-                        }
-
-                        span {
-                            font-size: $small-font-size;
-                            color: $dark-gray;
-                        }
-                    }
-                }
-
                 .#{$pre}-card-comment {
                     margin-top: 5px;
                     p {
@@ -695,6 +646,55 @@ margin-bottom: $bottom-distance;
                     margin-right: 15px;
                 }
             }
+        }
+    }
+}
+
+.tcd__reviews {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    .reviews-score {
+        width: $score-size;
+        height: $score-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        border-radius: 5px;
+        color: $white;
+
+        &.excellent {
+            background-color: $review-excellent;
+        }
+
+        &.perfect {
+            background-color: $review-perfect;
+        }
+
+        &.good {
+            background-color: $review-good;
+        }
+
+        &.accepted {
+            background-color: $review-accepted;
+        }
+
+        &.bad {
+            background-color: $review-bad;
+        }
+    }
+
+    .reviews-info {
+        p {
+            margin: 0;
+            line-height: 0.8;
+            margin-top: 2px;
+        }
+
+        span {
+            font-size: $small-font-size;
+            color: $dark-gray;
         }
     }
 }

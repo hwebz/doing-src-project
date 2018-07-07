@@ -1,0 +1,33 @@
+$parent: 'tcd__detail-wrapper';
+$pre: 'tcd__detail';
+
+.#{$parent} {
+    @extend %block-padding;
+}
+
+.#{$pre} {
+    h2 {
+        span {
+            font-size: $body-font-size;
+            @extend %tcd-light;
+        }
+    }
+
+    .#{$pre}-reviews {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .tcd__reviews {
+        
+        }    
+
+        .#{$pre}-reviews-info {
+            p {
+                margin: 0;
+                line-height: 1.3;
+            }
+        }
+    }
+}
