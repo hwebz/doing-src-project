@@ -94,6 +94,11 @@ margin-bottom: $bottom-distance;
                     background-position: center center;
                 }
 
+                .#{$pre}-card-map {
+                    cursor: pointer;
+                    @extend %hoverable-link;
+                }
+
                 .#{$pre}-card-thumb {
                     height: 66%
                 }

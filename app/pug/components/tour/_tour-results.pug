@@ -15,7 +15,7 @@
             .tcd__tour-results-card
                 .tcd__tour-results-card-thumbnail
                     .tcd__tour-results-card-thumb(style="background-image: url(img/slide-2.jpg)")
-                    .tcd__tour-results-card-map(style="background-image: url(img/map.jpg)")
+                    .tcd__tour-results-card-map(id="small-map-tour-" + i, data-toggle="modal", data-target="#map-tour")
                 .tcd__tour-results-card-info
                     h3.tcd__tour-results-card-title= item_title
                     .tcd__tour-results-card-stars
@@ -66,10 +66,22 @@
                         a(href="#")
                             span= pagination[i]
                 li.tcd__pagination-next
-                    a(href="#")
-                        span.icon-right-thin-chevron
+                        a(href="#")
+                            span.icon-right-thin-chevron
                 li.tcd__pagination-next-all
                     a(href="#")
                         each i in [0, 1]
                             span.icon-right-thin-chevron
+#map-tour.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= item_title
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                #map-tour-map
+            .modal-footer
+                p!= modal_description
+                button.btn.btn-primary(type="button", data-dismiss="modal")= promo_btn
         

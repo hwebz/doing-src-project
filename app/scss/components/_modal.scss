@@ -1,0 +1,66 @@
+$pre: 'tcd__modal';
+
+$map-tour-width: 600px;
+$map-tour-map-height: 400px;
+
+.#{$pre} {
+    .modal-dialog {
+        .modal-content {
+            border-radius: 0;
+            .modal-header {
+                padding: 10px;
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                }
+            }
+
+            .modal-body {
+
+            }
+
+            .modal-footer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 12px 10px;
+
+                p {
+                    font-size: $heading-3;
+                    margin: 0;
+                    flex-grow: 1;
+
+                    strong {
+                        color: $primary-yellow;
+                    }
+                }
+
+                .btn {
+                    padding: 10px 20px;
+                    @extend %tcd-light;
+                }
+            }
+        }
+    }
+}
+
+#map-tour {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                padding: 0;
+
+                #map-tour-map {
+                    height: $map-tour-map-height;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            min-width: $map-tour-width;
+        }
+    }
+}
