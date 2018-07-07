@@ -18,6 +18,7 @@ $separator-font-size: 20px;
             display: flex;
             flex-grow: 1;
             flex-direction: row;
+            text-align: left;
             align-items: center;
             justify-content: center;
             padding-left: 15px;
@@ -60,7 +61,7 @@ $separator-font-size: 20px;
                 font-size: $separator-font-size;
                 display: none;
 
-                @include media-breakpoint-up(md) {
+                @include media-breakpoint-up(lg) {
                     display: inline-block;
                 }
             }
@@ -72,11 +73,15 @@ $separator-font-size: 20px;
             }
 
             @include media-breakpoint-up(md) {
-                justify-content: space-around;
+                flex-direction: column;
+                text-align: center;
             }
 
-            @include media-breakpoint-up(xl) {
+            @include media-breakpoint-up(lg) {
                 padding-left: 0;
+                justify-content: space-around;
+                flex-direction: row;
+                text-align: left;
             }
         }   
 

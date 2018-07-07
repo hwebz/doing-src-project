@@ -52,5 +52,24 @@
                             span= item_included2
                     .tcd__tour-results-card-btn
                         button.btn.btn-primary(type="button")= item_btn
-        button.btn.btn-primary.tcd__more(type="button")= item_more
+        .tcd__pagination
+            ul
+                li.tcd__pagination-prev-all
+                    a(href="#")
+                        each i in [0, 1]
+                            span.icon-right-thin-chevron
+                li.tcd__pagination-prev
+                    a(href="#")
+                        span.icon-right-thin-chevron
+                each i in [0, 1, 2, 3]
+                    li(class=(i == 0) ? 'active' : '')
+                        a(href="#")
+                            span= pagination[i]
+                li.tcd__pagination-next
+                    a(href="#")
+                        span.icon-right-thin-chevron
+                li.tcd__pagination-next-all
+                    a(href="#")
+                        each i in [0, 1]
+                            span.icon-right-thin-chevron
         

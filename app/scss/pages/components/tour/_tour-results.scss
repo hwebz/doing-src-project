@@ -1,11 +1,14 @@
 $pre: 'tcd__tour-results';
 $wrap: 'tcd__tour-results-wrapper';
+$pagination: 'tcd__pagination';
 
 $thumbnail-size: 255px;
 $price-width: 175px;
 $bottom-distance: 15px;
 $star-size: 12px;
 $score-size: 30px;
+$pagination-btn-size-desktop: 40px;
+$pagination-btn-size-mobile: 30px;
 
 .#{$wrap} {
     @extend %block-padding;
@@ -304,6 +307,74 @@ margin-bottom: $bottom-distance;
 
             @include media-breakpoint-up(md) {
                 flex-wrap: nowrap;
+            }
+        }
+    }
+}
+
+.#{$pagination} {
+    padding-top: 15px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        li {
+            margin: 0 2px;
+            a {
+                display: inline-block;
+                border: 1px solid $primary-yellow;
+                border-radius: 5px;
+                color: $primary-black;
+                width: $pagination-btn-size-mobile;
+                height: $pagination-btn-size-mobile;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-size: $small-font-size;
+
+                span[class^='icon-'] {
+                    display: inline-block;
+                    font-size: $small-font-size;
+                    width: 5px;
+                    @include transform(translate(-3px, 0));
+                }
+
+                @include media-breakpoint-up(sm) {
+                    width: $pagination-btn-size-desktop;
+                    height: $pagination-btn-size-desktop;
+                    font-size: $body-font-size;
+                }
+            }
+
+            &.active,
+            &:hover {
+                a {
+                    background-color: $primary-yellow;
+                    color: $white;
+                }
+            }
+
+            &.#{$pagination}-prev-all,
+            &.#{$pagination}-prev {
+                @include transform(rotateY(180deg));
+            }
+
+            &.#{$pagination}-prev {
+                margin-right: 10px;
+
+                @include media-breakpoint-up(sm) {
+                    margin-right: 15px;
+                }
+            }
+
+            &.#{$pagination}-next {
+                margin-right: 10px;
+
+                @include media-breakpoint-up(sm) {
+                    margin-right: 15px;
+                }
             }
         }
     }
