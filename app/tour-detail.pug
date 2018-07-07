@@ -1,0 +1,10 @@
+extends pug/layouts/_index
+
+block main_content
+    include pug/components/tour-detail/_small-banner
+    include pug/components/tour-detail/_breadcrum
+    .tcd__detail-wrapper
+        .container
+            .row
+                include pug/components/tour-detail/_detail
+                include pug/components/tour-detail/_price-summary
