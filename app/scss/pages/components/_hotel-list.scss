@@ -29,16 +29,6 @@ $star-size: 12px;
                 }
             }
 
-            .#{$pre}-stars {
-                display: flex;
-                flex-direction: row;
-                img {
-                    width: $star-size;
-                    height: $star-size;
-                    margin: 0 1px;
-                }
-            }
-
             .#{$pre}-price {
                 margin: 5px 0;
                 span {
@@ -73,4 +63,15 @@ $star-size: 12px;
     .#{$parent}-title {
         @extend %block-title;
     }  
+}
+
+.tcd__stars {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+    img {
+        width: $star-size;
+        height: $star-size;
+        margin: 0 1px;
+    }
 }

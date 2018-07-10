@@ -9,78 +9,119 @@
         .tcd__detail-reviews-info
             p= tour_nights
             p= tour_ages
-    each i in [0, 1, 2, 3, 4]
-        .tcd__detail-card
-            .tcd__detail-info(style="background-image: url(" + card_images[i] + ")")
-                .tcd__detail-left
-                    .tcd__detail-icon(class={'start': i == 0, 'end': i == 4})
-                        if i == 4
-                            span.icon-flag
-                        else
-                            span.icon-maps-and-flags
-                    h2= card_days[i]
-                .tcd__detail-right
-                    h2= card_title
-                    p= card_description
-                    .tcd__detail-activity-list
-                        .tcd__detail-activity-list-label
-                            each label in card_activity_labels
-                                p= label
-                        .tcd__detail-activity-list-value
-                            each val in card_activity_values
-                                p= val
-                    .tcd__detail-tag(class=card_tag_classes[i])
-                        p= card_tags[i]
-                    .tcd__detail-btn
-                        a(href="#")= card_link
-            .tcd__detail-info-detail
-                .tcd__detail-info-detail-wrapper
-                    .tcd__detail-info-left
-                        h2= card_detail_title
-                    .tcd__detail-info-right
-                        .tcd__detail-info-tabs-wrapper
-                            ul.tcd__detail-info-tabs
-                                each j in [0, 1, 2, 3, 4]
-                                    li(class={'active': j == 0})
-                                        a(href="#" + card_tab_ids[j] + '-' + i)= card_tabs[j]
-                        .tcd__detail-info-tab-content.active(id="detail-hotel-" + i)
-                            .tcd__detail-info-hotel-info
-                                .tcd__detail-info-hotel-info-thumbnail(style="background-image: url(" + card_hotel_thumb + ")")
-                                .tcd__detail-info-hotel-information
-                                    h2= card_hotel_title
-                                    p
-                                        span.icon-maps-and-flags
-                                        span= card_hotel_address
-                                    p
-                                        span.icon-double-king-size-bed
-                                        span= card_hotel_bed
-                                    p
-                                        span.icon-multiple-users-silhouette
-                                        span= card_hotel_pax
-                                    p= card_hotel_provider_label
-                                        img(src=card_hotel_provider_logo)
-                            ul.tcd__detail-info-utils
-                                each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-                                    li
-                                        span(class="icon-" + card_hotel_util_icons[i])
-                                        span= card_hotel_utils[i]
-                        .tcd__detail-info-tab-content.map(id="detail-map-" + i)
-                            div(id="detail-map-detail-" + i)
-                        .tcd__detail-info-tab-content.gallery(id="detail-gallery-" + i)
-                            .tcd__detail-info-big-thumb(style="background-image:url(img/slide-2.jpg)")
-                            .tcd__detail-info-gallery
-                                each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-                                    .tcd__detail-info-image(class={'active': i == 1}, style="background-image:url(" + card_gallery_images[i] + ")")
-                        .tcd__detail-info-tab-content.description(id="detail-description-" + i)
-                            div!= card_description_value
-                        .tcd__detail-info-tab-content.reviews(id="detail-reviews-" + i)
-                            each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                                .tcd__detail-info-review
-                                    .tcd__detail-info-review-avatar
-                                        img(src="img/avatar.png", alt="")
-                                        p= card_review_name
-                                    .tcd__detail-info-review-info
-                                        p= card_review_comment
-                                        p= card_review_date
+    .tcd__detail-cards
+        each i in [0, 1, 2, 3, 4]
+            .tcd__detail-card
+                .tcd__detail-info(style="background-image: url(" + card_images[i] + ")")
+                    .tcd__detail-left
+                        .tcd__detail-icon(class={'start': i == 0, 'end': i == 4})
+                            if i == 4
+                                span.icon-flag
+                            else
+                                span.icon-maps-and-flags
+                        h2= card_days[i]
+                    .tcd__detail-right
+                        h2= card_title
+                        p= card_description
+                        .tcd__detail-activity-list
+                            .tcd__detail-activity-list-label
+                                each label in card_activity_labels
+                                    p= label
+                            .tcd__detail-activity-list-value
+                                each val in card_activity_values
+                                    p= val
+                        .tcd__detail-tag(class=card_tag_classes[i])
+                            p= card_tags[i]
+                        .tcd__detail-btn
+                            a(href="#")= card_link
+                .tcd__detail-info-detail
+                    .tcd__detail-info-detail-wrapper
+                        .tcd__detail-info-left
+                            h2= card_detail_title
+                        .tcd__detail-info-right
+                            .tcd__detail-info-tabs-wrapper
+                                ul.tcd__detail-info-tabs
+                                    each j in [0, 1, 2, 3, 4]
+                                        li(class={'active': j == 0})
+                                            a(href="#" + card_tab_ids[j] + '-' + i)= card_tabs[j]
+                            .tcd__detail-info-tab-content.active(id="detail-hotel-" + i)
+                                .tcd__detail-info-hotel-info
+                                    .tcd__detail-info-hotel-info-thumbnail(style="background-image: url(" + card_hotel_thumb + ")")
+                                    .tcd__detail-info-hotel-information
+                                        h2= card_hotel_title
+                                        p
+                                            span.icon-maps-and-flags
+                                            span= card_hotel_address
+                                        p
+                                            span.icon-double-king-size-bed
+                                            span= card_hotel_bed
+                                        p
+                                            span.icon-multiple-users-silhouette
+                                            span= card_hotel_pax
+                                        p= card_hotel_provider_label
+                                            img(src=card_hotel_provider_logo)
+                                ul.tcd__detail-info-utils
+                                    each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                                        li
+                                            span(class="icon-" + card_hotel_util_icons[i])
+                                            span= card_hotel_utils[i]
+                            .tcd__detail-info-tab-content.map(id="detail-map-" + i)
+                                div(id="detail-map-detail-" + i)
+                            .tcd__detail-info-tab-content.gallery(id="detail-gallery-" + i)
+                                .tcd__detail-info-big-thumb(style="background-image:url(img/slide-2.jpg)")
+                                .tcd__detail-info-gallery
+                                    each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+                                        .tcd__detail-info-image(class={'active': i == 1}, style="background-image:url(" + card_gallery_images[i] + ")")
+                            .tcd__detail-info-tab-content.description(id="detail-description-" + i)
+                                div!= card_description_value
+                            .tcd__detail-info-tab-content.reviews(id="detail-reviews-" + i)
+                                each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                                    .tcd__detail-info-review
+                                        .tcd__detail-info-review-avatar
+                                            img(src="img/avatar.png", alt="")
+                                            p= card_review_name
+                                        .tcd__detail-info-review-info
+                                            p= card_review_comment
+                                            p= card_review_date
+    .tcd__detail-comments
+        h2!= reviews_label
+        .tcd__detail-comments-score
+            each z in [0, 1, 2, 3, 4]
+                .tcd__detail-comments-item
+                    p= reviews_texts[z]
+                    .tcd__stars
+                        each val in [0, 1, 2, 3, 4]
+                            img(src="img/svg/star.svg", alt="Star")
+                    .tcd__progress-bar(class=reviews_classes[z])= reviews_scores[z]
+        .tcd__detail-comments-box
+            each i in [0, 1, 2, 3]
+                .tcd__detail-comments-wrapper
+                    .tcd__detail-comments-avatar
+                        img(src="img/avatar.png", alt="")
+                        p= card_review_name
+                    .tcd__detail-comments-info
+                        p= card_review_comment
+                        p= card_review_date
+            .tcd__pagination
+                ul
+                    li.tcd__pagination-prev-all
+                        a(href="#")
+                            each i in [0, 1]
+                                span.icon-right-thin-chevron
+                    li.tcd__pagination-prev
+                        a(href="#")
+                            span.icon-right-thin-chevron
+                    each i in [0, 1, 2, 3]
+                        li(class=(i == 0) ? 'active' : '')
+                            a(href="#")
+                                span= pagination[i]
+                    li.tcd__pagination-next
+                            a(href="#")
+                                span.icon-right-thin-chevron
+                    li.tcd__pagination-next-all
+                        a(href="#")
+                            each i in [0, 1]
+                                span.icon-right-thin-chevron
+
 
                                 

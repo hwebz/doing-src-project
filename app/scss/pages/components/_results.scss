@@ -135,14 +135,6 @@ margin-bottom: $bottom-distance;
                     margin-bottom: 0;
                 }
 
-                .#{$pre}-card-stars {
-                    img {
-                        width: $star-size;
-                        height: $star-size;
-                        margin: 0 2px;
-                    }
-                }
-
                 .#{$pre}-card-comment {
                     margin-top: 5px;
                     p {

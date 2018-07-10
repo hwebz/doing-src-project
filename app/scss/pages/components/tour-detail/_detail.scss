@@ -1,5 +1,6 @@
 $parent: 'tcd__detail-wrapper';
 $pre: 'tcd__detail';
+$review: 'tcd__detail-comments';
 
 $left-card-width: 45px;
 $icon-size: 26px;
@@ -45,417 +46,419 @@ $review-avatar-size: 35px;
     }
 }
 
-.#{$pre}-card {
-    box-shadow: 2px 4px 10px $shadow-button;
-    margin-bottom: 20px;
-    position: relative;
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 20px;
-        left: $left-card-width - 1px;
-        bottom: -20px;
-        background-color: $primary-black;
-    }
-
-    &:last-child {
-        &:before {
-            display: none;
-        }
-    }
-
-    .#{$pre}-info {
-        color: $white;
-        display: flex;
-        flex-direction: row;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center 30%;
+.#{$pre}-cards {
+    .#{$pre}-card {
+        box-shadow: 2px 4px 10px $shadow-button;
+        margin-bottom: 20px;
         position: relative;
-        &:before,
-        &:after {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
+    
         &:before {
-            background-color: $slide-info-bg;
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            left: $left-card-width - 1px;
+            bottom: -20px;
+            background-color: $primary-black;
         }
 
-        &:after {
-            @include background-degree(90deg, $slide-info-bg, transparent);
-        }
-
-        .#{$pre}-left {
-            width: $left-card-width;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border-right: 1px solid $white;
-            z-index: 1;
-
-            .#{$pre}-icon {
-                position: absolute;
-                top: 20px;
-                right: -13px;
-                color: $white;
-                font-size: $heading-2;
-
-                &:before {
-                    content: '';
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 7px;
-                    left: 7px;
-                    background-color: $primary-black;
-                }
-                
-                span {
-                    position: relative;
-                }
-
-                &.start, &.end {
-                    width: $icon-size;
-                    height: $icon-size;
-                    right: -$icon-size/2;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    font-size: $small-font-size;
-
-                    &:before {
-                        display: none;
-                    }
-                }
-
-                &.start {
-                    background-color: $primary-yellow;
-                }
-
-                &.end {
-                    background-color: $green;
-                }
-            }
-            h2 {
-                @include transform(rotateZ(-90deg));
-                width: 200px;
-                text-align: center;
+        &:last-child {
+            &:before {
+                display: none;
             }
         }
-        .#{$pre}-right {
-            position: relative;
-            flex-grow: 1;
-            padding: 10px;
-            z-index: 1;
-            h2 {
-                margin: 10px;
-                padding-left: 5px;
-            }
-            > p {
-
-            }
-            .#{$pre}-activity-list {
-                display: flex;
-                flex-direction: row;
-                .#{$pre}-activity-list-label {
-                    padding-right: 25px;
-                    p {
-                        margin-bottom: 5px;
-                    }
-                }
-                .#{$pre}-activity-list-value {
-                    @extend %tcd-bold;
-                    p {
-                        margin-bottom: 5px;
-                    }
-                }
-            }
-
-            .#{$pre}-btn {
-                position: absolute;
-                bottom: 8px;
-                right: 8px;
-                a {
-                    display: inline-block;
-                    padding: 5px;
-                    background-color: $slide-info-bg;
-                    color: $white;
-                    @extend %hoverable-link;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
-    .#{$pre}-info-detail {
-        display: none;
-        .#{$pre}-info-detail-wrapper {
+    
+        .#{$pre}-info {
+            color: $white;
             display: flex;
             flex-direction: row;
-            max-width: 100%;
-            overflow: hidden;
-            overflow-y: visible;
-
-            .#{$pre}-info-left {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 30%;
+            position: relative;
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+            }
+    
+            &:before {
+                background-color: $slide-info-bg;
+            }
+    
+            &:after {
+                @include background-degree(90deg, $slide-info-bg, transparent);
+            }
+    
+            .#{$pre}-left {
                 width: $left-card-width;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                border-right: 1px solid $primary-black;
+                border-right: 1px solid $white;
                 z-index: 1;
-
+    
+                .#{$pre}-icon {
+                    position: absolute;
+                    top: 20px;
+                    right: -13px;
+                    color: $white;
+                    font-size: $heading-2;
+    
+                    &:before {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 7px;
+                        left: 7px;
+                        background-color: $primary-black;
+                    }
+                    
+                    span {
+                        position: relative;
+                    }
+    
+                    &.start, &.end {
+                        width: $icon-size;
+                        height: $icon-size;
+                        right: -$icon-size/2;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: $small-font-size;
+    
+                        &:before {
+                            display: none;
+                        }
+                    }
+    
+                    &.start {
+                        background-color: $primary-yellow;
+                    }
+    
+                    &.end {
+                        background-color: $green;
+                    }
+                }
                 h2 {
                     @include transform(rotateZ(-90deg));
-                    width: 300px;
+                    width: 200px;
                     text-align: center;
                 }
             }
-            .#{$pre}-info-right {
+            .#{$pre}-right {
+                position: relative;
                 flex-grow: 1;
-                max-width: calc(100% - 45px);
-                .#{$pre}-info-tabs-wrapper {
-                    max-width: 100%;
-                    overflow: hidden;
-                    overflow-x: visible;
+                padding: 10px;
+                z-index: 1;
+                h2 {
+                    margin: 10px;
+                    padding-left: 5px;
                 }
-
-                .#{$pre}-info-tabs {
+                > p {
+    
+                }
+                .#{$pre}-activity-list {
                     display: flex;
                     flex-direction: row;
-                    border-bottom: 1px solid $horizontal-header-date;
-                    min-width: 520px;
-                    li {
-                        a {
-                            display: inline-block;
-                            padding: 15px 15px 12px 15px;
-                            @extend %tcd-bold;
-                            color: $primary-black;
-                            border-bottom: 3px solid transparent;
-
-                            &:hover {
-                                border-bottom-color: $primary-black;
-                            }
+                    .#{$pre}-activity-list-label {
+                        padding-right: 25px;
+                        p {
+                            margin-bottom: 5px;
                         }
-
-                        &.active {
-                            a {
-                                border-bottom-color: $primary-black;
-                            }
+                    }
+                    .#{$pre}-activity-list-value {
+                        @extend %tcd-bold;
+                        p {
+                            margin-bottom: 5px;
                         }
                     }
                 }
-                .#{$pre}-info-tab-content {
-                    padding: 15px;
-                    display: none;
-                    min-height: $tab-content-height;
-
-                    &.active {
-                        display: block;
+    
+                .#{$pre}-btn {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 8px;
+                    a {
+                        display: inline-block;
+                        padding: 5px;
+                        background-color: $slide-info-bg;
+                        color: $white;
+                        @extend %hoverable-link;
+                        text-decoration: underline;
                     }
-
-                    .#{$pre}-info-hotel-info {
+                }
+            }
+        }
+    
+        .#{$pre}-info-detail {
+            display: none;
+            .#{$pre}-info-detail-wrapper {
+                display: flex;
+                flex-direction: row;
+                max-width: 100%;
+                overflow: hidden;
+                overflow-y: visible;
+    
+                .#{$pre}-info-left {
+                    width: $left-card-width;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    border-right: 1px solid $primary-black;
+                    z-index: 1;
+    
+                    h2 {
+                        @include transform(rotateZ(-90deg));
+                        width: 300px;
+                        text-align: center;
+                    }
+                }
+                .#{$pre}-info-right {
+                    flex-grow: 1;
+                    max-width: calc(100% - 45px);
+                    .#{$pre}-info-tabs-wrapper {
+                        max-width: 100%;
+                        overflow: hidden;
+                        overflow-x: visible;
+                    }
+    
+                    .#{$pre}-info-tabs {
                         display: flex;
                         flex-direction: row;
-                        flex-wrap: wrap;
-                        
-                        .#{$pre}-info-hotel-info-thumbnail {
-                            width: 100%;
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            background-position: center center;
-                            height: 150px;
-
-                            @include media-breakpoint-up(sm) {
-                                width: 30%;
-                                height: auto;
-                            }
-                        }
-                        .#{$pre}-info-hotel-information {
-                            margin-top: 15px;
-                            h2 {
-
-                            }
-                            p {
-                                margin-bottom: 2px;
-                                color: $dark-gray;
-
-                                span[class^='icon-'] {
-                                    margin-right: 7px;
-                                }
-
-                                &:last-child {
-                                    margin-bottom: 0;
-                                    margin-top: 10px;
-                                    img {
-                                        max-height: 20px;
-                                        margin-left: 15px;
-                                    }
-                                }
-                            }
-
-                            @include media-breakpoint-up(sm) {
-                                padding-left: 15px;
-                                margin-top: 0;
-                            }
-                        }
-
-                        @include media-breakpoint-up(sm) {
-                            flex-wrap: nowrap;
-                        }
-                    }
-                    .#{$pre}-info-utils {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        margin-top: 10px;
+                        border-bottom: 1px solid $horizontal-header-date;
+                        min-width: 520px;
                         li {
-                            width: 50%;
+                            a {
+                                display: inline-block;
+                                padding: 15px 15px 12px 15px;
+                                @extend %tcd-bold;
+                                color: $primary-black;
+                                border-bottom: 3px solid transparent;
+    
+                                &:hover {
+                                    border-bottom-color: $primary-black;
+                                }
+                            }
+    
+                            &.active {
+                                a {
+                                    border-bottom-color: $primary-black;
+                                }
+                            }
+                        }
+                    }
+                    .#{$pre}-info-tab-content {
+                        padding: 15px;
+                        display: none;
+                        min-height: $tab-content-height;
+    
+                        &.active {
+                            display: block;
+                        }
+    
+                        .#{$pre}-info-hotel-info {
                             display: flex;
                             flex-direction: row;
-                            align-items: center;
-                            margin: 7px 0;
-                            span {
-                            }
-
-                            span[class^='icon-'] {
-                                margin-right: 10px;
-                                font-size: $heading-2;
-
+                            flex-wrap: wrap;
+                            
+                            .#{$pre}-info-hotel-info-thumbnail {
+                                width: 100%;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                height: 150px;
+    
                                 @include media-breakpoint-up(sm) {
-                                    font-size: $hotel-icon-size;
+                                    width: 30%;
+                                    height: auto;
                                 }
                             }
-
-                            @include media-breakpoint-up(sm) {
-                                width: $hotel-util-width;
+                            .#{$pre}-info-hotel-information {
+                                margin-top: 15px;
+                                h2 {
+    
+                                }
+                                p {
+                                    margin-bottom: 2px;
+                                    color: $dark-gray;
+    
+                                    span[class^='icon-'] {
+                                        margin-right: 7px;
+                                    }
+    
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                        margin-top: 10px;
+                                        img {
+                                            max-height: 20px;
+                                            margin-left: 15px;
+                                        }
+                                    }
+                                }
+    
+                                @include media-breakpoint-up(sm) {
+                                    padding-left: 15px;
+                                    margin-top: 0;
+                                }
                             }
-                        }
-                    }
-
-                    &.map {
-                        padding: 0;
-                        > div {
-                            min-height: $tab-content-height;
-                        }
-                    }
-
-                    &.gallery {
-                        &.active {
-                            display: flex;
-                            flex-wrap: wrap;
-
+    
                             @include media-breakpoint-up(sm) {
                                 flex-wrap: nowrap;
                             }
                         }
-
-                        .#{$pre}-info-big-thumb {
-                            width: 100%;
-                            background-size: cover;
-                            background-position: center center;
-                            background-repeat: no-repeat;
-                            height: 150px;
-                            margin-right: 10px;
-                            margin-bottom: 10px;
-
-                            @include media-breakpoint-up(sm) {
-                                width: 50%;
-                                height: auto;
-                                margin: 0;
-                            }
-                        }
-    
-                        .#{$pre}-info-gallery {
+                        .#{$pre}-info-utils {
                             display: flex;
                             flex-direction: row;
                             flex-wrap: wrap;
-                            width: 100%;
-                            max-height: $tab-content-height;
-                            overflow: hidden;
-                            overflow-y: visible;
+                            margin-top: 10px;
+                            li {
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                margin: 7px 0;
+                                span {
+                                }
     
-                            .#{$pre}-info-image {
-                                margin: 0 10px 10px 0;
-                                width: $gallery-image-width-mobile;
-                                height: $gallery-image-height-mobile;
+                                span[class^='icon-'] {
+                                    margin-right: 10px;
+                                    font-size: $heading-2;
+    
+                                    @include media-breakpoint-up(sm) {
+                                        font-size: $hotel-icon-size;
+                                    }
+                                }
+    
+                                @include media-breakpoint-up(sm) {
+                                    width: $hotel-util-width;
+                                }
+                            }
+                        }
+    
+                        &.map {
+                            padding: 0;
+                            > div {
+                                min-height: $tab-content-height;
+                            }
+                        }
+    
+                        &.gallery {
+                            &.active {
+                                display: flex;
+                                flex-wrap: wrap;
+    
+                                @include media-breakpoint-up(sm) {
+                                    flex-wrap: nowrap;
+                                }
+                            }
+    
+                            .#{$pre}-info-big-thumb {
+                                width: 100%;
                                 background-size: cover;
                                 background-position: center center;
                                 background-repeat: no-repeat;
-                                border: 3px solid transparent;
-                                
-                                &.active {
-                                    border: 3px solid $primary-red;
-                                }
-
+                                height: 150px;
+                                margin-right: 10px;
+                                margin-bottom: 10px;
+    
                                 @include media-breakpoint-up(sm) {
-                                    width: $gallery-image-width;
-                                    height: $gallery-image-height;
+                                    width: 50%;
+                                    height: auto;
+                                    margin: 0;
                                 }
                             }
-
-                            @include media-breakpoint-up(sm) {
-                                width: 50%;
-                                margin-left: 10px;
-                                margin-top: -5px;
+        
+                            .#{$pre}-info-gallery {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                width: 100%;
+                                max-height: $tab-content-height;
+                                overflow: hidden;
+                                overflow-y: visible;
+        
+                                .#{$pre}-info-image {
+                                    margin: 0 10px 10px 0;
+                                    width: $gallery-image-width-mobile;
+                                    height: $gallery-image-height-mobile;
+                                    background-size: cover;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    border: 3px solid transparent;
+                                    
+                                    &.active {
+                                        border: 3px solid $primary-red;
+                                    }
+    
+                                    @include media-breakpoint-up(sm) {
+                                        width: $gallery-image-width;
+                                        height: $gallery-image-height;
+                                    }
+                                }
+    
+                                @include media-breakpoint-up(sm) {
+                                    width: 50%;
+                                    margin-left: 10px;
+                                    margin-top: -5px;
+                                }
                             }
                         }
-                    }
-
-                    &.description,
-                    &.reviews {
-                        max-height: $tab-content-height;
-                        overflow: hidden;
-                        overflow-y: visible;
-                    }
-
-                    &.reviews {
-                        .#{$pre}-info-review {
-                            display: flex;
-                            flex-direction: row;
-                            padding: 10px;
-                            border-bottom: 1px solid $horizontal-header-date;
-
-                            &:last-child {
-                                border: none;
-                            }
-
-                            .#{$pre}-info-review-avatar {
-                                text-align: center;
-                                img {
-                                    width: $review-avatar-size;
-                                    height: $review-avatar-size;
-                                    border-radius: 50%;
-                                    margin-bottom: 5px;
+    
+                        &.description,
+                        &.reviews {
+                            max-height: $tab-content-height;
+                            overflow: hidden;
+                            overflow-y: visible;
+                        }
+    
+                        &.reviews {
+                            .#{$pre}-info-review {
+                                display: flex;
+                                flex-direction: row;
+                                padding: 10px;
+                                border-bottom: 1px solid $horizontal-header-date;
+    
+                                &:last-child {
+                                    border: none;
                                 }
-
-                                p {
-                                    font-size: $small-font-size;
-                                    margin: 0;
-                                }
-                            }
-
-                            .#{$pre}-info-review-info {
-                                flex-grow: 1;
-                                padding-left: 15px;
-
-                                p {
-                                    margin: 0;
-
-                                    &:last-child {
+    
+                                .#{$pre}-info-review-avatar {
+                                    text-align: center;
+                                    img {
+                                        width: $review-avatar-size;
+                                        height: $review-avatar-size;
+                                        border-radius: 50%;
+                                        margin-bottom: 5px;
+                                    }
+    
+                                    p {
                                         font-size: $small-font-size;
-                                        color: $dark-gray;
+                                        margin: 0;
+                                    }
+                                }
+    
+                                .#{$pre}-info-review-info {
+                                    flex-grow: 1;
+                                    padding-left: 15px;
+    
+                                    p {
+                                        margin: 0;
+    
+                                        &:last-child {
+                                            font-size: $small-font-size;
+                                            color: $dark-gray;
+                                        }
                                     }
                                 }
                             }
@@ -494,5 +497,121 @@ $review-avatar-size: 35px;
 
     &.blue {
         background-color: $tag-blue;
+    }
+}
+
+.#{$review} {
+    display: block;
+    h2 {
+
+    }
+    .#{$review}-score {
+        margin: 10px 0 20px 0;
+        .#{$review}-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p {
+                min-width: 100px;
+                text-align: right;
+                margin: 0;
+            }
+            .tcd__stars {
+                margin: 0 10px;
+                min-width: 70px;
+                img {
+
+                }
+            }
+        }
+    }   
+    .#{$review}-box {
+        background-color: $white;
+        box-shadow: 2px 4px 10px $shadow-button;
+        padding: 15px;
+        .#{$review}-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            border-bottom: 1px solid $horizontal-header-date;
+
+            &:last-child {
+                border: none;
+            }
+            
+            .#{$review}-avatar {
+                text-align: center;
+                img {
+                    width: $review-avatar-size;
+                    height: $review-avatar-size;
+                    border-radius: 50%;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: $small-font-size;
+                    margin: 0;
+                }
+            }
+            .#{$review}-info {
+                flex-grow: 1;
+                padding-left: 15px;
+
+                p {
+                    margin: 0;
+
+                    &:last-child {
+                        font-size: $small-font-size;
+                        color: $dark-gray;
+                    }
+                }
+            }
+        }     
+    } 
+}
+
+$progress-bar-width: 150px;
+$progress-bar-width-mobile: 70px;
+
+.tcd__progress-bar {
+    width: $progress-bar-width-mobile;
+    height: 15px;
+    position: relative;
+    padding-left: $progress-bar-width-mobile;
+    margin-left: 10px;
+
+    @include media-breakpoint-up(sm) {
+        width: $progress-bar-width;
+        padding-left: $progress-bar-width;
+    }
+    
+    &:after, &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        height: 100%;
+        background-color: $primary-yellow;
+    }
+
+    &:before {
+        background-color: $horizontal-header-date;
+        width: 100%;
+    }
+
+    &.seventy-four:after {
+        width: 74%;
+    }
+
+    &.twenty-one:after {
+        width: 21%;
+    }
+
+    &.four:after {
+        width: 4%;
+    }
+
+    &.one:after {
+        width: 1%;
     }
 }

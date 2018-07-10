@@ -179,16 +179,27 @@
     "provider_image": "img/src/providers/tripadvisor.png",
 
     "reviews_label": "Đánh giá <span>150 đánh giá</span>",
-    "reviews_excellent": "Tuyệt Vời",
-    "reviews_excellent_percent": "74%",
-    "reviews_perfect": "Tốt",
-    "reviews_perfect_percent": "21%",
-    "reviews_good": "Khá",
-    "reviews_good_percent": "4%",
-    "reviews_accepted": "Trung Bình",
-    "reviews_accepted_percent": "1%",
-    "reviews_bad": "Kém",
-    "reviews_bad_percent": "0%",
+    "reviews_classes": [
+        "seventy-four",
+        "twenty-one",
+        "four",
+        "one",
+        "zero"
+    ],
+    "reviews_texts": [
+        "Tuyệt Vời",
+        "Tốt",
+        "Khá",
+        "Trung Bình",
+        "Kém"
+    ],
+    "reviews_scores": [
+        "74%",
+        "21%",
+        "4%",
+        "1%",
+        "0%"
+    ],
     "reviews_name": "John Doe",
     "reviews_text": "Tuyệt Vời",
     "reviews_comment": "Cảnh quan rất đẹp, giá phải chăng, đồ ăn ngon, khách sạn thoải mái, nhân viên phục vụ tận tình",
