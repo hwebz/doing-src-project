@@ -176,6 +176,7 @@ margin-bottom: $bottom-distance;
 
                 @include media-breakpoint-up(md) {
                     width: auto;
+                    max-width: calc(100% - 430px);
                 }
             }
 

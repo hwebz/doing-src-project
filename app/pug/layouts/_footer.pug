@@ -8,10 +8,13 @@
                             img(src="img/logo.png", alt="Logo")
                         p.tcd__footer-description= description
                         ul.tcd__footer-socials
-                            each media in ['facebook', 'pinterest', 'google-plus', 'instagram', 'twitter']
+                            each media in ['facebook', 'pinterest', 'google-plus', 'instagram', 'twitter-1']
                                 li
                                     a(href="#")
                                         span(class= media ? 'icon-' + media : '')
+                                            if media == 'google-plus'
+                                                span.path1
+                                                span.path2
                 .tcd__footer-column.col-12.col-lg-6.col-xl-3
                     .tcd__footer-hotel-list.tcd__hotel-list
                         h4.tcd__footer-header= popular_hotel

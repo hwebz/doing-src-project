@@ -11,7 +11,7 @@ $modify-search-form-mobile-padding: 15px;
 $big-field: 40%;
 $btn-field: 20%;
 $price-font-size: 28px;
-$discount-size: 70px;
+$discount-size: 65px;
 
 
 .#{$pre} {
@@ -30,7 +30,7 @@ $discount-size: 70px;
         flex-direction: column;
 
         .#{$oldPre}-wrapper {
-            min-width: 70%;
+            min-width: 85%;
             .#{$oldPre}-tour-introduction {
                 color: $primary-black;
                 h3 {
@@ -67,6 +67,10 @@ $discount-size: 70px;
                     }
                 }
             }
+
+            @include media-breakpoint-up(lg) {
+                min-width: 70%;
+            }
         }
 
         .#{$adv}-slider {
@@ -97,11 +101,18 @@ $discount-size: 70px;
     }
 }
 
+.#{$adv}-slider {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+    }
+}
 .#{$adv} {
     @include background-degree(-60deg, $search-form-start-color , $search-form-end-color);
     color: $white;
     padding: 9px;
-
+    
     h4 {
         margin-bottom: 5px;
     }
@@ -170,5 +181,5 @@ $discount-size: 70px;
                 bottom: 0;
             }
         }
-    }   
+    } 
 }

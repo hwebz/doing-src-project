@@ -1,6 +1,9 @@
 $parent: 'tcd__detail-wrapper';
 $pre: 'tcd__detail';
 
+$left-card-width: 45px;
+$icon-size: 26px;
+
 .#{$parent} {
     @extend %block-padding;
 }
@@ -18,16 +21,211 @@ $pre: 'tcd__detail';
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 15px;
 
         .tcd__reviews {
         
         }    
 
         .#{$pre}-reviews-info {
+            text-align: right;
             p {
                 margin: 0;
                 line-height: 1.3;
             }
         }
+    }
+}
+
+.#{$pre}-card {
+    box-shadow: 2px 4px 10px $shadow-button;
+    .#{$pre}-info {
+        color: $white;
+        display: flex;
+        flex-direction: row;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 30%;
+        position: relative;
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        &:before {
+            background-color: $slide-info-bg;
+        }
+
+        &:after {
+            @include background-degree(90deg, $slide-info-bg, transparent);
+        }
+
+        .#{$pre}-left {
+            width: $left-card-width;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-right: 1px solid $white;
+            z-index: 1;
+
+            .#{$pre}-icon {
+                position: absolute;
+                top: 20px;
+                right: -13px;
+                color: $white;
+                font-size: $heading-2;
+                
+                span {
+                    
+                }
+
+                &.start, &.end {
+                    width: $icon-size;
+                    height: $icon-size;
+                    right: -$icon-size/2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    font-size: $small-font-size;
+                }
+
+                &.start {
+                    background-color: $primary-yellow;
+                }
+
+                &.end {
+                    background-color: $green;
+                }
+            }
+            h2 {
+                @include transform(rotateZ(-90deg));
+                width: 200px;
+                text-align: center;
+            }
+        }
+        .#{$pre}-right {
+            position: relative;
+            flex-grow: 1;
+            padding: 10px;
+            z-index: 1;
+            h2 {
+                margin: 10px;
+                padding-left: 5px;
+            }
+            > p {
+
+            }
+            .#{$pre}-activity-list {
+                display: flex;
+                flex-direction: row;
+                .#{$pre}-activity-list-label {
+                    padding-right: 25px;
+                    p {
+                        margin-bottom: 5px;
+                    }
+                }
+                .#{$pre}-activity-list-value {
+                    @extend %tcd-bold;
+                    p {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .#{$pre}-btn {
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                a {
+
+                }
+            }
+        }
+    }
+
+    .#{$pre}-info-detail {
+        .#{$pre}-info-left {
+            h2 {
+
+            }
+        }
+        .#{$pre}-info-right {
+            .#{$pre}-info-tabs {
+                li {
+                    a {
+
+                    }
+                }
+            }
+            .#{$pre}-info-tab-content {
+                .#{$pre}-info-hotel-info {
+                    .#{$pre}-info-hotel-info-thumbnail {
+                
+                    }
+                    .#{$pre}-info-hotel-information {
+                        h2 {
+
+                        }
+                        p {
+
+                            &:last-child {
+                                img {
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .#{$pre}-info-utils {
+                    li {
+                        span {
+
+                        }
+
+                        span[class^='icon-'] {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.#{$pre}-tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: $primary-black;
+    color: $white;
+    padding: 5px;
+    display: inline-block;
+
+    p {
+        margin: 0;
+    }
+
+    &.green {
+        background-color: $tag-green;
+    }
+
+    &.yellow {
+        background-color: $tag-yellow;
+    }
+
+    &.red {
+        background-color: $tag-red;
+    }
+
+    &.blue {
+        background-color: $tag-blue;
     }
 }

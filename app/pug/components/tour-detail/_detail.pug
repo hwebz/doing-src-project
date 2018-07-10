@@ -9,3 +9,58 @@
         .tcd__detail-reviews-info
             p= tour_nights
             p= tour_ages
+    each i in [0, 1, 2, 3, 4]
+        .tcd__detail-card
+            .tcd__detail-info(style="background-image: url(" + card_images[i] + ")")
+                .tcd__detail-left
+                    .tcd__detail-icon(class={'start': i == 0, 'end': i == 4})
+                        if i == 4
+                            span.icon-flag
+                        else
+                            span.icon-maps-and-flags
+                    h2= card_day
+                .tcd__detail-right
+                    h2= card_title
+                    p= card_description
+                    .tcd__detail-activity-list
+                        .tcd__detail-activity-list-label
+                            each label in card_activity_labels
+                                p= label
+                        .tcd__detail-activity-list-value
+                            each val in card_activity_values
+                                p= val
+                    .tcd__detail-tag(class=card_tag_classes[i])
+                        p= card_tags[i]
+                    .tcd__detail-btn
+                        a(href="#")= card_link
+            .tcd__detail-info-detail
+                .tcd__detail-info-left
+                    h2= card_detail_title
+                .tcd__detail-info-right
+                    ul.tcd__detail-info-tabs
+                        each i in [0, 1, 2, 3, 4]
+                            li
+                                a(href="#" + card_tab_ids[i])= card_tabs[i]
+                    #detail-hotel.tcd__detail-info-tab-content
+                        .tcd__detail-info-hotel-info
+                            .tcd__detail-info-hotel-info-thumbnail(style="background-image: url(" + card_hotel_thumb + ")")
+                            .tcd__detail-info-hotel-information
+                                h2= card_hotel_title
+                                p
+                                    span.icon-maps-and-flags
+                                    span= card_hotel_address
+                                p
+                                    span.icon-double-king-size-bed
+                                    span= card_hotel_bed
+                                p
+                                    span.icon-multiple-users-silhouette
+                                    span= card_hotel_pax
+                                p= card_hotel_provider_label
+                                    img(src=card_hotel_provider_logo)
+                        ul.tcd__detail-info-utils
+                           each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                            li
+                                span(class="icon-" + card_hotel_util_icons[i])
+                                span= card_hotel_utils[i]
+
+                                

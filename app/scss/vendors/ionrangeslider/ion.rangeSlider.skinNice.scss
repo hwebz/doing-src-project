@@ -81,15 +81,12 @@
 
 .irs-from, .irs-to, .irs-single {
     color: #fff;
-    font-size: 10px; line-height: 1.333;
+    font-size: 12px; line-height: 1.333;
     text-shadow: none;
     padding: 1px 5px;
     background: rgba(0,0,0,0.3);
     -moz-border-radius: 3px;
     border-radius: 3px;
-}
-.irs-from, .irs-to, .irs-single {
-    display: none;
 }
 .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
     background: #999;

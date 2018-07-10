@@ -15,6 +15,7 @@
         -ms-user-select: none;
             user-select: none;
     height: 50px !important; 
+    margin-top: 35px;
 }
     .irs-line {
         position: relative; display: block;
@@ -82,7 +83,7 @@
 
     .irs-from, .irs-to, .irs-single {
         position: absolute; display: block;
-        bottom: -15px; left: 0;
+        top: -15px; left: 0;
         cursor: default;
         white-space: nowrap;
     }

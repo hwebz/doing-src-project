@@ -6,7 +6,7 @@ $(document).ready(function () {
     var toggleButton = results.find('.navbar-toggler');
 
     var advListSlider = $('.tcd__adv-slider');
-    var advsListSlider = $('.tcd__advs-slider');
+    var advsListSlider = $('.tcd__advs-slider .tcd__advs-wrapper');
 
     var toggleCollapseClass = '.toggle-collapse';
     var toggleBtnClass = '.icon-right-thin-chevron';
@@ -35,8 +35,8 @@ $(document).ready(function () {
     });
 
     // Tour list slider
-    advSlider(advListSlider);
-    advSlider(advsListSlider);
+    advSlider(advListSlider, 1);
+    advSlider(advsListSlider, 3);
 
     if (isDefined(toggleCollapse)) {
         toggleCollapse.on('click', function (event) {

@@ -159,16 +159,24 @@ function getCenterPoint() {
     }
 }
 
-function advSlider(element) {
+function advSlider(element, numberSlide) {
     if (isDefined(element)) {
         element.slick({
-            slidesToShow: 1,
+            slidesToShow: numberSlide,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
             infinite: true,
             dot: false,
             arrows: false,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+              ]
         }).promise().done(function () {
             $(this).removeClass('initializing');
         });
