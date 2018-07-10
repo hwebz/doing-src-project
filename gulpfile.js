@@ -28,7 +28,7 @@ var jsLibs = [
     'app/js/vendors/bootstrap.min.js',
     'app/js/vendors/slick.min.js',
     'app/js/vendors/daterangepicker.min.js',
-    'app/js/vendors/ion.rangeSlider.min.js',
+    'app/js/vendors/ion.rangeSlider.min.js'
 ];
   
 gulp.task('bs-reload', function () {

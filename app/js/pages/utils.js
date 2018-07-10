@@ -163,7 +163,7 @@ function advSlider(element, numberSlide) {
     if (isDefined(element)) {
         element.slick({
             slidesToShow: numberSlide,
-            slidesToScroll: 1,
+            slidesToScroll: numberSlide,
             autoplay: true,
             autoplaySpeed: 5000,
             infinite: true,
@@ -173,7 +173,8 @@ function advSlider(element, numberSlide) {
                 {
                   breakpoint: 768,
                   settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                   }
                 }
               ]
