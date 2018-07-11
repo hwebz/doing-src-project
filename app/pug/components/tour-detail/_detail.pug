@@ -1,5 +1,7 @@
 .tcd__detail.col-12.col-lg-9
     h2!= tour_title
+        button.navbar-toggler(type="button")
+            span.navbar-toggler-icon.black
     .tcd__detail-reviews
         .tcd__reviews
             strong.reviews-score.excellent= tour_score
@@ -10,8 +12,8 @@
             p= tour_nights
             p= tour_ages
     .tcd__detail-cards
-        each i in [0, 1, 2, 3, 4]
-            .tcd__detail-card
+        each i in [0, 1, 2, 3, 4, 5]
+            .tcd__detail-card(class={'no-background': i == 5})
                 .tcd__detail-info(style="background-image: url(" + card_images[i] + ")")
                     .tcd__detail-left
                         .tcd__detail-icon(class={'start': i == 0, 'end': i == 4})
@@ -83,6 +85,39 @@
                                         .tcd__detail-info-review-info
                                             p= card_review_comment
                                             p= card_review_date
+    .tcd__detail-inclusions
+        h2!= inclusion_title
+        ul.tcd__detail-inclusions-utils
+            each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                li
+                    span(class="icon-" + card_hotel_util_icons[i])
+                    span= card_hotel_utils[i]
+            each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                li
+                    span(class="icon-" + card_hotel_util_icons[i])
+                    span= card_hotel_utils[i]
+    .tcd__detail-exclusions
+        h2!= exclusion_title
+        ul.tcd__detail-inclusions-utils
+            each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                li
+                    span(class="icon-" + card_hotel_util_icons[i])
+                    span= card_hotel_utils[i]
+    .tcd__detail-cancellation
+        h2!= cancellation_title
+        .tcd__detail-cancellation-wrapper
+            table.table
+                tbody
+                    tr
+                        td(scope="row")= prior_tour_cancellation
+                        each prior in priors
+                            td= prior
+                    tr
+                        td(scope="row")= fee_per_person
+                        each fee in fees
+                            td!= fee
+        p
+            em= fee_note
     .tcd__detail-comments
         h2!= reviews_label
         .tcd__detail-comments-score

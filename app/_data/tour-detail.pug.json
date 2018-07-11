@@ -35,7 +35,8 @@
         "Ngày 2",
         "Ngày 3",
         "Ngày 4",
-        "Ngày 5"
+        "Ngày 5",
+        "Ngày 6"
     ],
     "card_title": "Tham quan Cầu Ngọc Sơn - Hồ Hoàn Kiếm",
     "card_description": "Welcome to your 12 day Europe tour! Leaving London behind us, we make our way to Paris, crossing the English Channel and arriving in the ‘City of Lights’ in the afternoon...",
@@ -54,14 +55,16 @@
         "yellow",
         "red",
         "blue",
-        "green"
+        "green",
+        "red"
     ],
     "card_tags": [
         "Danh thắng",
         "Khu vui chơi",
         "Trải nghiệm",
         "Tắm Biển",
-        "Danh thắng"
+        "Danh thắng",
+        "Trải nghiệm"
     ],
     "card_link": "Xem chi tiết",
     "card_images": [
@@ -69,7 +72,8 @@
         "img/slide-7.jpg",
         "img/slide-1.jpg",
         "img/slide-6.jpg",
-        "img/introduction-bg.jpg"
+        "img/introduction-bg.jpg",
+        "img/logo-mobile-black.png"
     ],
 
     "card_detail_title": "Chi tiết tour - Ngày 1",
@@ -173,11 +177,29 @@
     "price_terms": "Điều khoản sử dụng",
     "price_hyphen": " - ",
     "price_guide": "Hướng dẫn thanh toán",
+    "prior_tour_cancellation": "Số ngày tới ngày khởi hành tour",
+    "priors": [
+        "91+",
+        "61-90",
+        "31-60",
+        "0-30"
+    ],
+    "fees": [
+        "4,000,000đ <span>(*)</span>",
+        "10,000,000đ",
+        "50% <span>giá trị tour</span>",
+        "100% <span>giá trị tour</span>"
+
+    ],
+    "fee_per_person": "Phí/người",
+    "fee_note": "(*) Với những lần hủy vé có độ dài tới ngày khởi hành tour ít nhất 61 ngày, chúng tôi sẽ áp dụng phí hủy tour cho lần đặt sau. Với số ngày tới ngày khởi hành nhỏ hơn 60 ngày, chúng tôi phạt trực tiếp vào tổng giá tour bên trên.",
 
     "provider_label": "Tour được cung cấp bởi:",
     "provider_name": "TripAdvisor",
     "provider_image": "img/src/providers/tripadvisor.png",
-
+    "inclusion_title": "Các dịch vụ đi kèm <span>Các dịch vụ đã được bao trọn gói</span>",
+    "exclusion_title": "Các dịch vụ phải trả phí <span>Các dịch vụ không bao gồm trong gói tour</span>",
+    "cancellation_title": "Chính sách hủy tour <span>Khoản tiền phải bồi thường và được nhận lại.</span>",
     "reviews_label": "Đánh giá <span>150 đánh giá</span>",
     "reviews_classes": [
         "seventy-four",
@@ -210,6 +232,41 @@
         "3",
         "4"
     ],
+
+    "item_discount": "-45%",
+    "item_old_price": "5,600,000đ",
+    "item_price": "4,500,000đ",
+    "item_detail": "Xem chi tiết giá & phí",
+    "item_days": "5 ngày",
+    "item_price_per_day": "950,000đ/ngày",
+    "item_included": "giá đã bao gồm thuế và phí",
+    "item_included2": "giá tốt nhất cho gia đình",
+    "extras": [
+        "Không phụ thu thẻ thanh toán quốc tế",
+        "Đảm bảo giá luôn tốt nhất",
+        "Nhận được 200 TPoint cho lần đặt sau"
+    ],
+    "item_btn": "Đặt tour",
+    "terms": "Điều  khoản sử dụng",
+    "payment_guide": "Hướng dẫn thanh toán",
+    "provider_label": "Tour được cung cấp bởi",
+    "provider_name": "TripAdvisor",
+
+    "fee_title": "Chi tiết giá & phí",
+    "fee_tour": "Tour",
+    "fee_tour_detail": "Tour (x4 người)",
+    "fee_tour_price": "6,000,00đ",
+    "fee_tax": "Thuế (10%)",
+    "fee_tax_value": "600,000đ",
+    "fee_other": "Phí phụ thu",
+    "fee_other_value": "300,000đ",
+    "fee_total": "Tổng",
+    "fee_total_value": "6,900,000đ",
+
+    "terms_title": "Điều khoản sử dụng",
+    "terms_content": "<p><strong>I. ĐIỀU KHOẢN CHUNG</strong></p><p>Giá tất cả các dịch vụ được tính theo tiền đồng (Việt Nam – VNĐ). Giá dịch vụ được liệt kê một cách rõ ràng trong phần “Bao gồm” trong các tour du lịch, dịch vụ xe, khách sạn,...TaChuDu không có nghĩa vụ thanh toán bất cứ chi phí nào không nằm trong phần “Bao gồm”</p><p><strong>II. THANH TOÁN</strong></p><p>Khi đăng ký, quý khách vui lòng cung cấp đầy đủ thông tin và đóng một khoản tiền cọc để giữ chỗ. Số tiền cọc khác nhau tùy theo chương trình mà quý khách tùy chọn, số tiền còn lại sẽ thanh toán trước ngày khởi hành là 5 ngày làm việc, có 2 hình thức thanh toán:</p><ul><li>Thanh toán bằng tiền mặt tại công ty.</li><li>Chuyển khoản qua ngân hàng.</li></ul><p>Việc thanh toán xem là hoàn tất khi Du Lịch Việt nhận được đủ tiền vé trước ngày khởi hành hoặc theo hợp đồng thỏa thuận giữa 2 bên. Bất kỳ việc thanh toán chậm trễ dẫn đến việc hủy dịch vụ không thuộc trách nhiệm của Du Lịch Việt.</p><p>Với hình thức thanh toán chuyển khoản: Khi thực hiện việc chuyển khoản, quý khách vui lòng ghi rõ họ tên, địa chỉ, điện thoại và nội dung chuyến du lịch cụ thể đã được quý khách chọn đăng ký.</p><p>Sau khi thực hiện việc chuyển khoản, quý khách vui lòng Fax Ủy Nhiệm Chi về công ty và liện hệ nhân viên phụ trách tuyến để nhận được vé du lịch chính thức từ công ty TaChuDu.</p><p>TaChuDu sẽ không giải quyết các trường hợp hệ thống tự động hủy phiếu đăng ký nếu quý khách không thực hiện đúng những quy định trên.</p>",
+    "payment_guide_title": "Hướng dẫn thanh toán",
+    "payment_guide_content": "<p><strong>Thực hiện thanh toán theo các bước sau:</strong></p><p><ul><li>Nhập tên và số thẻ trên thẻ tín dụng của bạn</li><li>Điền hạn sử dụng trên thẻ</li><li>Điền mã CCV ở mặt sau</li><li>Nhấn nút 'Thanh Toán' để hoàn thành việc thanh toán</li></ul></p>",
 
     "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
     "popular_hotel": "Khách sạn phổ biến",

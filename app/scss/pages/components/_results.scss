@@ -182,60 +182,19 @@ margin-bottom: $bottom-distance;
                 flex-direction: column;
 
                 .#{$pre}-card-discount {
-                    position: absolute;
-                    top: -10px;
-                    right: -40px;
-                    @include transform(rotateZ(45deg));
-                    background-color: $primary-red;
-                    color: $white;
-                    padding: 20px 40px 2px 40px;
-                    display: inline-block;
+                    @extend %discount-section;
                 }
 
                 .#{$pre}-card-price {
-                    p {
-                        font-size: $small-font-size;
-                        text-decoration: line-through;
-                        margin-bottom: 0;
-                    }
-
-                    h3 {
-                        color: $primary-yellow;
-                        margin-bottom: 0;
-                    }
+                    @extend %price-section;
                 }
 
                 .#{$pre}-card-duration {
-                    box-shadow: 0 0 4px $shadow-button;
-                    padding: 10px;
-                    text-align: center;
-                    margin: 15px 0;
-                    h3 {
-                        margin-bottom: 0;
-                    }
-
-                    p {
-                        color: $dark-gray;
-                        font-size: $small-font-size;
-                        margin: 0;
-                    }
+                    @extend %duration-block;
                 }
 
                 .#{$pre}-card-included {
-                    p {
-                        font-size: $small-font-size;
-                        text-align: right;
-                        margin: 0;
-
-                        span[class^='icon-'] {
-                            margin-right: 5px;
-                            font-size: $small-font-size - 2px;
-                        }
-
-                        span:last-child {
-
-                        }
-                    }
+                    @extend %included-block;
                 }
 
                 .#{$pre}-card-btn {

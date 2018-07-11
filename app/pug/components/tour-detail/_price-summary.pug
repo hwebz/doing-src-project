@@ -1,4 +1,6 @@
 .tcd__price-summary.col-12.col-lg-3
+    button.navbar-toggler(type="button")
+        span.icon-cancel-music
     .tcd__adv-slider.initializing
         each i in [0, 1, 2, 3]
             .tcd__adv
@@ -17,3 +19,80 @@
                             span= dong
                             span= adv_per
                         button.btn.btn-primary.small-light(type="button")= adv_btn
+    .tcd__price-info
+        span.tcd__price-info-discount= item_discount
+        .tcd__price-info-wrapper
+            .tcd__price-info-price
+                p= item_old_price
+                h3= item_price
+                a(href="#price-summary", data-toggle="modal")= item_detail
+            .tcd__price-info-duration
+                h3= item_days
+                p= item_price_per_day
+            .tcd__price-info-included
+                p
+                    span.icon-checked
+                    span= item_included
+                p
+                    span.icon-checked
+                    span= item_included2
+        .tcd__price-info-extra
+            ul
+                each extra in extras
+                    li
+                        span.icon-checked
+                        span= extra
+        .tcd__price-info-btn
+            a.btn.btn-primary(href="#")= item_btn
+            .tcd__price-info-terms
+                a(href="#terms-summary", data-toggle="modal")=terms
+                span -
+                a(href="#payment-guide-summary", data-toggle="modal")= payment_guide
+    .tcd__provider
+        .tcd__provider-logo
+            img(src='img/providers/tripadvisor.png')
+        .tcd__provider-info
+            p= provider_label
+            h2= provider_name
+            .tcd__stars
+                each i in [0, 1, 2, 3]
+                    img(src='img/svg/star.svg')
+#price-summary.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= fee_title
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                h3= fee_tour
+                .tcd__fee
+                    .tcd__fee-labels
+                        h4= fee_tour_detail
+                        h4= fee_tax
+                        h4= fee_other
+                    .tcd__fee-prices
+                        h4!= fee_tour_price
+                        h4= fee_tax_value
+                        h4= fee_other_value
+            .modal-footer
+                h3= fee_total
+                h3= fee_total_value
+#terms-summary.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= terms_title
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                div!= terms_content
+#payment-guide-summary.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= payment_guide_title
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                div!= payment_guide_content

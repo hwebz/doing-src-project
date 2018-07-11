@@ -1,7 +1,31 @@
 $pre: 'tcd__price-summary';
 $adv: 'tcd__adv';
+$price: 'tcd__price-info';
+$provider: 'tcd__provider';
 
 .#{$pre} {
+    height: 100vh;
+    width: 100vw;
+    background-color: $white;
+    @extend %fixed-element;
+    left: auto;
+    right: -100vw;
+    @include transition(right 0.3s ease-in-out);
+    padding-top: 25px;
+
+    &.active {
+        right: 0;
+    }
+
+    .navbar-toggler {
+        top: 15px;
+        right: 15px;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
     .#{$adv}-slider {
         .#{$adv} {
             .#{$adv}-content {
@@ -16,5 +40,124 @@ $adv: 'tcd__adv';
                 }
             }
         }
+    }
+
+    .#{$price} {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        box-shadow: 2px 4px 10px $shadow-button;
+        margin-top: 25px;
+        
+        .#{$price}-discount {
+            @extend %discount-section;
+        }
+        .#{$price}-wrapper {
+            padding: 20px 15px;
+
+            .#{$price}-price {
+                @extend %price-section;
+                text-align: center;
+
+                h3 {
+                    font-size: $heading-2;
+                }
+
+                a {
+                    font-size: $small-font-size;
+                    text-decoration: underline;
+                }
+            }
+            .#{$price}-duration {
+                @extend %duration-block;
+            }
+            .#{$price}-included {
+                @extend %included-block;
+            }
+        }
+
+        .#{$price}-extra {
+            padding: 15px;
+            border-top: 1px solid $horizontal-header-date;
+            border-bottom: 1px solid $horizontal-header-date;
+            ul {
+                li {
+                    font-size: $small-font-size + 2px;
+                    span:last-child {
+                        margin-left: 5px;
+                    }
+
+                    span[class^='icon-'] {
+                        font-size: $small-font-size;
+                    }
+                }
+            }
+        }
+        .#{$price}-btn {
+            padding: 15px;
+            
+            .btn {
+                display: block;
+            }
+
+            .#{$price}-terms {
+                font-size: 12px;
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: underline;
+                }
+
+                span {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .#{$provider} {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        background-color: $white;
+        margin-top: 25px;
+        box-shadow: 2px 4px 10px $shadow-button;
+        padding: 15px;
+
+        .#{$provider}-logo {
+            width: 30%;
+            margin-right: 5px;
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .#{$provider}-info {
+            flex-grow: 1;
+            p {
+                margin-bottom: 0;
+            }
+            h2 {
+                margin-top: 0;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        position: inherit;
+        right: auto;
+        padding-top: 0;
     }
 }

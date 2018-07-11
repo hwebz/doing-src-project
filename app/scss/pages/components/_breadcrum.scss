@@ -6,6 +6,7 @@ $pre: 'tcd__breadcrum';
     ul {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         li {
             a {
                 color: $white;  
