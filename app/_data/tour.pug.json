@@ -13,12 +13,29 @@
     "ms_at": "Tại",
     "ms_location": "Hanoi, Vietnam",
     "ms_departure": "Ngày khởi hành",
+    "passenger": "Hành khách",
+    "flight_date_info": "22 Th06 - 28 Th06 2018",
+    "passenger_info": "1 người lớn, 2 trẻ em, Phổ thông",
     "ms_date": "21 Th06 2018",
     "ms_btn": "Tìm kiếm",
     "result_location": "Hanoi, Vietnam",
     "result_city": "Thành phố Hà Nội (HAN), Việt Nam",
     "result_airport": "Sân bay Nội Bài (NIA), Hà Nội, Việt Nam",
     "result_airport2": "Sân bay Phú Hưng (HBN), Hà Nội, Việt Nam",
+    "ticket_type": "Loại vé",
+    "tickets": [
+        "Phổ thông",
+        "Thương gia"
+    ],
+    "paxs": [
+        "Người lớn",
+        "Trưởng thành",
+        "Trẻ em",
+        "Sơ sinh"
+    ],
+    "plus": "+",
+    "minus": "-",
+    "zero": "0",
 
     "adv_title": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
     "minus": "-",

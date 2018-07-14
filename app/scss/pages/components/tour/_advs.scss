@@ -25,13 +25,18 @@ $separator-font-size: 20px;
                 @extend %tcd-pacifico;
                 font-size: $body-font-size;
     
-                span {
+                .price {
                     font-size: $price-font-size-mobile;
                     margin-left: 5px;
 
                     @include media-breakpoint-up(md) {
                         font-size: $price-font-size-desktop;
                     }
+                }
+
+                .text {
+                    @extend %ellipse-text;
+                    max-width: 80px;
                 }
     
                 small {

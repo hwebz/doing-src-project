@@ -69,6 +69,7 @@ $icon-size: 25px;
         box-shadow: 2px 4px 10px $shadow-button;
         margin-bottom: 20px;
         position: relative;
+        cursor: pointer;
     
         &:before {
             content: '';
@@ -95,6 +96,13 @@ $icon-size: 25px;
             background-repeat: no-repeat;
             background-position: center 30%;
             position: relative;
+            @extend %hoverable-link;
+            overflow: hidden;
+
+            &:hover {
+                outline: 5px solid $primary-yellow;
+            }
+
             &:before,
             &:after {
                 position: absolute;
@@ -141,6 +149,7 @@ $icon-size: 25px;
                     @include media-breakpoint-up(sm) {
                         top: 20px;
                         right: -13px;
+                        left: auto;
                     }
     
                     &:before {
@@ -160,7 +169,7 @@ $icon-size: 25px;
                     &.start, &.end {
                         width: $icon-size;
                         height: $icon-size;
-                        right: -$icon-size/2;
+                        right: -13px;
                         display: flex;
                         flex-direction: column;
                         align-items: center;

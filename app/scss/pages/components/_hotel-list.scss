@@ -24,6 +24,7 @@ $star-size: 12px;
                 margin-bottom: 5px;
                 
                 a {
+                    //@include ellipse-text($heading-3, 21.6px, 1);
                     color: $primary-black;
                     @extend %hoverable-link;
                 }

@@ -23,7 +23,7 @@
                                 span.icon-maps-and-flags
                         h2= card_days[i]
                     .tcd__detail-right
-                        h2= card_title
+                        h2(data-toggle="tooltip", data-placement="top", title=card_title)= card_title
                         p= card_description
                         .tcd__detail-activity-list
                             .tcd__detail-activity-list-label
@@ -34,8 +34,8 @@
                                     p= val
                         .tcd__detail-tag(class=card_tag_classes[i])
                             p= card_tags[i]
-                        .tcd__detail-btn
-                            a(href="#")= card_link
+                        //- .tcd__detail-btn
+                        //-     a(href="#")= card_link
                 .tcd__detail-info-detail
                     .tcd__detail-info-detail-wrapper
                         .tcd__detail-info-left
@@ -50,7 +50,7 @@
                                 .tcd__detail-info-hotel-info
                                     .tcd__detail-info-hotel-info-thumbnail(style="background-image: url(" + card_hotel_thumb + ")")
                                     .tcd__detail-info-hotel-information
-                                        h2= card_hotel_title
+                                        h2(data-toggle="tooltip", data-placement="top", title=card_hotel_title)= card_hotel_title
                                         p
                                             span.icon-maps-and-flags
                                             span= card_hotel_address

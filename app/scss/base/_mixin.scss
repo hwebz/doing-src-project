@@ -204,3 +204,16 @@
         padding: $desktop;
     }
 }
+
+@mixin ellipse-text($font-size, $line-height, $num-line) {
+    font-size: $font-size;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 100%;
+    height: $font-size*($line-height/$font-size)*$num-line; /* Fallback for non-webkit */
+    line-height: $line-height;
+    -webkit-line-clamp: $num-line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

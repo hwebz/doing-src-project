@@ -1,9 +1,10 @@
 $(document).ready(function () {
     var body = $('body');
     var detailCardClass = '.tcd__detail-card';
+    var detailCardInfoClass = '.tcd__detail-info';
     var infoDetailClass = '.tcd__detail-info-detail';
     var detailCard = $(detailCardClass);
-    var detailBtn = detailCard.find('.tcd__detail-btn');
+    var detailCardInfo = detailCard.find(detailCardInfoClass);
     
     var detailInfoTabClass = '.tcd__detail-info-tabs';
     var detailinfoTabContentClass = '.tcd__detail-info-tab-content';
@@ -15,8 +16,11 @@ $(document).ready(function () {
     var galleryImagesClass = '.tcd__detail-info-image';
     var galleryImages = gallery.find(galleryImagesClass);
 
-    if (isDefined(detailBtn)) {
-        detailBtn.on('click', function(e) {
+    var priceSummaryId = '#tcd__sticky-sidebar';
+    var priceSummary = $(priceSummaryId);
+
+    if (isDefined(detailCardInfo)) {
+        detailCardInfo.on('click', function(e) {
             e.preventDefault();
             var $this = $(this);
             var pane = $this.parents(detailCardClass).find(infoDetailClass);
@@ -74,5 +78,28 @@ $(document).ready(function () {
 
             return false;
         })
+    }
+
+    if (isDefined(priceSummary)) {
+        //$.lockfixed(priceSummaryId,{offset: {top: 50}});
+
+        $(window).on('scroll orientationchange', $.debounce(2, function() {
+            var sT = $(window).scrollTop();
+            var offsetPart = 70;
+            var parent = priceSummary.parents('.tcd__price-summary');
+            var topEdge = parent.offset().top;
+            var parentWidth = parent.width();
+            var bottomEdge = topEdge + parent.height() - priceSummary.height() - offsetPart;
+
+            if (sT > topEdge - offsetPart) {
+                if (sT > bottomEdge) {
+                    priceSummary.css({width: parentWidth, top: offsetPart - (sT - bottomEdge)})
+                } else {
+                    priceSummary.addClass('sticky-sidebar').css({width: parentWidth});
+                }
+            } else {
+                priceSummary.removeClass('sticky-sidebar').removeAttr('style');
+            }
+        }))
     }
 });

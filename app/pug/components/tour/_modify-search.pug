@@ -8,7 +8,7 @@ include ../../mixins/_mixins
                     h3= ms_title
                     p= ms_sub
                 form.tcd__search-form-tour-form(action="#", method="POST")
-                    .tcd__search-form-field.big-field.have-dropdown
+                    .tcd__search-form-field.have-dropdown
                         +form-input(ms_at, "text", '', '', ms_location)
                         .tcd__search-form-dropdown-results
                             .arrow-icon
@@ -18,6 +18,28 @@ include ../../mixins/_mixins
                                     span= val
                     .tcd__search-form-field.single-daterange-picker
                         +form-input(ms_departure, "text", '', '', ms_date)
+                    .tcd__search-form-field.have-dropdown
+                        +form-input(passenger, "text", '', '', passenger_info)
+                        .tcd__search-form-dropdown-results
+                            .arrow-icon
+                            .tcd__search-form-ticket-types
+                                h4= ticket_type
+                                ul
+                                    each ticket, idx in {0: tickets[0], 1: tickets[1]}
+                                        li(class=idx == 0 ? 'active' : '')
+                                            a(href="#")= ticket
+                            .tcd__search-form-passengers
+                                h4= passenger
+                                .tcd__search-form-passengers-wrapper
+                                    each val, age in {"(18+)": paxs[0], "(12-17)": paxs[1],"(2-11)": paxs[2],"(<2)": paxs[3]}
+                                        .tcd__search-form-pax
+                                            p
+                                                span= val
+                                                small= age
+                                            .tcd__search-form-pax-selector
+                                                button.btn.btn-primary.minus(type="button")= minus
+                                                p= zero
+                                                button.btn.btn-primary.plus(type="button")= plus
                     .tcd__search-form-btn
                         button.btn.btn-primary.tcd__search-btn(type="submit")= ms_btn
             .tcd__adv-slider.initializing

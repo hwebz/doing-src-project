@@ -23,7 +23,7 @@
                                 .tcd__hotel-thumbnail(style="background-image:url(img/banner.jpg)")
                                 .tcd__hotel-content
                                     h3.tcd__hotel-title
-                                        a(href="#")= hotel_name
+                                        a(href="#", data-toggle="tooltip", data-placement="top", title=hotel_name)= hotel_name
                                     .tcd__stars
                                         each val in [1, 2, 3, 4]
                                             img(src="img/svg/star.svg", alt="Star")

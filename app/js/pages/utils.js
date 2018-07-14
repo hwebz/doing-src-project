@@ -352,3 +352,7 @@ function initMap(mapId, zoom) {
         autoRefresh();
     });
 }
+
+(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+})();

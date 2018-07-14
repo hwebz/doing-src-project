@@ -17,7 +17,7 @@
                     .tcd__results-card-thumb(style="background-image: url(img/slide-2.jpg)")
                     .tcd__results-card-map(id="small-map-tour-" + i, data-toggle="modal", data-target="#map-tour")
                 .tcd__results-card-info
-                    h3.tcd__results-card-title= item_title
+                    h3(data-toggle="tooltip", data-placement="top", title=item_title).tcd__results-card-title= item_title
                     .tcd__stars
                         each val in [1, 2, 3, 4]
                             img(src="img/svg/star.svg", alt="Star")

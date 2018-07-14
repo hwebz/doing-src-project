@@ -3,6 +3,7 @@ $slide-height: 500px;
 $discount-size: 50px;
 $badget-left: 30px;
 $tour-desktop-padding: 75px 0 40px 0;
+$info-height: 250px;
 
 .#{$pre} {
     padding: $mobile-padding;
@@ -51,6 +52,7 @@ $tour-desktop-padding: 75px 0 40px 0;
                 color: $white;
                 padding: 40px 30px 15px 30px;
                 position: relative;
+                min-height: $info-height;
 
                 .#{$pre}-price {
                     position: absolute;
@@ -71,7 +73,8 @@ $tour-desktop-padding: 75px 0 40px 0;
                 }
 
                 h3 {
-                    font-size: $heading-1;
+                    font-size: $heading-2;
+                    //@include ellipse-text($heading-2, $heading-2-line-height, 2);
                 }
 
                 p {

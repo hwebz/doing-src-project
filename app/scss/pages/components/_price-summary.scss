@@ -156,8 +156,17 @@ $provider: 'tcd__provider';
         height: auto;
         width: auto;
         background-color: transparent;
-        position: inherit;
+        position: relative;
         right: auto;
         padding-top: 0;
+        @include transform(inherit);
+    }
+}
+
+.sticky-sidebar {
+    @include media-breakpoint-up(lg) {
+        position: fixed;
+        top: 70px;
+        @include transform(translate3d(0, 0, 0));
     }
 }

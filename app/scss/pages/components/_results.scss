@@ -133,6 +133,7 @@ margin-bottom: $bottom-distance;
 
                 .#{$pre}-card-title {
                     margin-bottom: 0;
+                    //@include ellipse-text($heading-3, $heading-3-line-height, 1);
                 }
 
                 .#{$pre}-card-comment {
