@@ -48,7 +48,7 @@
         .tcd__booking-tour
             .tcd__booking-tour-thumb(style="background-image:url(img/slide-2.jpg)")
             .tcd__booking-tour-info
-                h4= tour_title
+                h4= tour_title_2
                 each i in [0, 1]
                     p
                         span(class="icon-" + tour_icons[i])
@@ -56,7 +56,7 @@
                 a(href="#")= tour_detail
         .tcd__booking-price
             h2= booking_price
-            a(href="#price-summary", data-toggle="modal")= booking_price_detail
+            a(href="#tour-detail-popup", data-toggle="modal")= booking_price_detail
             .tcd__booking-price-included
                 p
                     span.icon-checked
@@ -130,3 +130,12 @@
                     span.icon-cancel-music
             .modal-body
                 div!= payment_guide_content
+#tour-detail-popup.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= tour_title_2
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                include ../tour-detail/_detail

@@ -103,7 +103,8 @@ $info-modal-width: 850px;
 }
 
 #terms-summary,
-#payment-guide-summary {
+#payment-guide-summary,
+#tour-detail-popup {
     .modal-dialog {
         width: auto;
         @include media-breakpoint-up(sm) {
@@ -113,20 +114,31 @@ $info-modal-width: 850px;
         @include media-breakpoint-up(lg) {
             max-width: $info-modal-width;
         }
-        .modal-body {
-            p {
-                margin-bottom: 15px;
-            }
-    
-            ul {
-                padding-left: 15px;
-                margin-bottom: 15px;
-                li {
-                    &:before {
-                        content: '- ';
-                    }
+    }
+}
+
+#terms-summary,
+#payment-guide-summary {
+    .modal-body {
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 15px;
+            margin-bottom: 15px;
+            li {
+                &:before {
+                    content: '- ';
                 }
             }
         }
+    }
+}
+
+#tour-detail-popup {
+    .tcd__detail {
+        max-width: 100%;
+        flex: 0 0 100%;
     }
 }

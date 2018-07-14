@@ -84,7 +84,7 @@
     ],
 
 
-    "tour_title": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
+    "tour_title_2": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
     "tour_icons": [
         "double-king-size-bed", 
         "multiple-users-silhouette"
@@ -144,6 +144,186 @@
     "payment_guide_title": "Hướng dẫn thanh toán",
     "payment_guide_content": "<p><strong>Thực hiện thanh toán theo các bước sau:</strong></p><p><ul><li>Nhập tên và số thẻ trên thẻ tín dụng của bạn</li><li>Điền hạn sử dụng trên thẻ</li><li>Điền mã CCV ở mặt sau</li><li>Nhấn nút 'Thanh Toán' để hoàn thành việc thanh toán</li></ul></p>",
  
+
+    "tour_title": "Hành trình tour",
+    "tour_sub": "tất cả các chi phí đã bao gồm",
+    "tour_score": "4.2",
+    "tour_text": "Tuyệt Vời",
+    "tour_reviews": "150 đánh giá",
+    "tour_nights": "5 Ngày 4 Đêm",
+    "tour_ages": "18 - 39 tuổi",
+    "card_days": [
+        "Ngày 1",
+        "Ngày 2",
+        "Ngày 3",
+        "Ngày 4",
+        "Ngày 5",
+        "Ngày 6"
+    ],
+    "card_title": "Tham quan Cầu Ngọc Sơn - Hồ Hoàn Kiếm",
+    "card_description": "Welcome to your 12 day Europe tour! Leaving London behind us, we make our way to Paris, crossing the English Channel and arriving in the ‘City of Lights’ in the afternoon...",
+    "card_activity_labels": [
+        "Hoạt động:",
+        "Vé vào cửa:",
+        "Chi tiêu khác:"
+    ],
+    "card_activity_values": [
+        "Đi bộ, Ăn trưa, Ăn tối, Chơi trò chơi",
+        "Đã bao gồm",
+        "Tự túc"
+    ],
+    "card_tag_classes": [
+        "green",
+        "yellow",
+        "red",
+        "blue",
+        "green",
+        "red"
+    ],
+    "card_tags": [
+        "Danh thắng",
+        "Khu vui chơi",
+        "Trải nghiệm",
+        "Tắm Biển",
+        "Danh thắng",
+        "Trải nghiệm"
+    ],
+    "card_link": "Xem chi tiết",
+    "card_images": [
+        "img/slide-2.jpg",
+        "img/slide-7.jpg",
+        "img/slide-1.jpg",
+        "img/slide-6.jpg",
+        "img/introduction-bg.jpg",
+        "img/logo-mobile-black.png"
+    ],
+
+    "card_detail_title": "Chi tiết tour - Ngày 1",
+    "card_tabs": [
+        "Khách sạn",
+        "Bản đồ hành trình",
+        "Thư viện ảnh",
+        "Mô tả",
+        "Đánh giá"
+    ],
+    "card_tab_ids": [
+        "detail-hotel",
+        "detail-map",
+        "detail-gallery",
+        "detail-description",
+        "detail-reviews"
+    ],
+    "card_hotel_thumb": "img/hotel.jpg",
+    "card_hotel_title": "Khách sạn Mường Thanh",
+    "card_hotel_address": "số 3, thôn Vĩnh Thanh, xã Vĩnh Hòa, huyện Vĩnh Yên, tỉnh Vĩnh Phúc",
+    "card_hotel_bed": "1 phòng, 2 giường đơn",
+    "card_hotel_pax": "2 người lớn, 2 trẻ em",
+    "card_hotel_provider_label": "Được cung cấp bởi:",
+    "card_hotel_provider_logo": "img/providers/tripadvisor.png",
+    "card_hotel_util_icons": [
+        "parking",
+        "room-service",
+        "suitcase",
+        "van",
+        "taxi",
+        "laundry",
+        "wifi",
+        "passport",
+        "television",
+        "telephone",
+        "air-conditioner",
+        "bunk"
+    ],
+    "card_hotel_utils": [
+        "Chỗ đậu xe",
+        "Dịch vụ tận phòng",
+        "Xách hành lý",
+        "Xe nhỏ đưa đón",
+        "Taxi đưa đón",
+        "Giặt là quần áo",
+        "Wifi miễn phí",
+        "Hộ chiếu",
+        "Tivi riêng",
+        "Điện thoại để bàn",
+        "Điều hòa không khí",
+        "Giường tầng"
+    ],
+    "card_gallery_images": [
+        "img/slide-1.jpg",
+        "img/slide-2.jpg",
+        "img/slide-3.jpg",
+        "img/slide-4.jpg",
+        "img/slide-5.jpg",
+        "img/slide-6.jpg",
+        "img/slide-7.jpg",
+        "img/introduction-bg.jpg",
+        "img/banner.jpg",
+        "img/slide-1.jpg",
+        "img/slide-2.jpg",
+        "img/slide-3.jpg",
+        "img/slide-4.jpg",
+        "img/slide-5.jpg",
+        "img/slide-6.jpg",
+        "img/slide-7.jpg"
+    ],
+    "card_description_value": "<p>Nhằm thỏa mãn nhu cầu đa dạng của khách hàng nội địa và quốc tế, Tập đoàn khách sạn Mường Thanh cung cấp cho thị trường các phân khúc trung và cao cấp khác nhau:</p><p>- <strong>Mường Thanh Luxury</strong> là thương hiệu khách sạn 5 sao cao cấp tọa lạc tại trung tâm các thành phố lớn và các trung tâm du lịch nổi tiếng của Việt Nam.</p><p>-  Được ưu ái tọa lạc tại những vị trí đắc địa của những đô thị lớn, các khách sạn thuộc phân khúc 4 sao <strong>Mường Thanh Grand</strong> đã và đang mang đến một không gian nghỉ dưỡng tuyệt vời cho những kỳ nghỉ và chuyến công tác cho quý khách.</p><p>-  <strong>Mường Thanh Holiday</strong> là nhóm khách sạn đạt tiêu chuẩn 4 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p><p>-  Đến với các khách sạn thuộc <strong>phân khúc Mường Thanh</strong>, du khách được hòa mình vào không gian xinh xắn và những trải nghiệm du lịch địa phương độc đáo để thưởng thức các món ăn và phong tục vùng miền đặc sắc. Phân khúc Mường Thanh bao gồm các khách sạn 3-4 sao, tọa lạc tại vị trí trung tâm của các thành phố, thị trấn trên khắp cả nước.</p><p>- <strong>Mường Thanh Luxury</strong>là thương hiệu khách sạn 5 sao cao cấp tọa lạc tại trung tâm các thành phố lớn và các trung tâm du lịch nổi tiếng của Việt Nam.</p><p>-  Được ưu ái tọa lạc tại những vị trí đắc địa của những đô thị lớn, các khách sạn thuộc phân khúc 4 sao <strong>Mường Thanh Grand</strong> đã và đang mang đến một không gian nghỉ dưỡng tuyệt vời cho những kỳ nghỉ và chuyến công tác cho quý khách.</p><p>-  <strong>Mường Thanh Holiday</strong> là nhóm khách sạn đạt tiêu chuẩn 4 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p><p>-  Đến với các khách sạn thuộc <strong>phân khúc Mường Thanh</strong>, du khách được hòa mình vào không gian xinh xắn và những trải nghiệm du lịch địa phương độc đáo để thưởng thức các món ăn và phong tục vùng miền đặc sắc. Phân khúc Mường Thanh bao gồm các khách sạn 3-4 sao, tọa lạc tại vị trí trung tâm của các thành phố, thị trấn trên khắp cả nước.</p>",
+    "card_review_name": "John Doe",
+    "card_review_comment": "Cảnh quan rất đẹp, giá phải chăng, đồ ăn ngon, khách sạn thoải mái, nhân viên phục vụ tận tình",
+    "card_review_date": "Đăng ngày 15 tháng 6 năm 2018",
+    "prior_tour_cancellation": "Số ngày tới ngày khởi hành tour",
+    "priors": [
+        "91+",
+        "61-90",
+        "31-60",
+        "0-30"
+    ],
+    "fees": [
+        "4,000,000đ <span>(*)</span>",
+        "10,000,000đ",
+        "50% <span>giá trị tour</span>",
+        "100% <span>giá trị tour</span>"
+
+    ],
+    "fee_per_person": "Phí/người",
+    "fee_note": "(*) Với những lần hủy vé có độ dài tới ngày khởi hành tour ít nhất 61 ngày, chúng tôi sẽ áp dụng phí hủy tour cho lần đặt sau. Với số ngày tới ngày khởi hành nhỏ hơn 60 ngày, chúng tôi phạt trực tiếp vào tổng giá tour bên trên.",
+    "provider_label": "Tour được cung cấp bởi:",
+    "provider_name": "TripAdvisor",
+    "provider_image": "img/src/providers/tripadvisor.png",
+    "inclusion_title": "Các dịch vụ đi kèm <span>Các dịch vụ đã được bao trọn gói</span>",
+    "exclusion_title": "Các dịch vụ phải trả phí <span>Các dịch vụ không bao gồm trong gói tour</span>",
+    "cancellation_title": "Chính sách hủy tour <span>Khoản tiền phải bồi thường và được nhận lại.</span>",
+    "reviews_label": "Đánh giá <span>150 đánh giá</span>",
+    "reviews_classes": [
+        "seventy-four",
+        "twenty-one",
+        "four",
+        "one",
+        "zero"
+    ],
+    "reviews_texts": [
+        "Tuyệt Vời",
+        "Tốt",
+        "Khá",
+        "Trung Bình",
+        "Kém"
+    ],
+    "reviews_scores": [
+        "74%",
+        "21%",
+        "4%",
+        "1%",
+        "0%"
+    ],
+    "reviews_name": "John Doe",
+    "reviews_text": "Tuyệt Vời",
+    "reviews_comment": "Cảnh quan rất đẹp, giá phải chăng, đồ ăn ngon, khách sạn thoải mái, nhân viên phục vụ tận tình",
+    "reviews_date": "Đăng ngày 15 tháng 6 năm 2018",
+    "pagination": [
+        "1",
+        "2",
+        "3",
+        "4"
+    ],
 
     "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
     "popular_hotel": "Khách sạn phổ biến",
