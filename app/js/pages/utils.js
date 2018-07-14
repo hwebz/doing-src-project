@@ -358,6 +358,9 @@ function initMap(mapId, zoom) {
     var body = $('body');
     var toggleButton = $('.navbar-toggler');
 
+    var priceSummaryId = '.tcd__sticky-sidebar';
+    var priceSummary = $(priceSummaryId);
+
     // Toggle Menu
     if (isDefined(toggleButton)) toggleButton.on('click', function() {
         var $this = $(this);
@@ -372,4 +375,29 @@ function initMap(mapId, zoom) {
             else body.removeClass('modal-open')
         });
     });
+
+    if (isDefined(priceSummary)) {
+        $(window).on('scroll orientationchange', $.debounce(2, function() {
+            var sT = $(window).scrollTop();
+            var offsetPart = 70;
+            var parent = priceSummary.parents('.col-lg-3');
+            var topEdge = parent.offset().top;
+            var parentWidth = parent.width();
+            var bottomEdge = topEdge + parent.height() - priceSummary.height() - offsetPart;
+
+            if ($(window).width() > 991) {
+                if (sT > topEdge - offsetPart) {
+                    if (sT > bottomEdge) {
+                        priceSummary.css({width: parentWidth, top: offsetPart - (sT - bottomEdge)})
+                    } else {
+                        priceSummary.addClass('sticky-sidebar').css({width: parentWidth});
+                    }
+                } else {
+                    priceSummary.removeClass('sticky-sidebar').removeAttr('style');
+                }
+            } else {
+                priceSummary.removeClass('sticky-sidebar').removeAttr('style')
+            }
+        }))
+    }
 })();

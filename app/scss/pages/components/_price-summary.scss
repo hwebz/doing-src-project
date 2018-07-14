@@ -5,6 +5,7 @@ $provider: 'tcd__provider';
 
 .#{$pre} {
     @extend %leftSlideFilter;
+    @include transform(inerhit);
 
     @include media-breakpoint-up(lg) {
         padding: 0;

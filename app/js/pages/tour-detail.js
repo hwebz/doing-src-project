@@ -16,9 +16,6 @@ $(document).ready(function () {
     var galleryImagesClass = '.tcd__detail-info-image';
     var galleryImages = gallery.find(galleryImagesClass);
 
-    var priceSummaryId = '#tcd__sticky-sidebar';
-    var priceSummary = $(priceSummaryId);
-
     if (isDefined(detailCardInfo)) {
         detailCardInfo.on('click', function(e) {
             e.preventDefault();
@@ -78,32 +75,5 @@ $(document).ready(function () {
 
             return false;
         })
-    }
-
-    if (isDefined(priceSummary)) {
-        //$.lockfixed(priceSummaryId,{offset: {top: 50}});
-
-        $(window).on('scroll orientationchange', $.debounce(2, function() {
-            var sT = $(window).scrollTop();
-            var offsetPart = 70;
-            var parent = priceSummary.parents('.tcd__price-summary');
-            var topEdge = parent.offset().top;
-            var parentWidth = parent.width();
-            var bottomEdge = topEdge + parent.height() - priceSummary.height() - offsetPart;
-
-            if ($(window).width() > 991) {
-                if (sT > topEdge - offsetPart) {
-                    if (sT > bottomEdge) {
-                        priceSummary.css({width: parentWidth, top: offsetPart - (sT - bottomEdge)})
-                    } else {
-                        priceSummary.addClass('sticky-sidebar').css({width: parentWidth});
-                    }
-                } else {
-                    priceSummary.removeClass('sticky-sidebar').removeAttr('style');
-                }
-            } else {
-                priceSummary.removeClass('sticky-sidebar').removeAttr('style')
-            }
-        }))
     }
 });

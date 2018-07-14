@@ -1,96 +1,97 @@
 .tcd__booking-summary.col-12.col-lg-3
-    button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__contact-detail-wrapper")
-        span.icon-cancel-music
-    .tcd__adv-slider.initializing.type-2
-        each i in [0, 1, 2, 3]
-            .tcd__adv
-                h4= adv_title
-                .tcd__adv-content
-                    .tcd__adv-discount
-                        p
-                            span= minus
-                            span= adv_discount
-                            span= percent
-                    .tcd__adv-info
-                        ul
-                            each util in adv_utils
-                                li= util
-                        h3.tcd__adv-price= adv_price
-                            span= dong
-                            span= adv_per
-                        button.btn.btn-primary.small-light(type="button")= adv_btn
-    .tcd__booking-pane
-        .tcd__booking-flight
-            h4= booking_flight
-            each i in [0, 1]
-                .tcd__booking-flight-direction
-                    .tcd__booking-flight-info
-                        p= booking_depart[i]
-                        .tcd__booking-flight-brand
-                            img(src="img/svg/VN.svg")
-                            p= booking_flightNumber
-                        .tcd__booking-flight-depart
-                            h2= booking_departure_code
-                            p= booking_departure_time
-                        .tcd__booking-flight-icon
-                            p= booking_duration
-                            img(src="img/svg/airplane.svg")
-                            p= booking_stopover
-                        .tcd__booking-flight-depart
-                            h2= booking_arrival_code
-                            p= booking_arrival_time
-                        a(href="#").toggle-collapse
-                            span.icon-right-thin-chevron
-                    .tcd__booking-flight-detail
-                        ul
-                            each info in booking_flight_infos
-                                li= info
-        .tcd__booking-tour
-            .tcd__booking-tour-thumb(style="background-image:url(img/slide-2.jpg)")
-            .tcd__booking-tour-info
-                h4= tour_title_2
+    .tcd__sticky-sidebar
+        button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__contact-detail-wrapper")
+            span.icon-cancel-music
+        .tcd__adv-slider.initializing.type-2
+            each i in [0, 1, 2, 3]
+                .tcd__adv
+                    h4= adv_title
+                    .tcd__adv-content
+                        .tcd__adv-discount
+                            p
+                                span= minus
+                                span= adv_discount
+                                span= percent
+                        .tcd__adv-info
+                            ul
+                                each util in adv_utils
+                                    li= util
+                            h3.tcd__adv-price= adv_price
+                                span= dong
+                                span= adv_per
+                            button.btn.btn-primary.small-light(type="button")= adv_btn
+        .tcd__booking-pane
+            .tcd__booking-flight
+                h4= booking_flight
                 each i in [0, 1]
+                    .tcd__booking-flight-direction
+                        .tcd__booking-flight-info
+                            p= booking_depart[i]
+                            .tcd__booking-flight-brand
+                                img(src="img/svg/VN.svg")
+                                p= booking_flightNumber
+                            .tcd__booking-flight-depart
+                                h2= booking_departure_code
+                                p= booking_departure_time
+                            .tcd__booking-flight-icon
+                                p= booking_duration
+                                img(src="img/svg/airplane.svg")
+                                p= booking_stopover
+                            .tcd__booking-flight-depart
+                                h2= booking_arrival_code
+                                p= booking_arrival_time
+                            a(href="#").toggle-collapse
+                                span.icon-right-thin-chevron
+                        .tcd__booking-flight-detail
+                            ul
+                                each info in booking_flight_infos
+                                    li= info
+            .tcd__booking-tour
+                .tcd__booking-tour-thumb(style="background-image:url(img/slide-2.jpg)")
+                .tcd__booking-tour-info
+                    h4= tour_title_2
+                    each i in [0, 1]
+                        p
+                            span(class="icon-" + tour_icons[i])
+                            span= tour_infos[i]
+                    a(href="#tour-detail-popup", data-toggle="modal")= tour_detail
+            .tcd__booking-price
+                h2= booking_price
+                a(href="#price-summary", data-toggle="modal")= booking_price_detail
+                .tcd__booking-price-included
                     p
-                        span(class="icon-" + tour_icons[i])
-                        span= tour_infos[i]
-                a(href="#tour-detail-popup", data-toggle="modal")= tour_detail
-        .tcd__booking-price
-            h2= booking_price
-            a(href="#price-summary", data-toggle="modal")= booking_price_detail
-            .tcd__booking-price-included
-                p
-                    span.icon-checked
-                    span= booking_util1
-                p
-                    span.icon-checked
-                    span= booking_util2
-        .tcd__booking-sum
-            ul
-                each i in [0, 1, 2, 3]
-                    li
-                        span.label= price_labels[i]
-                        strong.price(class={"yellow": i == 3})= price_table[i]
-                        if price_subs[i] != ""
-                            span.sub= price_subs[i]
-        .tcd__booking-promo
-            label= price_discount_label
-            .form-group.is-invalid
-                input.form-control(type="text", value=price_discount_code)
-                button.btn.btn-primary.small(type="button")= price_discount_btn
-            .invalid-feedback= price_discount_error
-            .tcd__checkbox
-                input(type="checkbox", id="promo-applied")
-                label(for="promo-applied")!= price_discount_point
-        .tcd__booking-extra
-            ul
-                each extra in price_utils
-                    li
                         span.icon-checked
-                        span= extra
-        .tcd__booking-terms
-            a(href="#terms-summary", data-toggle="modal")=terms_title
-            span -
-            a(href="#payment-guide-summary", data-toggle="modal")= payment_guide_title
+                        span= booking_util1
+                    p
+                        span.icon-checked
+                        span= booking_util2
+            .tcd__booking-sum
+                ul
+                    each i in [0, 1, 2, 3]
+                        li
+                            span.label= price_labels[i]
+                            strong.price(class={"yellow": i == 3})= price_table[i]
+                            if price_subs[i] != ""
+                                span.sub= price_subs[i]
+            .tcd__booking-promo
+                label= price_discount_label
+                .form-group.is-invalid
+                    input.form-control(type="text", value=price_discount_code)
+                    button.btn.btn-primary.small(type="button")= price_discount_btn
+                .invalid-feedback= price_discount_error
+                .tcd__checkbox
+                    input(type="checkbox", id="promo-applied")
+                    label(for="promo-applied")!= price_discount_point
+            .tcd__booking-extra
+                ul
+                    each extra in price_utils
+                        li
+                            span.icon-checked
+                            span= extra
+            .tcd__booking-terms
+                a(href="#terms-summary", data-toggle="modal")=terms_title
+                span -
+                a(href="#payment-guide-summary", data-toggle="modal")= payment_guide_title
 #price-summary.tcd__modal.tcd__map-modal.modal.fade
     .modal-dialog
         .modal-content
