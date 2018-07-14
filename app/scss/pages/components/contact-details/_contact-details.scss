@@ -1,0 +1,125 @@
+$pre: 'tcd__contact-details';
+$parent: 'tcd__contact-detail-wrapper';
+
+$padding: 40px 0 0 0;
+$padding-mobile: 20px 0 0 0;
+$field-desktop-width: calc(33.33% - 10px);
+$field-tablet-width: calc(50% - 10px);
+
+%padding {
+    padding: $padding-mobile;
+
+    @include media-breakpoint-up(sm) {
+        padding: $padding;
+    }
+}
+
+.#{$parent} {
+    @extend %block-padding;
+    background-color: $results-background;
+}
+
+.#{$pre} {
+    .#{$pre}-contact {
+    }
+
+    .#{$pre}-passengers {
+        margin-top: 20px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 40px;
+        }
+
+        .#{$pre}-form{
+            padding: 15px;
+        }
+    }
+
+    .#{$pre}-title {
+        margin-bottom: 20px;
+        h2 {
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+
+        p {
+
+        }
+    }
+
+    .#{$pre}-form{
+        background: $white;
+        padding: 25px 15px 15px 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-shadow: 2px 4px 10px $shadow-button;
+        border-bottom: 1px solid $form-control-border;
+
+        .#{$pre}-header {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5px;
+            h4 {
+                width: $field-desktop-width;
+                margin: 0 5px;
+            }
+            .#{$pre}-radios {
+                display: flex;
+                flex-direction: row;
+
+                .tcd__radio {
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .#{$pre}-field {
+            width: 100%;
+            margin: 0 5px;
+
+            @include media-breakpoint-up(sm) {
+                width: $field-tablet-width;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: $field-desktop-width;
+            }
+
+            .form-group {
+                border-color: $form-control-border;
+        
+                &.is-invalid {
+                    border-color: $primary-red;
+                }
+
+                label {
+
+                }
+
+                select {
+                    background-size: 15px;
+                    background-position: right 10px top 0px;
+                }
+            }
+
+            .invalid-feedback {
+
+            }
+        }
+    }
+
+    .#{$pre}-btn {
+        background: $white;
+        padding: 15px;
+        text-align: right;
+        .btn {
+            
+        }
+    }
+}

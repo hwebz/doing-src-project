@@ -1,0 +1,171 @@
+{
+    "navigation": [
+      "Sản phẩm",
+      "Tuyển dụng",
+      "Liên hệ",
+      "Giới thiệu"
+    ],
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+
+    "detail_title": "Thông tin hành khách",
+    "breadcrums": [
+        "Trang chủ",
+        "Tour ở Hà Nội",
+        "Tour truyền thống",
+        "Tour khám phá"
+    ],
+    "breadcrum_arrow": ">",
+
+    "contact_title": "Thông tin liên hệ",
+    "contact_description": "Cung cấp thông tin liên hệ với nhà cung cấp để tiện liên lạc trong những trường hợp cần thiết.",
+    "contact_last": "Họ",
+    "contact_error": "Vui lòng cung cấp thông tin",
+    "contact_middle": "Đệm",
+    "contact_first": "Tên",
+    "contact_email": "Email",
+    "contact_phone": "Điện thoại",
+    "contact_phone_code": "+84",
+
+    "passenger_title": "Thông tin hành khách",
+    "passenger_description": "Cung cấp thông tin từng hành khách để làm thủ tục vé máy bay và quản lý hành khách",
+    "passenger_label" : "Hành khách #",
+    "passenger_type": " - Người lớn",
+    "passenger_male": "Nam",
+    "passenger_female": "Nữ",
+    "passenger_dob": "Ngày sinh",
+    "passenger_dob_value": "09 / 08 / 1986",
+    "passenger_nationality": "Quốc tịch",
+    "passenger_nationalities": [
+        "Việt Nam",
+        "Thái Lan",
+        "Campuchia",
+        "Lào",
+        "Singapore",
+        "Malaysia",
+        "Philippines"
+    ],
+    "passenger_passport": "Hộ chiếu",
+    "passenger_passport_number": "C4145676", 
+    "continue_btn": "Tiếp tục",
+
+
+    "adv_title": "Tham quan Vịnh Hạ Long và các điểm gần kề",
+    "minus": "-",
+    "adv_discount": "45",
+    "adv_utils": [
+        "Đặt vé gia đình",
+        "Trả tiền trước"
+        
+    ],
+    "adv_price": "530000",
+    "adv_per": "/người",
+    "adv_btn": "Chi tiết",
+    "dong": "đ",
+    "percent": "%",
+
+    "booking_flight": "Chuyến bay",
+    "booking_depart": [
+        "Chuyến bay đi",
+        "Chuyến bay về"
+    ],
+    "booking_flightNumber": "VN340",
+    "booking_departure_code": "HAN",
+    "booking_departure_time": "11:30",
+    "booking_duration": "3h 50m",
+    "booking_stopover": "1 stop",
+    "booking_arrival_code": "SGN",
+    "booking_arrival_time": "16:20",
+    "booking_flight_infos": [
+        "Vietnam Airlines, VN340, Phổ thông",
+        "Bay từ Hà Nội tới Thành phố Hồ Chí Minh",
+        "Nối chuyến tại Đà Nẵng",
+        "Hành lý xách tay 7kg"
+    ],
+
+
+    "tour_title": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
+    "tour_icons": [
+        "double-king-size-bed", 
+        "multiple-users-silhouette"
+    ],
+    "tour_infos": [
+        "6 ngày 5 đêm",
+        "18 - 39"
+    ],
+    "tour_detail": "Xem chi tiết...",
+
+    "booking_price": "12,350,000đ",
+    "booking_price_detail": "Xem chi tiết giá và phí",
+    "booking_util1": "giá đã bao gồm thuế & phí",
+    "booking_util2": "giá tốt nhất cho gia đình",
+
+    "price_labels": [
+        "Vé máy bay",
+        "Tour",
+        "Thuế & Phí",
+        "Giảm giá"
+    ],
+    "price_subs": [
+        "2 người lớn, 2 trẻ em",
+        "",
+        "",
+        "TCD700"
+    ],
+    "price_table": [
+        "7,800,000đ",
+        "4,500,000đ",
+        "750,000đ",
+        "-700,000"
+    ],
+    "price_discount_label": "Mã giảm giá",
+    "price_discount_code": "TCD700",
+    "price_discount_btn": "Áp dụng",
+    "price_discount_error": "Mã giảm giá không hợp lệ hoặc hết hạn",
+    "price_discount_point": "Sử dụng <strong>450 TPoint</strong> cho lần thanh toán này",
+    "price_utils": [
+        "Không phụ thu thẻ thanh toán quốc tế",
+        "Đảm bảo giá luôn tốt nhất",
+        "Nhận được 200 TPoint cho lần đặt sau"
+    ],
+    "fee_title": "Chi tiết giá & phí",
+    "fee_tour": "Tour",
+    "fee_tour_detail": "Tour (x4 người)",
+    "fee_tour_price": "6,000,00đ",
+    "fee_tax": "Thuế (10%)",
+    "fee_tax_value": "600,000đ",
+    "fee_other": "Phí phụ thu",
+    "fee_other_value": "300,000đ",
+    "fee_total": "Tổng",
+    "fee_total_value": "6,900,000đ",
+
+    "terms_title": "Điều khoản sử dụng",
+    "terms_content": "<p><strong>I. ĐIỀU KHOẢN CHUNG</strong></p><p>Giá tất cả các dịch vụ được tính theo tiền đồng (Việt Nam – VNĐ). Giá dịch vụ được liệt kê một cách rõ ràng trong phần “Bao gồm” trong các tour du lịch, dịch vụ xe, khách sạn,...TaChuDu không có nghĩa vụ thanh toán bất cứ chi phí nào không nằm trong phần “Bao gồm”</p><p><strong>II. THANH TOÁN</strong></p><p>Khi đăng ký, quý khách vui lòng cung cấp đầy đủ thông tin và đóng một khoản tiền cọc để giữ chỗ. Số tiền cọc khác nhau tùy theo chương trình mà quý khách tùy chọn, số tiền còn lại sẽ thanh toán trước ngày khởi hành là 5 ngày làm việc, có 2 hình thức thanh toán:</p><ul><li>Thanh toán bằng tiền mặt tại công ty.</li><li>Chuyển khoản qua ngân hàng.</li></ul><p>Việc thanh toán xem là hoàn tất khi Du Lịch Việt nhận được đủ tiền vé trước ngày khởi hành hoặc theo hợp đồng thỏa thuận giữa 2 bên. Bất kỳ việc thanh toán chậm trễ dẫn đến việc hủy dịch vụ không thuộc trách nhiệm của Du Lịch Việt.</p><p>Với hình thức thanh toán chuyển khoản: Khi thực hiện việc chuyển khoản, quý khách vui lòng ghi rõ họ tên, địa chỉ, điện thoại và nội dung chuyến du lịch cụ thể đã được quý khách chọn đăng ký.</p><p>Sau khi thực hiện việc chuyển khoản, quý khách vui lòng Fax Ủy Nhiệm Chi về công ty và liện hệ nhân viên phụ trách tuyến để nhận được vé du lịch chính thức từ công ty TaChuDu.</p><p>TaChuDu sẽ không giải quyết các trường hợp hệ thống tự động hủy phiếu đăng ký nếu quý khách không thực hiện đúng những quy định trên.</p>",
+    "payment_guide_title": "Hướng dẫn thanh toán",
+    "payment_guide_content": "<p><strong>Thực hiện thanh toán theo các bước sau:</strong></p><p><ul><li>Nhập tên và số thẻ trên thẻ tín dụng của bạn</li><li>Điền hạn sử dụng trên thẻ</li><li>Điền mã CCV ở mặt sau</li><li>Nhấn nút 'Thanh Toán' để hoàn thành việc thanh toán</li></ul></p>",
+ 
+
+    "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
+    "popular_hotel": "Khách sạn phổ biến",
+    "tag": "Thẻ",
+    "hotel_name": "Grand Hotel",
+    "from_price": "chỉ từ",
+    "hotel_price": "450,000đ",
+    "hotel_address": "Hoàn Kiếm, Hà Nội",
+    "tags": [
+        "Hà Nội",
+        "Hoàn Kiếm",
+        "Đà Nẵng",
+        "Đà Lạt",
+        "Vịnh Hạ Long",
+        "Cát Bà",
+        "Sài Gòn",
+        "Mũi Né"
+    ],
+    "company_address": "tầng 5, tòa nhà Victoria, Nguyễn Chánh, Trung Hòa, Cầu Giấy, Hà Nội",
+    "company_phone": "+8493 725 0110",
+    "company_email": "admin@tachudu.com",
+    "company_website": "www.tachudu.com",
+    "copyright": "Bản quyền thuộc về TaChuDu © 2018.",
+    "own_design": "Bản quyền thiết kế của TaChuDu"
+}

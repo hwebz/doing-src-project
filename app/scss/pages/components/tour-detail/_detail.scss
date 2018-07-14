@@ -33,13 +33,15 @@ $icon-size: 25px;
 
 .#{$pre} {
     h2 {
-        span {
+        position: relative;
+        > span {
+            display: block;
             font-size: $body-font-size;
             @extend %tcd-light;
-        }
 
-        .navbar-toggler {
-            
+            @include media-breakpoint-up(sm) {
+                display: inline;
+            }
         }
     }
 

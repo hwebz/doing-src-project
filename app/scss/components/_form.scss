@@ -1,6 +1,11 @@
+$radio-size: 15px;
+$radio-in-size: 7px;
+$checkbox-size: 15px;
+
 .form-group {
     border: 1px solid $primary-black;
     @extend %rounded-input;
+
     label {
         font-size: $small-font-size;
         display: block;
@@ -14,6 +19,7 @@
         padding-top: 0;
         background-color: transparent !important;
         padding-bottom: 3px;
+        height: auto !important;
     }
 
     + .invalid-feedback {
@@ -31,6 +37,106 @@
     &.has-toggle {
         .form-control {
             width: 80% !important;
+        }
+    }
+}
+
+.tcd__radio {
+    position: relative;
+    cursor: pointer;
+    label {
+        position:relative;
+        padding-left: $radio-size + 10px;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        &:before {
+            border: 1px solid $radio-out;
+            width: $radio-size;
+            height: $radio-size;
+            top: 50%;
+            left: 0;
+            @include transform(translate(0, -50%));
+        }
+
+        &:after {
+            width: $radio-in-size;
+            height: $radio-in-size;
+            top: 50%;
+            left: 4px;
+            @include transform(translate(0, -50%));
+            background: $radio-in;
+            display: none;
+        }
+    }
+
+    input {
+        @include opacity(0);
+        visibility: hidden;
+        position: absolute;
+
+        &:checked + label {
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+.tcd__checkbox {
+    position: relative;
+    cursor: pointer;
+    label {
+        padding-left: 25px;
+        position: relative;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            @include transform(translate(0, -50%));
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border: 1px solid $primary-black;
+            border-radius: 2px;
+        }
+
+        span {
+
+        }
+
+        img {
+            display: inline-block;
+            max-height: 20px;
+        }
+    }
+
+    input {
+        @include opacity(0);
+        visibility: hidden;
+        position: absolute;
+
+        &:checked + label {
+            &:before {
+                font-family: 'icomoon' !important;
+                content: "\e92c";
+                color: $white;
+                font-size: $small-font-size - 2px;
+                background-color: $primary-yellow;
+                border-color: $primary-yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }

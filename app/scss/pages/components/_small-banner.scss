@@ -1,6 +1,7 @@
 $pre: 'tcd__small-banner';
 
 $small-banner-height: 320px;
+$small-banner-height-type-2: 240px;
 $icon-size: 25px;
 
 .#{$pre} {
@@ -80,7 +81,13 @@ $icon-size: 25px;
                 }
 
                 &.start {
+                    &:before {
+                        left: 60%;
 
+                        @include media-breakpoint-up(lg) {
+                            left: 50%;
+                        }
+                    }
                 }
 
                 &.process {
@@ -95,6 +102,18 @@ $icon-size: 25px;
                             position: absolute;
                             top: 5px;
                             left: 5px;
+                        }
+                    }
+
+                    &:before {
+                        width: 90%;
+
+                        @include media-breakpoint-up(sm) {
+                            width: 80%;
+                        }
+
+                        @include media-breakpoint-up(md) {
+                            width: 100%;
                         }
                     }
                 }
@@ -122,5 +141,9 @@ $icon-size: 25px;
                 margin-left: -70px;
             }
         }
+    }
+
+    &.type-2 {
+        height: $small-banner-height-type-2;
     }
 }

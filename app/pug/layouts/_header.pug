@@ -4,10 +4,10 @@
             a.tcd__header-logo.navbar-brand(href="#")
                 img.desktop(src="img/logo.png", alt="Logo")
                 img.mobile(src="img/logo-mobile.png", alt="Logo")
-            button.navbar-toggler(type="button")
+            button.navbar-toggler(type="button", data-target=".tcd__header-navigation", data-parent=".tcd__header")
                 span.navbar-toggler-icon
             .tcd__header-navigation
-                button.navbar-toggler(type="button")
+                button.navbar-toggler(type="button", data-target=".tcd__header-navigation", data-parent=".tcd__header")
                     span.icon-cancel-music
                 ul.navbar-nav
                     each item in navigation

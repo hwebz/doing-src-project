@@ -1,9 +1,5 @@
 $(document).ready(function () {
     var body = $('body');
-    var resultsClass = '.tcd__results-wrapper';
-    var filterClass = '.tcd__filters';
-    var results = $(resultsClass);
-    var toggleButton = results.find('.navbar-toggler');
 
     var advListSlider = $('.tcd__adv-slider');
     var advsListSlider = $('.tcd__advs-slider .tcd__advs-wrapper');
@@ -20,19 +16,6 @@ $(document).ready(function () {
     var mapTour = $('#' + mapTourClass);
     var smallMapTourChildClass = null;
     var smallMapTourChild = null;
-
-    // Toggle Menu
-    if (isDefined(toggleButton)) toggleButton.on('click', function () {
-        var $this = $(this);
-        var $nav = $this.parents(resultsClass).find(filterClass);
-
-        if (isDefined($nav)) $nav.toggleClass('active').promise().done(function () {
-            var isOpened = $(this).hasClass('active');
-
-            if (isOpened) body.addClass('modal-open')
-            else body.removeClass('modal-open')
-        });
-    });
 
     // Tour list slider
     advSlider(advListSlider, 1);

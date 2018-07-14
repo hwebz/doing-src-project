@@ -1,0 +1,249 @@
+$pre: 'tcd__booking';
+
+$tour-thumb-size: 100px;
+
+.#{$pre}-summary {
+    @extend %leftSlideFilter;
+    
+    .navbar-toggler {
+        @extend %navbar-toggler;
+    }
+    
+    .#{$pre}-pane {
+        background-color: $white;
+        
+        @include media-breakpoint-up(lg) {
+            margin-top: 20px;
+            box-shadow: 2px 4px 10px $shadow-button;
+        }
+
+        .#{$pre}-flight {
+            border-bottom: 1px solid $horizontal-header-date;
+            > h4 {
+                padding: 10px 10px 0 10px;
+                margin-bottom: 5px;
+            }
+    
+            .#{$pre}-flight-direction {
+                .#{$pre}-flight-info {
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    align-items: center;
+    
+                    > p {
+                        font-size: $small-font-size;
+                        margin-bottom: 0;
+                        width: 100%;
+                        text-align: left;
+                    }
+                    .#{$pre}-flight-brand {
+                        img {
+                            width: 40px;
+                        }
+                        p {
+                            margin: 0;
+                            font-size: $small-font-size;
+                        }
+                    }
+                    .#{$pre}-flight-depart {
+                        padding: 0 5px;
+                        flex-grow: 1;
+                        h2 {
+                            margin-bottom: 0
+                        }
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                    .#{$pre}-flight-icon {
+                        p {
+                            margin: 0;
+                            font-size: $small-font-size;
+                        }
+                        img {
+                            width: 25px;
+                        }
+                    }
+                    > a {
+                        color: $primary-black;
+                        @include transform(rotateZ(90deg));
+                        color: $primary-black;
+                        @extend %hoverable-link;
+                        @include transition(all 0.3s ease-in-out);
+
+                        &.expanded {
+                            @include transform(rotateZ(-90deg));
+                        }
+                    }
+                }
+    
+                .#{$pre}-flight-detail {
+                    padding: 10px;
+                    background-color: $primary-yellow;
+                    display: none;
+                    ul {
+                        li {
+                            color: $white;
+    
+                            &:before {
+                                content: '- ';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .#{$pre}-tour {
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border-bottom: 1px solid $horizontal-header-date;
+            .#{$pre}-tour-thumb {
+                width: $tour-thumb-size;
+                height: $tour-thumb-size;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin-right: 10px;
+            }
+    
+            .#{$pre}-tour-info {
+                h4 {
+                    margin-bottom: 5px;
+                }
+                p {
+                    margin: 0;
+                    color: $dark-gray;
+                    font-size: $small-font-size;
+                    span {
+                        margin-right: 5px;
+                    }
+                }
+
+                a {
+                    font-size: $small-font-size;
+                    text-decoration: underline;
+                }
+            }
+        }
+    
+        .#{$pre}-price {
+            padding:10px;
+            text-align: center;
+            border-bottom: 1px solid $horizontal-header-date;
+            h2 {
+                color: $primary-yellow;
+                margin: 0;
+            }
+            a {
+                font-size: $small-font-size;
+                text-decoration: underline;
+            }
+            .#{$pre}-price-included {
+                @extend %included-block;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    
+        .#{$pre}-sum {
+            border-bottom: 1px solid $horizontal-header-date;
+            padding: 10px;
+            ul {
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    border-bottom: 1px dashed $horizontal-header-date;
+                    padding-bottom: 5px;
+                    .label {
+                        flex-grow: 1;
+                    }
+                    .price {
+                        &.yellow {
+                            color: $primary-yellow;
+                        }
+                    }
+                    .sub {
+                        width: 100%;
+                        font-size: $small-font-size;
+                        padding-left: 25px;
+                        margin: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                        border: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    
+        .#{$pre}-promo {
+        border-bottom: 1px solid $horizontal-header-date;
+            padding: 10px;
+            > label {
+                font-size: $small-font-size;
+            }
+            .form-group {
+                border-color: $form-control-border;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+                .form-control {
+                    padding: 3px 10px;
+                }
+                .btn {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    @include transform(scale(1.07));
+                    box-shadow: none !important;
+                }
+
+                &.is-invalid {
+                    border-color: $primary-red;
+                    + .invalid-feedback {
+                        display: block;
+                    }
+                }
+            }
+            .invalid-feedback {
+                color: $primary-red;
+                margin: -10px 0 10px 0;
+            }
+
+            .tcd__checkbox {
+                label {
+                    font-size: $small-font-size;
+                    display: inherit;
+                    strong {
+                        margin: 0 3px;
+                    }
+                }
+            }
+        }
+    
+        .#{$pre}-extra {
+            @extend %extra-information;
+            padding: 10px;
+            border-top: 0;
+            border-bottom: 1px solid $horizontal-header-date;
+        }
+    
+        .#{$pre}-terms {
+            @extend %terms-block;
+            margin-top: 0;
+            padding: 10px;
+        }
+    }
+}

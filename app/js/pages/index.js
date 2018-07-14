@@ -2,8 +2,6 @@ $(document).ready(function() {
 
     var body = $('body');
     var header = $('.tcd__header');
-    var toggleButton = header.find('.navbar-toggler');
-    var navigation = header.find('.tcd__header-navigation');
 
     var tourList = $('.tcd__tour-list');
     var tourListSlider = tourList.find('.tcd__tour-list-slider'); 
@@ -35,19 +33,6 @@ $(document).ready(function() {
     // pax selectors
     var paxSelectorsClass = '.tcd__search-form-pax';
     var paxSelectors = $(paxSelectorsClass);
-
-    // Toggle Menu
-    if (isDefined(toggleButton)) toggleButton.on('click', function() {
-        var $this = $(this);
-        var $nav = $this.parents(header).find(navigation);
-
-        if (isDefined($nav)) $nav.toggleClass('active').promise().done(function() {
-            var isOpened = $(this).hasClass('active');
-
-            if (isOpened) body.addClass('modal-open')
-            else body.removeClass('modal-open')
-        });
-    });
 
     // Tour list slider
     if (isDefined(tourListSlider)) {
@@ -120,7 +105,7 @@ $(document).ready(function() {
                     "Th08",
                     "Th09",
                     "Th10",
-                    "th11",
+                    "Th11",
                     "Th12"
                 ],
                 "firstDay": 1

@@ -1,8 +1,12 @@
-mixin form-input(title, type, placeholder, error_message, value, isToggleBtn)
+mixin form-input(title, type, placeholder, error_message, value, isToggleBtn, options = [])
     .form-group(class={'is-invalid': error_message, 'has-toggle': isToggleBtn})
         label= title
         if type == 'textarea'
             textarea.form-control(placeholder=placeholder ? placeholder : '', required, value=value ? value : '')
+        else if type == 'select'
+            select.form-control(required)
+                each option in options
+                    option(value=option)= option
         else
             input.form-control(type=type, placeholder=placeholder ? placeholder : '', required, value=value ? value : '')
     if error_message 

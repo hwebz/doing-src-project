@@ -4,42 +4,14 @@ $price: 'tcd__price-info';
 $provider: 'tcd__provider';
 
 .#{$pre} {
-    height: 100vh;
-    width: 100vw;
-    background-color: $white;
-    @extend %fixed-element;
-    left: auto;
-    right: -100vw;
-    @include transition(right 0.3s ease-in-out);
-    padding-top: 25px;
+    @extend %leftSlideFilter;
 
-    &.active {
-        right: 0;
+    @include media-breakpoint-up(lg) {
+        padding: 0;
     }
 
     .navbar-toggler {
-        top: 15px;
-        right: 15px;
-
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
-    }
-
-    .#{$adv}-slider {
-        .#{$adv} {
-            .#{$adv}-content {
-                .#{$adv}-info {
-                    .#{$adv}-price {
-                        font-size: $heading-2;
-
-                        span {
-                            font-size: $small-font-size;
-                        }
-                    }
-                }
-            }
-        }
+        @extend %navbar-toggler;
     }
 
     .#{$price} {
@@ -49,8 +21,13 @@ $provider: 'tcd__provider';
         display: flex;
         flex-direction: column;
         background-color: $white;
-        box-shadow: 2px 4px 10px $shadow-button;
-        margin-top: 25px;
+        border-top: 1px solid $horizontal-header-date;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 25px;
+            box-shadow: 2px 4px 10px $shadow-button;
+            border: none;
+        }
         
         .#{$price}-discount {
             @extend %discount-section;
@@ -80,21 +57,7 @@ $provider: 'tcd__provider';
         }
 
         .#{$price}-extra {
-            padding: 15px;
-            border-top: 1px solid $horizontal-header-date;
-            border-bottom: 1px solid $horizontal-header-date;
-            ul {
-                li {
-                    font-size: $small-font-size + 2px;
-                    span:last-child {
-                        margin-left: 5px;
-                    }
-
-                    span[class^='icon-'] {
-                        font-size: $small-font-size;
-                    }
-                }
-            }
+            @extend %extra-information;
         }
         .#{$price}-btn {
             padding: 15px;
@@ -104,18 +67,7 @@ $provider: 'tcd__provider';
             }
 
             .#{$price}-terms {
-                font-size: 12px;
-                display: block;
-                text-align: center;
-                margin-top: 10px;
-
-                a {
-                    text-decoration: underline;
-                }
-
-                span {
-                    margin: 0 5px;
-                }
+                @extend %terms-block;
             }
         }
     }
@@ -151,16 +103,6 @@ $provider: 'tcd__provider';
             display: flex;
         }
     }
-
-    @include media-breakpoint-up(lg) {
-        height: auto;
-        width: auto;
-        background-color: transparent;
-        position: relative;
-        right: auto;
-        padding-top: 0;
-        @include transform(inherit);
-    }
 }
 
 .sticky-sidebar {
@@ -168,5 +110,21 @@ $provider: 'tcd__provider';
         position: fixed;
         top: 70px;
         @include transform(translate3d(0, 0, 0));
+    }
+}
+
+.#{$adv}-slider.type-2 {
+    .#{$adv} {
+        .#{$adv}-content {
+            .#{$adv}-info {
+                .#{$adv}-price {
+                    font-size: $heading-2;
+
+                    span {
+                        font-size: $small-font-size;
+                    }
+                }
+            }
+        }
     }
 }

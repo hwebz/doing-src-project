@@ -355,4 +355,21 @@ function initMap(mapId, zoom) {
 
 (function() {
     $('[data-toggle="tooltip"]').tooltip();
+    var body = $('body');
+    var toggleButton = $('.navbar-toggler');
+
+    // Toggle Menu
+    if (isDefined(toggleButton)) toggleButton.on('click', function() {
+        var $this = $(this);
+        var navClass = $this.attr('data-target');
+        var parentClass = $this.attr('data-parent');
+        var $nav = $this.parents(parentClass).find(navClass);
+
+        if (isDefined($nav)) $nav.toggleClass('active').promise().done(function() {
+            var isOpened = $(this).hasClass('active');
+
+            if (isOpened) body.addClass('modal-open')
+            else body.removeClass('modal-open')
+        });
+    });
 })();

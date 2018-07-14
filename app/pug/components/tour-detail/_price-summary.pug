@@ -1,8 +1,8 @@
 .tcd__price-summary.col-12.col-lg-3
     #tcd__sticky-sidebar
-        button.navbar-toggler(type="button")
+        button.navbar-toggler(type="button", data-target=".tcd__price-summary", data-parent=".tcd__detail-wrapper")
             span.icon-cancel-music
-        .tcd__adv-slider.initializing
+        .tcd__adv-slider.initializing.type-2
             each i in [0, 1, 2, 3]
                 .tcd__adv
                     h4= adv_title

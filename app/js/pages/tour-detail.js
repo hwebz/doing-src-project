@@ -91,14 +91,18 @@ $(document).ready(function () {
             var parentWidth = parent.width();
             var bottomEdge = topEdge + parent.height() - priceSummary.height() - offsetPart;
 
-            if (sT > topEdge - offsetPart) {
-                if (sT > bottomEdge) {
-                    priceSummary.css({width: parentWidth, top: offsetPart - (sT - bottomEdge)})
+            if ($(window).width() > 991) {
+                if (sT > topEdge - offsetPart) {
+                    if (sT > bottomEdge) {
+                        priceSummary.css({width: parentWidth, top: offsetPart - (sT - bottomEdge)})
+                    } else {
+                        priceSummary.addClass('sticky-sidebar').css({width: parentWidth});
+                    }
                 } else {
-                    priceSummary.addClass('sticky-sidebar').css({width: parentWidth});
+                    priceSummary.removeClass('sticky-sidebar').removeAttr('style');
                 }
             } else {
-                priceSummary.removeClass('sticky-sidebar').removeAttr('style');
+                priceSummary.removeClass('sticky-sidebar').removeAttr('style')
             }
         }))
     }
