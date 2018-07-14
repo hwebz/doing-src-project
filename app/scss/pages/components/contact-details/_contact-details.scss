@@ -1,18 +1,8 @@
 $pre: 'tcd__contact-details';
 $parent: 'tcd__contact-detail-wrapper';
 
-$padding: 40px 0 0 0;
-$padding-mobile: 20px 0 0 0;
 $field-desktop-width: calc(33.33% - 10px);
 $field-tablet-width: calc(50% - 10px);
-
-%padding {
-    padding: $padding-mobile;
-
-    @include media-breakpoint-up(sm) {
-        padding: $padding;
-    }
-}
 
 .#{$parent} {
     @extend %block-padding;

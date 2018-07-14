@@ -15,17 +15,7 @@ $gallery-image-height: 110px;
 $gallery-image-width-mobile: calc(50% - 10px);
 $gallery-image-height-mobile: 80px;
 $review-avatar-size: 35px;
-$padding: 40px 0 0 0;
-$padding-mobile: 20px 0 0 0;
 $icon-size: 25px;
-
-%padding {
-    padding: $padding-mobile;
-
-    @include media-breakpoint-up(sm) {
-        padding: $padding;
-    }
-}
 
 .#{$parent} {
     @extend %block-padding;

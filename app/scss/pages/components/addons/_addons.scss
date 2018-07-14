@@ -1,0 +1,11 @@
+$pre: 'tcd__addons';
+$parent: 'tcd__addons-wrapper';
+
+.#{$parent} {
+    @extend %block-padding;
+    background-color: $results-background;
+}
+
+.#{$pre} {
+
+}
