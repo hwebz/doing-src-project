@@ -53,10 +53,10 @@
                     p
                         span(class="icon-" + tour_icons[i])
                         span= tour_infos[i]
-                a(href="#")= tour_detail
+                a(href="#tour-detail-popup", data-toggle="modal")= tour_detail
         .tcd__booking-price
             h2= booking_price
-            a(href="#tour-detail-popup", data-toggle="modal")= booking_price_detail
+            a(href="#price-summary", data-toggle="modal")= booking_price_detail
             .tcd__booking-price-included
                 p
                     span.icon-checked
