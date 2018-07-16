@@ -170,7 +170,8 @@
         "Máy bay, xe khách",
         "TripAdvisor"
     ], 
-    "item_discount": "-45%",
+    "item_discount": "Giảm giá 45%",
+    "item_discount_price": "Giảm 1,500,000đ",
     "item_old_price": "5,600,000đ",
     "item_price": "4,500,000đ",
     "item_days": "5 ngày",

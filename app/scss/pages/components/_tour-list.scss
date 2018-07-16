@@ -75,6 +75,7 @@ $info-height: 250px;
                 h3 {
                     font-size: $heading-2;
                     //@include ellipse-text($heading-2, $heading-2-line-height, 2);
+                    min-height: 60px;
                 }
 
                 p {

@@ -36,7 +36,12 @@
                             each val in item_values
                                 p= val
                 .tcd__results-card-price-info
-                    span.tcd__results-card-discount= item_discount
+                    span.tcd__results-card-discount
+                        span.icon-price
+                        if i == 2 || i == 4
+                            span= item_discount
+                        else
+                            span= item_discount_price
                     .tcd__results-card-price
                         p= item_old_price
                         h3= item_price
