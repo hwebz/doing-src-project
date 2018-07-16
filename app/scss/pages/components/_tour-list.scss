@@ -53,6 +53,9 @@ $info-height: 250px;
                 padding: 40px 30px 15px 30px;
                 position: relative;
                 min-height: $info-height;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 .#{$pre}-price {
                     position: absolute;
@@ -75,7 +78,6 @@ $info-height: 250px;
                 h3 {
                     font-size: $heading-2;
                     //@include ellipse-text($heading-2, $heading-2-line-height, 2);
-                    min-height: 60px;
                 }
 
                 p {

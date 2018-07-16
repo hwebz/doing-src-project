@@ -2,6 +2,14 @@ $radio-size: 15px;
 $radio-in-size: 7px;
 $checkbox-size: 15px;
 
+input, select, textarea {
+    outline: none !important;
+    
+    &:focus, &:hover, &:active {
+        outline: none !important;
+    }
+}
+
 .form-group {
     border: 1px solid $primary-black;
     @extend %rounded-input;

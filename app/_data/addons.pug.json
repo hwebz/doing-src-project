@@ -30,6 +30,7 @@
     "meals": "Thức ăn",
     "add_baggage": "Thêm hành lý",
     "add_baggage_sub": "Hành lý xách tay + hành lý ký gửi",
+    "close_btn": "X",
     "seven_kg": "7 kg",
     "thirty_kg": "30 kg",
     "plus_sign": "+",
@@ -49,7 +50,7 @@
         "Ghế đã được chọn"
     ], 
     "seat_cols": [
-        "A", "B", "C", "D", "E", "F"
+        "A", "B", "C", "", "D", "E", "F"
     ], 
     "meal_title": "Chọn thức ăn",
     "meal_sub": "Chọn thức ăn và thanh toán trước khi bay. Tất cả những đồ ăn được đặt sẽ được phục vụ trên chuyến bay cho tất cả các hành khách đã đặt",
@@ -68,10 +69,20 @@
         "img/meals/3.jpg",
         "img/meals/4.jpg",
         "img/meals/5.jpg",
-        "img/meals/6.jpg",
-        "img/meals/7 .jpg"
+        "img/meals/3.jpg",
+        "img/meals/2.jpg"
     ],
-
+    "meal_prices": [
+        "+ 120,000đ",
+        "Đã chọn",
+        "+ 100,000đ",
+        "+ 85,000đ",
+        "+ 90,000đ",
+        "+ 145,000đ",
+        "+ 105,000đ"
+    ],
+    "addons_btn": "Tiếp tục",
+    
     "adv_title": "Tham quan Vịnh Hạ Long và các điểm gần kề",
     "minus": "-",
     "adv_discount": "45",

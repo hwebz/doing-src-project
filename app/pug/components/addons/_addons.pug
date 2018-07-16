@@ -1,2 +1,84 @@
 .tcd__addons.col-12.col-lg-9
-    h2 dasdsa
+    each f in [0, 1]
+        .tcd__addons-flight
+            h4= depart_flight
+                button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__addons-wrapper")
+                    span.navbar-toggler-icon.black
+            p= depart_on 
+            each p in [0, 1]
+                .tcd__addons-flight_item
+                    .tcd__addons-flight_item-tabs
+                        h4= passengers[p]
+                        .tcd__addons-flight_item-tab.navigation-tab(data-target="#tcd__addons-seat-" + f + "-" + p)
+                            p= seat
+                            span.icon-car-seat
+                            a(href="#seat-selector")= add
+                        .tcd__addons-flight_item-tab.double.navigation-tab(data-target="#tcd__addons-baggage-" + f + "-" + p)
+                            p= baggage
+                            .tcd__addons-icon
+                                span.icon-briefcase
+                                p= seven_kg
+                            span= plus_sign
+                            .tcd__addons-icon
+                                span.icon-case
+                                p= thirty_kg
+                        .tcd__addons-flight_item-tab.navigation-tab(data-target="#tcd__addons-meal-" + f + "-" + p)
+                            p= meals
+                            span.icon-plate-fork-and-knife 
+                            a(href="#meal-selector")= add
+                    .tcd__addons-flight_item-contents
+                        .tcd__addons-content.navigation-content(id="tcd__addons-seat-" + f + "-" + p)
+                            .tcd__addons-seat__left
+                                h4= depart_flight
+                                p= depart_on
+                                ul.tcd__addons-seat-types
+                                    each i in [0, 1, 2, 3]
+                                        li
+                                            span(class=seat_classes[i])
+                                            span= seat_labels[i]
+                            .tcd__addons-seat__right
+                                .tcd__addons-seat-map
+                                    each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+                                        ul
+                                            each j in [0, 1, 2, 3, 4, 5, 6]
+                                                if i == 0
+                                                    li= seat_cols[j]
+                                                else if i == 1
+                                                    if j == 3 
+                                                        li= i
+                                                    else
+                                                        li.seat.yellow
+                                                else
+                                                    if j == 3 
+                                                        li= i
+                                                    else
+                                                        li.seat(class={'selected': i == 4 && j == 2, 'blue': (i == 5 && (j == 1 || j == 2)) || (i == 6 && (j == 4 || j == 5 || j == 6))})
+                        .tcd__addons-content.navigation-content(id="tcd__addons-baggage-" + f + "-" + p)
+                            h4= add_baggage
+                            p= add_baggage_sub
+                            .tcd__addons-baggages
+                                each i in [0, 1]
+                                    .tcd__addons-baggage-item(class={'active': i == 0})
+                                        span.close-btn= close_btn
+                                        .tcd__addons-icon
+                                            span.icon-briefcase
+                                            p= seven_kg
+                                        span= plus_sign
+                                        .tcd__addons-icon
+                                            span.icon-case
+                                            p= thirty_kg
+                                        h4= baggage_price
+                        .tcd__addons-content.navigation-content(id="tcd__addons-meal-" + f + "-" + p)
+                            h4= meal_title
+                            p= meal_sub
+                            .tcd__addons-meals
+                                h4= depart_flight
+                                p= depart_on
+                                .tcd__addons-meals-slider
+                                    each i in [0, 1, 2, 3, 4, 5, 6]
+                                        .tcd__addons-meal
+                                            img(src=meal_photos[i])
+                                            p= meal_menu[i]
+                                            a.btn.btn-primary(href="#", class={'active': i == 1})= meal_prices[i]
+    .tcd__addons-btns
+        button.btn.btn-primary(type="button")= addons_btn
