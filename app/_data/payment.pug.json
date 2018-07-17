@@ -1,0 +1,374 @@
+{
+    "navigation": [
+      "Sản phẩm",
+      "Tuyển dụng",
+      "Liên hệ",
+      "Giới thiệu"
+    ],
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+
+    "detail_title": "Tiện ích",
+    "detail_description": "Để cho chuyến đi của bạn thêm phần thoải mái, bạn có thể đặt chỗ ngồi, đặt thức ăn và thậm chí là mua thêm một hoặc nhiều gói hành lý. Đơn giản chỉ cần chọn những gì bạn muốn và thanh toán",
+    "breadcrums": [
+        "Trang chủ",
+        "Tour ở Hà Nội",
+        "Tour truyền thống",
+        "Tour khám phá"
+    ],
+    "breadcrum_arrow": ">",
+
+    "passenger_title": "Thông tin khách hàng",
+    "passenger_ths": [
+        "Họ và Tên",
+        "Ngày sinh",
+        "Quốc tich",
+        "Hộ chiếu số"
+    ],
+    "passenger_icons": [
+        "business-man",
+        "woman-avatar",
+        "boy-and-girl-students",
+        "crawling-baby-silhouette"
+    ],
+    "passengers": [
+        "Trần Nguyễn Đạt",
+        "Nguyễn Thị Thu Hoa",
+        "Trần Hoa Duyên",
+        "Trần Quốc Huy"
+    ],
+    "passenger_dobs": [
+        "20/09/1986",
+        "12/11/1989",
+        "22/12/2005",
+        "16/10/2017"
+    ],
+    "passenger_nationality_value": "Việt Nam",
+    "passenger_passports": [
+        "C5657454",
+        "C1232132",
+        "H5665445",
+        "S6563435"
+    ],
+    "payment_title": "Thông tin thanh toán",
+    "payment_sub": "Chọn phương thức thanh toán và hoàn tất thanh toán",
+    "payment_tabs": [
+        "Thẻ tín dụng",
+        "MasterCard",
+        "Chuyển khoản"
+    ],
+    "payment_tab_icons": [
+        "visa-logo",
+        "mastercard2",
+        "credit-card"
+    ],
+    "credit_name": "Họ và tên",
+    "credit_name_value": "TRAN NGUYEN DAT",
+    "credit_number": "Số thẻ",
+    "credit_number_value": "4111 1111 1111 1111",
+    "credit_period": "Ngày hết hạn",
+    "credit_ccv": "CCV",
+    "terms_and_conditions": "<p>Điều khoản:</p><ul><li>Cung cấp cho khách hàng các dịch vụ được yêu cầu như tạo tài khoản, thực hiện và xác nhận đặt phòng, đồng thời liên hệ với khách hàng về các dịch vụ đã yêu cầu (ví dụ như trò chuyện hỗ trợ trước và sau khi đặt phòng (không bao gồm số thẻ tín dụng), yêu cầu đặc biệt, hủy phòng, tặng thưởng</li><li>Gửi cho khách hàng email tiếp thị về những sản phẩm và dịch vụ có thể liên quan đến khách hàng</li><li>Thực hiện khảo sát, cung cấp cho quý khách thông tin về các dịch vụ trong Trang Web của chúng tôi; hoặc các trang web khác mà bạn có thể truy cập</li><li>Duy trì và cải thiện Trang Web, cá nhân hóa trải nghiệm khách hàng và để đào tạo nội bộ</li><li>Bảo vệ an toàn cho khách hàng và Trang Web</li><li>Thực hiện quyền lợi hoặc nghĩa vụ theo quy định của pháp luật, bao gồm cả việc hồi đáp cho những đòi hỏi và yêu cầu pháp lý Khi khách hàng thực hiện đặt phòng từ trang web hoặc ứng dụng thuộc về một trong những đối tác của Agoda, chúng tôi cũng có thể nhận được một số thông tin như họ tên và chi tiết đặt phòng, bao gồm cả nơi lưu trú đã đặt, để thực hiện yêu cầu đặt và xác định nguồn gốc đặt phòng đến từ kênh nào.</li></ul>",
+    "terms_aggrement": "<span>Tôi đồng ý với tất cả điều khoản trên </span><small>Vui lòng đọc và đồng ý với điêu khoản quy định</small>",
+    "conditions_aggrement": "<span>Tôi đồng ý với điều khoản về luật và thuế phí khi thanh toán trực tuyến</span>",
+    "payment_btn": "Thanh toán",
+
+    "adv_title": "Tham quan Vịnh Hạ Long và các điểm gần kề",
+    "minus": "-",
+    "adv_discount": "45",
+    "adv_utils": [
+        "Đặt vé gia đình",
+        "Trả tiền trước"
+        
+    ],
+    "adv_price": "530000",
+    "adv_per": "/người",
+    "adv_btn": "Chi tiết",
+    "dong": "đ",
+    "percent": "%",
+
+    "booking_flight": "Chuyến bay",
+    "booking_depart": [
+        "Chuyến bay đi",
+        "Chuyến bay về"
+    ],
+    "booking_flightNumber": "VN340",
+    "booking_departure_code": "HAN",
+    "booking_departure_time": "11:30",
+    "booking_duration": "3h 50m",
+    "booking_stopover": "1 stop",
+    "booking_arrival_code": "SGN",
+    "booking_arrival_time": "16:20",
+    "booking_flight_infos": [
+        "Vietnam Airlines, VN340, Phổ thông",
+        "Bay từ Hà Nội tới Thành phố Hồ Chí Minh",
+        "Nối chuyến tại Đà Nẵng",
+        "Hành lý xách tay 7kg"
+    ],
+
+
+    "tour_title_2": "Tham quan Cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
+    "tour_icons": [
+        "double-king-size-bed", 
+        "multiple-users-silhouette"
+    ],
+    "tour_infos": [
+        "6 ngày 5 đêm",
+        "18 - 39"
+    ],
+    "tour_detail": "Xem chi tiết...",
+
+    "booking_price": "12,350,000đ",
+    "booking_price_detail": "Xem chi tiết giá và phí",
+    "booking_util1": "giá đã bao gồm thuế & phí",
+    "booking_util2": "giá tốt nhất cho gia đình",
+
+    "price_labels": [
+        "Vé máy bay",
+        "Tour",
+        "Thuế & Phí",
+        "Giảm giá"
+    ],
+    "price_subs": [
+        "2 người lớn, 2 trẻ em",
+        "",
+        "",
+        "TCD700"
+    ],
+    "price_table": [
+        "7,800,000đ",
+        "4,500,000đ",
+        "750,000đ",
+        "-700,000"
+    ],
+    "price_discount_label": "Mã giảm giá",
+    "price_discount_code": "TCD700",
+    "price_discount_btn": "Áp dụng",
+    "price_discount_error": "Mã giảm giá không hợp lệ hoặc hết hạn",
+    "price_discount_point": "Sử dụng <strong>450 TPoint</strong> cho lần thanh toán này",
+    "price_utils": [
+        "Không phụ thu thẻ thanh toán quốc tế",
+        "Đảm bảo giá luôn tốt nhất",
+        "Nhận được 200 TPoint cho lần đặt sau"
+    ],
+    "fee_title": "Chi tiết giá & phí",
+    "fee_tour": "Tour",
+    "fee_tour_detail": "Tour (x4 người)",
+    "fee_tour_price": "6,000,00đ",
+    "fee_tax": "Thuế (10%)",
+    "fee_tax_value": "600,000đ",
+    "fee_other": "Phí phụ thu",
+    "fee_other_value": "300,000đ",
+    "fee_total": "Tổng",
+    "fee_total_value": "6,900,000đ",
+
+    "terms_title": "Điều khoản sử dụng",
+    "terms_content": "<p><strong>I. ĐIỀU KHOẢN CHUNG</strong></p><p>Giá tất cả các dịch vụ được tính theo tiền đồng (Việt Nam – VNĐ). Giá dịch vụ được liệt kê một cách rõ ràng trong phần “Bao gồm” trong các tour du lịch, dịch vụ xe, khách sạn,...TaChuDu không có nghĩa vụ thanh toán bất cứ chi phí nào không nằm trong phần “Bao gồm”</p><p><strong>II. THANH TOÁN</strong></p><p>Khi đăng ký, quý khách vui lòng cung cấp đầy đủ thông tin và đóng một khoản tiền cọc để giữ chỗ. Số tiền cọc khác nhau tùy theo chương trình mà quý khách tùy chọn, số tiền còn lại sẽ thanh toán trước ngày khởi hành là 5 ngày làm việc, có 2 hình thức thanh toán:</p><ul><li>Thanh toán bằng tiền mặt tại công ty.</li><li>Chuyển khoản qua ngân hàng.</li></ul><p>Việc thanh toán xem là hoàn tất khi Du Lịch Việt nhận được đủ tiền vé trước ngày khởi hành hoặc theo hợp đồng thỏa thuận giữa 2 bên. Bất kỳ việc thanh toán chậm trễ dẫn đến việc hủy dịch vụ không thuộc trách nhiệm của Du Lịch Việt.</p><p>Với hình thức thanh toán chuyển khoản: Khi thực hiện việc chuyển khoản, quý khách vui lòng ghi rõ họ tên, địa chỉ, điện thoại và nội dung chuyến du lịch cụ thể đã được quý khách chọn đăng ký.</p><p>Sau khi thực hiện việc chuyển khoản, quý khách vui lòng Fax Ủy Nhiệm Chi về công ty và liện hệ nhân viên phụ trách tuyến để nhận được vé du lịch chính thức từ công ty TaChuDu.</p><p>TaChuDu sẽ không giải quyết các trường hợp hệ thống tự động hủy phiếu đăng ký nếu quý khách không thực hiện đúng những quy định trên.</p>",
+    "payment_guide_title": "Hướng dẫn thanh toán",
+    "payment_guide_content": "<p><strong>Thực hiện thanh toán theo các bước sau:</strong></p><p><ul><li>Nhập tên và số thẻ trên thẻ tín dụng của bạn</li><li>Điền hạn sử dụng trên thẻ</li><li>Điền mã CCV ở mặt sau</li><li>Nhấn nút 'Thanh Toán' để hoàn thành việc thanh toán</li></ul></p>",
+ 
+
+    "tour_title": "Hành trình tour",
+    "tour_sub": "tất cả các chi phí đã bao gồm",
+    "tour_score": "4.2",
+    "tour_text": "Tuyệt Vời",
+    "tour_reviews": "150 đánh giá",
+    "tour_nights": "5 Ngày 4 Đêm",
+    "tour_ages": "18 - 39 tuổi",
+    "card_days": [
+        "Ngày 1",
+        "Ngày 2",
+        "Ngày 3",
+        "Ngày 4",
+        "Ngày 5",
+        "Ngày 6"
+    ],
+    "card_title": "Tham quan Cầu Ngọc Sơn - Hồ Hoàn Kiếm",
+    "card_description": "Welcome to your 12 day Europe tour! Leaving London behind us, we make our way to Paris, crossing the English Channel and arriving in the ‘City of Lights’ in the afternoon...",
+    "card_activity_labels": [
+        "Hoạt động:",
+        "Vé vào cửa:",
+        "Chi tiêu khác:"
+    ],
+    "card_activity_values": [
+        "Đi bộ, Ăn trưa, Ăn tối, Chơi trò chơi",
+        "Đã bao gồm",
+        "Tự túc"
+    ],
+    "card_tag_classes": [
+        "green",
+        "yellow",
+        "red",
+        "blue",
+        "green",
+        "red"
+    ],
+    "card_tags": [
+        "Danh thắng",
+        "Khu vui chơi",
+        "Trải nghiệm",
+        "Tắm Biển",
+        "Danh thắng",
+        "Trải nghiệm"
+    ],
+    "card_link": "Xem chi tiết",
+    "card_images": [
+        "img/slide-2.jpg",
+        "img/slide-7.jpg",
+        "img/slide-1.jpg",
+        "img/slide-6.jpg",
+        "img/introduction-bg.jpg",
+        "img/logo-mobile-black.png"
+    ],
+
+    "card_detail_title": "Chi tiết tour - Ngày 1",
+    "card_tabs": [
+        "Khách sạn",
+        "Bản đồ hành trình",
+        "Thư viện ảnh",
+        "Mô tả",
+        "Đánh giá"
+    ],
+    "card_tab_ids": [
+        "detail-hotel",
+        "detail-map",
+        "detail-gallery",
+        "detail-description",
+        "detail-reviews"
+    ],
+    "card_hotel_thumb": "img/hotel.jpg",
+    "card_hotel_title": "Khách sạn Mường Thanh",
+    "card_hotel_address": "số 3, thôn Vĩnh Thanh, xã Vĩnh Hòa, huyện Vĩnh Yên, tỉnh Vĩnh Phúc",
+    "card_hotel_bed": "1 phòng, 2 giường đơn",
+    "card_hotel_pax": "2 người lớn, 2 trẻ em",
+    "card_hotel_provider_label": "Được cung cấp bởi:",
+    "card_hotel_provider_logo": "img/providers/tripadvisor.png",
+    "card_hotel_util_icons": [
+        "parking",
+        "room-service",
+        "suitcase",
+        "van",
+        "taxi",
+        "laundry",
+        "wifi",
+        "passport",
+        "television",
+        "telephone",
+        "air-conditioner",
+        "bunk"
+    ],
+    "card_hotel_utils": [
+        "Chỗ đậu xe",
+        "Dịch vụ tận phòng",
+        "Xách hành lý",
+        "Xe nhỏ đưa đón",
+        "Taxi đưa đón",
+        "Giặt là quần áo",
+        "Wifi miễn phí",
+        "Hộ chiếu",
+        "Tivi riêng",
+        "Điện thoại để bàn",
+        "Điều hòa không khí",
+        "Giường tầng"
+    ],
+    "card_gallery_images": [
+        "img/slide-1.jpg",
+        "img/slide-2.jpg",
+        "img/slide-3.jpg",
+        "img/slide-4.jpg",
+        "img/slide-5.jpg",
+        "img/slide-6.jpg",
+        "img/slide-7.jpg",
+        "img/introduction-bg.jpg",
+        "img/banner.jpg",
+        "img/slide-1.jpg",
+        "img/slide-2.jpg",
+        "img/slide-3.jpg",
+        "img/slide-4.jpg",
+        "img/slide-5.jpg",
+        "img/slide-6.jpg",
+        "img/slide-7.jpg"
+    ],
+    "card_description_value": "<p>Nhằm thỏa mãn nhu cầu đa dạng của khách hàng nội địa và quốc tế, Tập đoàn khách sạn Mường Thanh cung cấp cho thị trường các phân khúc trung và cao cấp khác nhau:</p><p>- <strong>Mường Thanh Luxury</strong> là thương hiệu khách sạn 5 sao cao cấp tọa lạc tại trung tâm các thành phố lớn và các trung tâm du lịch nổi tiếng của Việt Nam.</p><p>-  Được ưu ái tọa lạc tại những vị trí đắc địa của những đô thị lớn, các khách sạn thuộc phân khúc 4 sao <strong>Mường Thanh Grand</strong> đã và đang mang đến một không gian nghỉ dưỡng tuyệt vời cho những kỳ nghỉ và chuyến công tác cho quý khách.</p><p>-  <strong>Mường Thanh Holiday</strong> là nhóm khách sạn đạt tiêu chuẩn 4 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p><p>-  Đến với các khách sạn thuộc <strong>phân khúc Mường Thanh</strong>, du khách được hòa mình vào không gian xinh xắn và những trải nghiệm du lịch địa phương độc đáo để thưởng thức các món ăn và phong tục vùng miền đặc sắc. Phân khúc Mường Thanh bao gồm các khách sạn 3-4 sao, tọa lạc tại vị trí trung tâm của các thành phố, thị trấn trên khắp cả nước.</p><p>- <strong>Mường Thanh Luxury</strong>là thương hiệu khách sạn 5 sao cao cấp tọa lạc tại trung tâm các thành phố lớn và các trung tâm du lịch nổi tiếng của Việt Nam.</p><p>-  Được ưu ái tọa lạc tại những vị trí đắc địa của những đô thị lớn, các khách sạn thuộc phân khúc 4 sao <strong>Mường Thanh Grand</strong> đã và đang mang đến một không gian nghỉ dưỡng tuyệt vời cho những kỳ nghỉ và chuyến công tác cho quý khách.</p><p>-  <strong>Mường Thanh Holiday</strong> là nhóm khách sạn đạt tiêu chuẩn 4 sao trở lên, tọa lạc ở các địa điểm du lịch, nghỉ dưỡng nổi tiếng trên toàn quốc với thiết kế tinh tế cùng phong cách phục vụ chuyên nghiệp nhằm mang đến cho du khách kì nghỉ tiện nghi và thoải mái. </p><p>-  Đến với các khách sạn thuộc <strong>phân khúc Mường Thanh</strong>, du khách được hòa mình vào không gian xinh xắn và những trải nghiệm du lịch địa phương độc đáo để thưởng thức các món ăn và phong tục vùng miền đặc sắc. Phân khúc Mường Thanh bao gồm các khách sạn 3-4 sao, tọa lạc tại vị trí trung tâm của các thành phố, thị trấn trên khắp cả nước.</p>",
+    "card_review_name": "John Doe",
+    "card_review_comment": "Cảnh quan rất đẹp, giá phải chăng, đồ ăn ngon, khách sạn thoải mái, nhân viên phục vụ tận tình",
+    "card_review_date": "Đăng ngày 15 tháng 6 năm 2018",
+    "prior_tour_cancellation": "Số ngày tới ngày khởi hành tour",
+    "priors": [
+        "91+",
+        "61-90",
+        "31-60",
+        "0-30"
+    ],
+    "fees": [
+        "4,000,000đ <span>(*)</span>",
+        "10,000,000đ",
+        "50% <span>giá trị tour</span>",
+        "100% <span>giá trị tour</span>"
+
+    ],
+    "fee_per_person": "Phí/người",
+    "fee_note": "(*) Với những lần hủy vé có độ dài tới ngày khởi hành tour ít nhất 61 ngày, chúng tôi sẽ áp dụng phí hủy tour cho lần đặt sau. Với số ngày tới ngày khởi hành nhỏ hơn 60 ngày, chúng tôi phạt trực tiếp vào tổng giá tour bên trên.",
+    "provider_label": "Tour được cung cấp bởi:",
+    "provider_name": "TripAdvisor",
+    "provider_image": "img/src/providers/tripadvisor.png",
+    "inclusion_title": "Các dịch vụ đi kèm <span>Các dịch vụ đã được bao trọn gói</span>",
+    "exclusion_title": "Các dịch vụ phải trả phí <span>Các dịch vụ không bao gồm trong gói tour</span>",
+    "cancellation_title": "Chính sách hủy tour <span>Khoản tiền phải bồi thường và được nhận lại.</span>",
+    "reviews_label": "Đánh giá <span>150 đánh giá</span>",
+    "reviews_classes": [
+        "seventy-four",
+        "twenty-one",
+        "four",
+        "one",
+        "zero"
+    ],
+    "reviews_texts": [
+        "Tuyệt Vời",
+        "Tốt",
+        "Khá",
+        "Trung Bình",
+        "Kém"
+    ],
+    "reviews_scores": [
+        "74%",
+        "21%",
+        "4%",
+        "1%",
+        "0%"
+    ],
+    "reviews_name": "John Doe",
+    "reviews_text": "Tuyệt Vời",
+    "reviews_comment": "Cảnh quan rất đẹp, giá phải chăng, đồ ăn ngon, khách sạn thoải mái, nhân viên phục vụ tận tình",
+    "reviews_date": "Đăng ngày 15 tháng 6 năm 2018",
+    "pagination": [
+        "1",
+        "2",
+        "3",
+        "4"
+    ],
+
+    "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
+    "popular_hotel": "Khách sạn phổ biến",
+    "tag": "Thẻ",
+    "hotel_name": "Grand Hotel",
+    "from_price": "chỉ từ",
+    "hotel_price": "450,000đ",
+    "hotel_address": "Hoàn Kiếm, Hà Nội",
+    "tags": [
+        "Hà Nội",
+        "Hoàn Kiếm",
+        "Đà Nẵng",
+        "Đà Lạt",
+        "Vịnh Hạ Long",
+        "Cát Bà",
+        "Sài Gòn",
+        "Mũi Né"
+    ],
+    "company_address": "tầng 5, tòa nhà Victoria, Nguyễn Chánh, Trung Hòa, Cầu Giấy, Hà Nội",
+    "company_phone": "+8493 725 0110",
+    "company_email": "admin@tachudu.com",
+    "company_website": "www.tachudu.com",
+    "copyright": "Bản quyền thuộc về TaChuDu © 2018.",
+    "own_design": "Bản quyền thiết kế của TaChuDu"
+}

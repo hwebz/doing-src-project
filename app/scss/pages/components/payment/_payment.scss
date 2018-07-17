@@ -1,0 +1,216 @@
+$parent: 'tcd__payment-wrapper';
+$pre: 'tcd__payment';
+
+$block-margin: 20px;
+$table-min-width: 600px;
+$tab-size: 110px;
+$tab-size-mobile: 90px;
+$terms-height: 300px;
+
+%block-box {
+    background-color: $white;
+    box-shadow: 2px 4px 10px $shadow-button;
+}
+
+.#{$parent} {
+    @extend %block-padding;
+    background-color: $results-background;
+}
+
+.#{$pre} {
+    .#{$pre}-passengers {
+        margin-bottom: $block-margin;
+        > h2 {
+            margin-bottom: $block-margin;
+            position: relative;
+        }
+        .#{$pre}-passengers-wrapper {
+            @extend %block-box;
+            padding: 15px;
+            max-width: 100%;
+            overflow: hidden;
+            overflow-x: visible;
+
+            table {
+                border: none;
+                min-width: $table-min-width;
+                tr {
+                    th, td {
+                        border: none;
+                        padding: 2px 5px;
+                        text-align: center;
+
+                        &:nth-child(2) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .#{$pre}-methods {
+        margin-bottom: $block-margin;
+        >h2 {
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        >p {
+            margin-bottom: $block-margin;
+        }
+
+        .#{$pre}-methods-wrapper {
+            @extend %block-box;
+
+            .#{$pre}-methods-tabs {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .#{$pre}-methods-tab {
+                    width: $tab-size-mobile;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    border-right-color: $gray;
+                    padding: 10px;
+                    margin-top: -1px;
+
+                    @include media-breakpoint-up(sm) {
+                        margin-top: 0;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        width: $tab-size;
+                    }
+
+                    &.active {
+                        border: 1px solid $primary-yellow;
+                        border-bottom-color: $white;
+                    }
+
+                    >p {
+                        margin: 0;
+                    }
+
+                    span[class^='icon-'] {
+                        font-size: $heading-2;
+                        margin: 5px 0;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: $heading-1;
+                        }
+                    }
+
+                    p {
+
+                    }
+                }
+            }
+
+            .#{$pre}-methods-contents {
+                .#{$pre}-methods-content {
+                    display: none;
+                    &.active {
+                        border: 1px solid $primary-yellow;
+                        margin-top: -1px;
+                        padding: 15px;
+                        display: flex;
+                        min-height: 430px;
+
+                        @include media-breakpoint-up(md) {
+                            min-height: auto;
+                        }
+                    }
+
+                    .#{$pre}-credit-card__left {
+
+                        @include media-breakpoint-up(md) {
+                            width: 50%;
+                        }
+
+                        .tcd__credit-card-columns {
+                            display: flex;
+                            flex-direction: row;
+
+                            .form-group {
+                                width: calc(50% - 5px);
+                                margin-right: 10px;
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .#{$pre}-credit-card__right {
+                        position: relative;
+
+                        @include media-breakpoint-up(md) {
+                            width: 50%;
+                        }
+
+                        .credit-card-box {
+                            position: relative;
+                            top: auto;
+                            left: auto;
+                            @include transform(scale(0.65));
+                            @include transform-origin(top left);
+                            margin: 0 auto;
+                            height: auto;
+
+                            @include media-breakpoint-up(sm) {
+                                @include transform-origin(top center);
+                                @include transform(scale(0.75));
+                            }
+                        }
+                    }
+
+                    &##{$pre}-method-0 {
+                        flex-direction: column;
+
+                        @include media-breakpoint-up(md) {
+                            flex-direction: row;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .#{$pre}-terms {
+        @extend %block-box;
+        .#{$pre}-terms-and-conditions {
+            padding: 15px;
+            border-bottom: 1px solid $horizontal-header-date;
+            max-height: $terms-height;
+            overflow: hidden;
+            overflow-y: visible;
+        }
+
+        .#{$pre}-terms-aggrements {
+            padding: 15px;
+
+            .tcd__checkbox {
+                small {
+                    color: $primary-red;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .#{$pre}-btns {
+        margin: $block-margin 0;
+        text-align: right;
+
+        .btn {
+            text-transform: uppercase;
+        }
+    }
+}

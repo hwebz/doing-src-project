@@ -1,0 +1,10 @@
+extends pug/layouts/_index
+
+block main_content
+    include pug/components/contact-details/_small-banner
+    include pug/components/tour-detail/_breadcrum
+    .tcd__payment-wrapper
+        .container
+            .row
+                include pug/components/payment/_payment
+                include pug/components/contact-details/_booking-summary
