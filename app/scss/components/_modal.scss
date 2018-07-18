@@ -140,5 +140,10 @@ $info-modal-width: 850px;
     .tcd__detail {
         max-width: 100%;
         flex: 0 0 100%;
+        padding: 0;
+
+        .navbar-toggler {
+            display: none;
+        }
     }
 }

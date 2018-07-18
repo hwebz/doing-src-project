@@ -26,31 +26,46 @@ include ../../mixins/_mixins
                 button.navbar-toggler(type="button", data-target=".tcd__booking-summary")
                     span.navbar-toggler-icon.black
             p= passenger_description
-        each i in [1, 2, 3, 4]
-            .tcd__contact-details-form
-                .tcd__contact-details-header
-                    h4
-                        span= passenger_label
-                        span= i
-                        span= passenger_type
-                    .tcd__contact-details-radios
-                        .tcd__radio
-                            input(type="radio", name="passengerGender", value="male", id="passengerMale-" + i)
-                            label(for="passengerMale-" + i)= passenger_male
-                        .tcd__radio
-                            input(type="radio", name="passengerGender", value="male", id="passengerFemale-" + i)
-                            label(for="passengerFemale-" + i)= passenger_female
-                .tcd__contact-details-field
-                    +form-input(contact_last, "text", '', contact_error, '', false)
-                .tcd__contact-details-field
-                    +form-input(contact_middle, "text", '', '', '', false)
-                .tcd__contact-details-field
-                    +form-input(contact_first, "text", '', '', '', false)
-                .tcd__contact-details-field.single-daterange-picker
-                    +form-input(passenger_dob, "text", '', '', passenger_dob_value, false)
-                .tcd__contact-details-field
-                    +form-input(passenger_nationality, "select", '', '', '', false, passenger_nationalities)
-                .tcd__contact-details-field
-                    +form-input(passenger_passport, "text", '', '', passenger_passport_number, false)
+        .tcd__contact-details-form
+            .tcd__contact-details-header
+                h4= passenger_count_label
+                .tcd__contact-details-radios
+            .tcd__contact-details-field
+                +form-input(passenger_adults, "number", '', passenger_adults_error, '', false)
+            .tcd__contact-details-field
+                +form-input(passenger_children, "number", '', '', '', false)
+            .tcd__contact-details-field
+                +form-input(passenger_infants, "number", '', '', '', false)
+        .tcd__contact-details-expand
+            a(href="#")
+                span.text= passenger_expand
+                span.icon-right-thin-chevron
+        .tcd__contact-details-form-wrapper
+            each i in [1, 2, 3, 4]
+                .tcd__contact-details-form
+                    .tcd__contact-details-header
+                        h4
+                            span= passenger_label
+                            span= i
+                            span= passenger_type
+                        .tcd__contact-details-radios
+                            .tcd__radio
+                                input(type="radio", name="passengerGender", value="male", id="passengerMale-" + i)
+                                label(for="passengerMale-" + i)= passenger_male
+                            .tcd__radio
+                                input(type="radio", name="passengerGender", value="male", id="passengerFemale-" + i)
+                                label(for="passengerFemale-" + i)= passenger_female
+                    .tcd__contact-details-field
+                        +form-input(contact_last, "text", '', '', '', false)
+                    .tcd__contact-details-field
+                        +form-input(contact_middle, "text", '', '', '', false)
+                    .tcd__contact-details-field
+                        +form-input(contact_first, "text", '', '', '', false)
+                    .tcd__contact-details-field.single-daterange-picker
+                        +form-input(passenger_dob, "text", '', '', passenger_dob_value, false)
+                    .tcd__contact-details-field
+                        +form-input(passenger_nationality, "select", '', '', '', false, passenger_nationalities)
+                    .tcd__contact-details-field
+                        +form-input(passenger_passport, "text", '', '', passenger_passport_number, false)
         .tcd__contact-details-btn
             button.btn.btn-primary(type="button")= continue_btn

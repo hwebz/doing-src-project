@@ -35,11 +35,11 @@ include ../../mixins/_mixins
                 each i in [0, 1, 2]
                     .tcd__payment-methods-content.navigation-content(id="tcd__payment-method-" + i, class={'active': i == 0})
                         .tcd__payment-credit-card__left
-                            +form-input(credit_name, "text", '', '', credit_name_value, false)
-                            +form-input(credit_number, "text", '', '', credit_number_value, false)
+                            +form-input(credit_name, "text", '', '', '', false, [], 'CardName')
+                            +form-input(credit_number, "text", '', '', '', false, [], 'CardNumber')
                             .tcd__credit-card-columns
-                                +form-input(credit_period, "text", '', '', '', false)
-                                +form-input(credit_ccv, "text", '', '', '', false)
+                                +form-input(credit_period, "text", '', '', '', false, [], 'CardDate')
+                                +form-input(credit_ccv, "text", '', '', '', false, [], 'CardCCV')
                         .tcd__payment-credit-card__right
                             .credit-card-box
                                 .flip
@@ -86,7 +86,8 @@ include ../../mixins/_mixins
                                                         h-3.888L19.153,16.8z')
                                         .ccv
                                             label CCV
-    .tcd__payment-terms
+                                            div
+    .tcd__payment-terms 
         .tcd__payment-terms-and-conditions!= terms_and_conditions
         .tcd__payment-terms-aggrements
             .tcd__checkbox

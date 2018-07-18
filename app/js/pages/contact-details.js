@@ -4,6 +4,10 @@ $(document).ready(function () {
     var toggleCollapse = $(toggleCollapseClass).find(toggleBtnClass);
     var dropdownClasses = '.tcd__booking-flight-detail';
 
+    var viewDetailLinkClass = '.tcd__contact-details-expand';
+    var detailPaneClass = '.tcd__contact-details-form-wrapper';
+    var viewDetailLink = $(viewDetailLinkClass);
+
     if (isDefined(toggleCollapse)) {
         toggleCollapse.on('click', function (event) {
             event.preventDefault();
@@ -25,5 +29,22 @@ $(document).ready(function () {
 
             return false;
         })
+    }
+
+    if (isDefined(viewDetailLink)) {
+        viewDetailLink.on('click', function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+            var pane = $this.next(detailPaneClass);
+
+            if (isDefined(pane)) pane.slideToggle('fast', function() {
+                if ($this.hasClass('active')) $this.removeClass('active')
+                else $this.addClass('active');
+                $(window).trigger('resize');
+            });
+
+            return false;
+        });
     }
 });

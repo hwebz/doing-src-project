@@ -29,6 +29,12 @@
 
     "passenger_title": "Thông tin hành khách",
     "passenger_description": "Cung cấp thông tin từng hành khách để làm thủ tục vé máy bay và quản lý hành khách",
+    "passenger_count_label": "Số lượng hành khách",
+    "passenger_adults": "Số người lớn",
+    "passenger_adults_error": "Vui lòng chọn số lượng",
+    "passenger_children": "Số trẻ em",
+    "passenger_infants": "Số trẻ sơ sinh",
+    "passenger_expand": "Điền thông tin chi tiết",
     "passenger_label" : "Hành khách #",
     "passenger_type": " - Người lớn",
     "passenger_male": "Nam",
