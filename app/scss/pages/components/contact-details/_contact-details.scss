@@ -10,6 +10,12 @@ $field-tablet-width: calc(50% - 10px);
 }
 
 .#{$pre} {
+    .#{$pre}-hotels {
+        h2 {
+            @extend %detail-title;
+        }
+    }
+
     .#{$pre}-contact {
     }
 
