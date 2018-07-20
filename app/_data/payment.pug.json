@@ -17,7 +17,8 @@
         "Tour khám phá"
     ],
     "breadcrum_arrow": ">",
-
+    "hotel_title": "Chọn khách sạn",
+    "hotel_sub": "Bạn có thể thay đổi khách sạn, nơi mà bạn sẽ ở trong hành trình. Lưu ý là giá tour sẽ tăng hoặc giảm tùy vào khách sạn bạn chọn.",
     "passenger_title": "Thông tin khách hàng",
     "passenger_ths": [
         "Họ và Tên",
