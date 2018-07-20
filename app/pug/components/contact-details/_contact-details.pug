@@ -1,6 +1,19 @@
 include ../../mixins/_mixins
 
 .tcd__contact-details.col-12.col-lg-9
+    .tcd__contact-details-hotels
+        h2.type-2= hotel_title
+            button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__contact-detail-wrapper")
+                span.navbar-toggler-icon.black
+            span= hotel_sub
+        .tcd__detail-hotels
+            each i in [1, 2, 3, 4, 5]
+                .tcd__detail-hotel(style="background-image:url(img/stars/"+ i +"-stars.jpg)")
+                    input(type="radio", name="HotelStars", id="" + i + "-stars" checked)
+                    label(for="" + i + "-stars")= i + " sao"
+                        .tcd__stars
+                            each val in [1, 2, 3, 4]
+                                img(src="img/svg/star.svg", alt="Star")
     .tcd__contact-details-contact
         .tcd__contact-details-title
             h2= contact_title

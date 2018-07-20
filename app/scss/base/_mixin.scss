@@ -216,9 +216,31 @@ $padding-mobile: 20px 0 0 0;
     }
 }
 
+<<<<<<< HEAD
 %block-box {
     background-color: $white;
     box-shadow: 2px 4px 10px $shadow-button;
+=======
+%detail-title {
+    position: relative;
+    > span {
+        display: block;
+        font-size: $body-font-size;
+        @extend %tcd-light;
+
+        @include media-breakpoint-up(sm) {
+            display: inline;
+        }
+    }
+
+    &.type-2 {
+        margin-bottom: 15px;
+        > span {
+            display: block;
+            margin-top: 5px;
+        }
+    }
+>>>>>>> b8e3d27156370366d2c4135279cb9106426a3332
 }
 
 @mixin initializing($height, $width) {
