@@ -1,0 +1,194 @@
+.tcd__summary.col-12.col-lg-9
+    .tcd__payment-passengers
+        h2= contact_title
+            button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__summary-wrapper")
+                span.navbar-toggler-icon.black
+        .tcd__payment-passengers-wrapper
+            table.table
+                tbody
+                    each i in [0, 1, 2]
+                        tr
+                            td.text-left(width="15%")= contact_labels[i]
+                            td= contact_values[i]
+    .tcd__payment-passengers
+        h2= passenger_title
+            button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__summary-wrapper")
+                span.navbar-toggler-icon.black
+        .tcd__payment-passengers-wrapper
+            table.table.fixed-width
+                thead
+                    th &nbsp;
+                    each th in passenger_ths
+                        th= th
+                tbody
+                    each i in [0, 1, 2, 3]
+                        tr
+                            td(width="2%")
+                                span(class="icon-" + passenger_icons[i])
+                            td= passengers[i]
+                            td= passenger_dobs[i]
+                            td= passenger_nationality_value
+                            td= passenger_passports[i]
+    .tcd__summary-flights
+        h2= flight_title
+            button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__summary-wrapper")
+                span.navbar-toggler-icon.black
+        p= flight_description
+        each i in [0, 1]
+            .tcd__results-card.type-2.active
+                .tcd__results-card-wrapper
+                    .tcd__results-brand
+                        img(src=airline_images[i])
+                        h4= airline_names[i]
+                        p= airline_codes[i]
+                    .tcd__results-info
+                        .tcd__results-column-info
+                            h2= airline_departure_time
+                            p= airline_departure
+                            p= airline_departure_code
+                        .tcd__results-info-center
+                            span= airline_duration
+                            img(src="img/svg/airplane.svg")
+                            span= airline_stop
+                        .tcd__results-column-info
+                            h2= airline_arrival_time
+                            p= airline_arrival
+                            p= airline_arrival_code
+                    .tcd__results-price
+                .tcd__results-detail(class={'active': (i == 0 || i == 3)})
+                    .tcd__results-detail-card
+                        .tcd__results-detail-brand
+                            img(src=airline_images[i])
+                            h4= airline_names[i]
+                            p= airline_codes_types[i]
+                        .tcd__results-detail-info
+                            .tcd__results-detail-vertical-line
+                                span
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_departure_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_departure
+                                        span= airline_departure_code
+                                    p= airline_departure_airport
+                            .tcd__results-detail-info-middle
+                                p= airline_duration_first
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_arrival_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_arrival
+                                        span= airline_arrival_code
+                                    p= airline_arrival_airport
+                        .tcd__results-detail-utils
+                            ul
+                                each util in airline_utils
+                                    li= util
+                    .tcd__results-detail-stopover
+                        p= airline_transit_label
+                            strong= airline_transit_location
+                            span= airline_transit_label2
+                            strong= airline_transit_duration
+                    .tcd__results-detail-card
+                        .tcd__results-detail-brand
+                            img(src=airline_images[i])
+                            h4= airline_names[i]
+                            p= airline_codes_types[i]
+                        .tcd__results-detail-info
+                            .tcd__results-detail-vertical-line
+                                span
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_departure_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_departure
+                                        span= airline_departure_code
+                                    p= airline_departure_airport
+                            .tcd__results-detail-info-middle
+                                p= airline_duration_first
+                            .tcd__results-detail-sub-info
+                                .tcd__results-detail-info-left
+                                    h4= airline_arrival_time
+                                    p= airline_departure_date
+                                .tcd__results-detail-info-right
+                                    p= airline_arrival
+                                        span= airline_arrival_code
+                                    p= airline_arrival_airport
+                        .tcd__results-detail-utils
+                            ul
+                                each util in airline_utils
+                                    li= util
+    .tcd__summary-tour
+        h2= tour_title
+            button.navbar-toggler(type="button", data-target=".tcd__booking-summary", data-parent=".tcd__summary-wrapper")
+                span.navbar-toggler-icon.black
+        p= tour_description
+        .tcd__results-card
+            .tcd__results-card-thumbnail
+                .tcd__results-card-thumb(style="background-image: url(img/slide-2.jpg)")
+                .tcd__results-card-map(id="small-map-tour-0", data-toggle="modal", data-target="#map-tour")
+            .tcd__results-card-info
+                h3(data-toggle="tooltip", data-placement="top", title=item_title).tcd__results-card-title= item_title
+                .tcd__stars
+                    each val in [1, 2, 3, 4]
+                        img(src="img/svg/star.svg", alt="Star")
+                .tcd__reviews
+                    strong.reviews-score(class=item_score_classes[0])= item_scores[0]
+                    .reviews-info
+                        p= item_texts[0]
+                        span= item_reviews[0]
+                .tcd__results-card-comment
+                    p= item_comment
+                .tcd__results-card-detail-info
+                    .detail-info-label
+                        each label in item_labels
+                            p= label
+                    .detail-info-text
+                        each val in item_values
+                            p= val
+                a.detail-btn(href="#tour-detail-popup", data-toggle="modal")= tour_detail
+    .tcd__summary-price
+        .tcd__summary-price-wrapper
+            ul.tcd__summary-price-out
+                each i in [0, 1, 2]
+                    li
+                        strong= price_list[i]
+                        ul
+                            if i == 0
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= price_adult[j]
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= price_child[j]
+                            else if i == 1
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= tour_price[j]
+                            else
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= tax_price[j]
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= fee_price[j]
+        .tcd__summary-price-total
+            p!= total_price
+    .tcd__summary-btns
+        button.btn.btn-primary.big(type="button")= conmfirm_btn
+#map-tour.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= item_title
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                #map-tour-map
+            .modal-footer
+                p!= modal_description
+                button.btn.btn-primary(type="button", data-dismiss="modal")= promo_btn
+        

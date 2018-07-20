@@ -82,455 +82,460 @@ margin-bottom: $bottom-distance;
     }
 
     .#{$pre}-list {
-        .#{$pre}-card {
-            background-color: $white;
-            box-shadow: 2px 4px 10px $shadow-button;
+    }
+}
+
+.#{$pre}-card {
+    background-color: $white;
+    box-shadow: 2px 4px 10px $shadow-button;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    // tour cards
+    .#{$pre}-card-thumbnail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 300px;
+        
+        .#{$pre}-card-thumb,
+        .#{$pre}-card-map {
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .#{$pre}-card-map {
+            cursor: pointer;
+            @extend %hoverable-link;
+        }
+
+        .#{$pre}-card-thumb {
+            height: 66%
+        }
+
+        .#{$pre}-card-map {
+            height: 34%;
+        }   
+
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: $thumbnail-size;
+        }
+    }
+
+    .#{$pre}-card-info {
+        flex-grow: 1;
+        padding: 20px 15px;
+        width: 100%;
+
+        .#{$pre}-card-title {
+            margin-bottom: 0;
+            //@include ellipse-text($heading-3, $heading-3-line-height, 1);
+        }
+
+        .#{$pre}-card-comment {
+            margin-top: 5px;
+            p {
+                @extend %tcd-light-italic;
+            }
+        }
+
+        .#{$pre}-card-detail-info {
             display: flex;
             flex-direction: row;
-            margin-bottom: 20px;
+            .detail-info-label {
+                flex-grow: 1;
+                p {
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+                    color: $dark-gray;
+                }
+            }
+
+            .detail-info-text {
+                flex-grow: 1;
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .detail-btn {
+            text-decoration: underline;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+            max-width: calc(100% - 430px);
+        }
+    }
+
+    .#{$pre}-card-price-info {
+        padding: 50px 15px 20px 15px;
+        border-top: 1px solid $horizontal-header-date;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .#{$pre}-card-discount {
+            @extend %discount-section;
+        }
+
+        .#{$pre}-card-price {
+            @extend %price-section;
+        }
+
+        .#{$pre}-card-duration {
+            @extend %duration-block;
+        }
+
+        .#{$pre}-card-included {
+            @extend %included-block;
+        }
+
+        .#{$pre}-card-btn {
+            flex-grow: 1;
+            position: relative;
+            margin-top: $bottom-distance;
+
+            .btn {
+                width: 100%;
+
+                @include media-breakpoint-up(md) {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            width: $price-width;
+            border-top: 0;
+            border-left: 1px solid $horizontal-header-date;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        flex-wrap: nowrap;
+    }
+
+    // flight cards
+    &.type-2 {
+        display: block;
+        border: 1px solid $white;
+        @include transition(all 0.3s ease-in-out);
+
+        .#{$pre}-card-wrapper {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
 
-            // tour cards
-            .#{$pre}-card-thumbnail {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                min-height: 300px;
-                
-                .#{$pre}-card-thumb,
-                .#{$pre}-card-map {
-                    width: 100%;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center center;
+            .#{$pre}-brand {
+                text-align: center;
+                min-width: 100px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $horizontal-header-date;
+                img {
+                    height: $airline-logo-size;
+                    margin-bottom: 5px;
                 }
-
-                .#{$pre}-card-map {
-                    cursor: pointer;
-                    @extend %hoverable-link;
+                h4 {
+                    margin: 0
                 }
-
-                .#{$pre}-card-thumb {
-                    height: 66%
+                p {
+                    margin: 0;
                 }
-
-                .#{$pre}-card-map {
-                    height: 34%;
-                }   
 
                 @include media-breakpoint-up(sm) {
-                    width: 50%;
-                }
-
-                @include media-breakpoint-up(md) {
-                    width: $thumbnail-size;
+                    padding-bottom: 0;
+                    border: 0;
                 }
             }
 
-            .#{$pre}-card-info {
+            .#{$pre}-info {
                 flex-grow: 1;
-                padding: 20px 15px;
-                width: 100%;
-
-                .#{$pre}-card-title {
-                    margin-bottom: 0;
-                    //@include ellipse-text($heading-3, $heading-3-line-height, 1);
-                }
-
-                .#{$pre}-card-comment {
-                    margin-top: 5px;
-                    p {
-                        @extend %tcd-light-italic;
-                    }
-                }
-
-                .#{$pre}-card-detail-info {
-                    display: flex;
-                    flex-direction: row;
-                    .detail-info-label {
-                        flex-grow: 1;
-                        p {
-                            margin-bottom: 5px;
-                            text-transform: uppercase;
-                            color: $dark-gray;
-                        }
-                    }
-
-                    .detail-info-text {
-                        flex-grow: 1;
-                        p {
-                            margin-bottom: 5px;
-                        }
-                    }
-                }
-
-                @include media-breakpoint-up(sm) {
-                    width: 50%;
-                }
-
-                @include media-breakpoint-up(md) {
-                    width: auto;
-                    max-width: calc(100% - 430px);
-                }
-            }
-
-            .#{$pre}-card-price-info {
-                padding: 50px 15px 20px 15px;
-                border-top: 1px solid $horizontal-header-date;
-                position: relative;
-                overflow: hidden;
-                width: 100%;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $horizontal-header-date;
 
-                .#{$pre}-card-discount {
-                    @extend %discount-section;
-                }
-
-                .#{$pre}-card-price {
-                    @extend %price-section;
-                }
-
-                .#{$pre}-card-duration {
-                    @extend %duration-block;
-                }
-
-                .#{$pre}-card-included {
-                    @extend %included-block;
-                }
-
-                .#{$pre}-card-btn {
-                    flex-grow: 1;
-                    position: relative;
-                    margin-top: $bottom-distance;
-
-                    .btn {
-                        width: 100%;
-
-                        @include media-breakpoint-up(md) {
-                            position: absolute;
-                            bottom: 0;
-                        }
-                    }
-                }
-
-                @include media-breakpoint-up(md) {
-                    width: $price-width;
-                    border-top: 0;
-                    border-left: 1px solid $horizontal-header-date;
-                }
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            @include media-breakpoint-up(md) {
-                flex-wrap: nowrap;
-            }
-
-            // flight cards
-            &.type-2 {
-                display: block;
-                border: 1px solid $white;
-                @include transition(all 0.3s ease-in-out);
-
-                .#{$pre}-card-wrapper {
-                    padding: 15px;
+                .#{$pre}-column-info {
                     display: flex;
                     flex-direction: column;
-                    flex-wrap: wrap;
+                    text-align: right;
+                    h2 {
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        margin: 0;
+                        line-height: 1.3;
+                    }
 
-                    .#{$pre}-brand {
-                        text-align: center;
-                        min-width: 100px;
-                        padding-bottom: 10px;
-                        border-bottom: 1px solid $horizontal-header-date;
-                        img {
+                    &:last-child {
+                        align-items: flex-start;
+                    }
+                }
+
+                .#{$pre}-info-center {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0 40px;
+                    span {
+                        font-size: $small-font-size;
+                    }
+
+                    img {
+                        max-width: 40px;
+                    }
+                }
+
+                @include media-breakpoint-up(sm) {
+                    padding-bottom: 0;
+                    border: 0;
+                }
+            }
+
+            .#{$pre}-price {
+                flex-grow: 1;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+
+                h3 {
+                    color: $primary-yellow;
+                    margin-bottom: 0;
+                    span {
+                        font-size: $small-font-size;
+                        color: $primary-black;
+                        @extend %tcd-light;
+                    }
+                }
+
+                p {
+                    font-size: $small-font-size;
+                    margin: 0;
+                    color: $dark-gray;
+
+                    span[class^='icon-'] {
+                        font-size: $small-font-size - 2px;
+                        margin-right: 3px;
+                    }
+                }
+
+                .#{$pre}-btns {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 15px;
+                    
+
+                    a {
+                        text-decoration: underline;
+                        margin-right: 15px;
+                        margin-bottom: 5px;
+
+                        @include media-breakpoint-up(sm) {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .btn {
+                        padding: 5px 15px;
+                    }
+
+                    @include media-breakpoint-up(sm) {
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        flex-direction: row;
+                    }
+                }
+
+                @include media-breakpoint-up(sm) {
+                    text-align: right;
+                    margin-top: 0;
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                flex-direction: row;
+            }
+        }
+
+        .#{$pre}-detail {
+            border-top: 1px solid $horizontal-header-date;
+            margin: 0 15px;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0;
+            display: none;
+
+            .#{$pre}-detail-card {
+                display: flex;
+                flex-direction: column;
+                
+                .#{$pre}-detail-brand {
+                    margin-bottom: 15px;
+                    text-align: center;
+                    img {
+                        height: $airline-logo-size-mobile;
+
+                        @include media-breakpoint-up(sm) {
                             height: $airline-logo-size;
-                            margin-bottom: 5px;
                         }
-                        h4 {
-                            margin: 0
-                        }
-                        p {
-                            margin: 0;
+                    }
+                    h4, p {
+                        margin: 0
+                    }
+
+                    @include media-breakpoint-up(sm) {
+                        margin-bottom: 0;
+                    }
+                }
+                .#{$pre}-detail-info {
+                    flex-grow: 1;
+                    position: relative;
+                    padding-left: 15px;
+
+                    .#{$pre}-detail-vertical-line {
+                        position: absolute;
+                        top: 5px;
+                        left: 0px;
+
+                        span {
+                            width: 2px;
+                            height: 90px;
+                            background-color: $horizontal-header-date;
+                            display: inline-block;
+                            position: relative;
+
+                            &:before, &:after {
+                                content: '';
+                                position: absolute;
+                                left: -5px;
+                                top: 0;
+                                width: 11px;
+                                height: 11px;
+                                border-radius: 50%;
+                                background-color: $horizontal-header-date;
+                            }
+
+                            &:after {
+                                top: auto;
+                                bottom: 0;
+                            }
                         }
 
                         @include media-breakpoint-up(sm) {
-                            padding-bottom: 0;
-                            border: 0;
+                            left: 70px;
                         }
                     }
-    
-                    .#{$pre}-info {
-                        flex-grow: 1;
+
+                    .#{$pre}-detail-sub-info {
                         display: flex;
                         flex-direction: row;
-                        justify-content: center;
-                        padding-top: 10px;
-                        padding-bottom: 10px;
-                        border-bottom: 1px solid $horizontal-header-date;
 
-                        .#{$pre}-column-info {
-                            display: flex;
-                            flex-direction: column;
-                            text-align: right;
-                            h2 {
-                                margin-bottom: 5px;
+                        .#{$pre}-detail-info-left {
+                            h4 {
+                                margin: 0;
                             }
                             p {
                                 margin: 0;
-                                line-height: 1.3;
-                            }
-    
-                            &:last-child {
-                                align-items: flex-start;
-                            }
-                        }
-    
-                        .#{$pre}-info-center {
-                            display: flex;
-                            flex-direction: column;
-                            text-align: center;
-                            margin: 0 40px;
-                            span {
                                 font-size: $small-font-size;
-                            }
-    
-                            img {
-                                max-width: 40px;
+                                color: $dark-gray;
                             }
                         }
 
-                        @include media-breakpoint-up(sm) {
-                            padding-bottom: 0;
-                            border: 0;
-                        }
-                    }
-    
-                    .#{$pre}-price {
-                        flex-grow: 1;
-                        text-align: center;
-                        display: flex;
-                        flex-direction: column;
-                        margin-top: 15px;
-
-                        h3 {
-                            color: $primary-yellow;
-                            margin-bottom: 0;
-                            span {
-                                font-size: $small-font-size;
-                                color: $primary-black;
-                                @extend %tcd-light;
-                            }
-                        }
-    
-                        p {
-                            font-size: $small-font-size;
-                            margin: 0;
-                            color: $dark-gray;
-    
-                            span[class^='icon-'] {
-                                font-size: $small-font-size - 2px;
-                                margin-right: 3px;
-                            }
-                        }
-    
-                        .#{$pre}-btns {
+                        .#{$pre}-detail-info-right {
                             flex-grow: 1;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            margin-top: 15px;
-                            
-    
-                            a {
-                                text-decoration: underline;
-                                margin-right: 15px;
-                                margin-bottom: 5px;
+                            padding-left: 20px;
+                            p {
+                                margin: 0;
+                                line-height: 1.3;
 
-                                @include media-breakpoint-up(sm) {
-                                    margin-bottom: 0;
+                                span {
+                                    margin-left: 5px;
                                 }
                             }
-    
-                            .btn {
-                                padding: 5px 15px;
-                            }
-
-                            @include media-breakpoint-up(sm) {
-                                align-items: flex-end;
-                                justify-content: flex-end;
-                                flex-direction: row;
-                            }
                         }
-
-                        @include media-breakpoint-up(sm) {
-                            text-align: right;
-                            margin-top: 0;
+                    }
+                    .#{$pre}-detail-info-middle {
+                        p {
+                            font-size: $small-font-size;
+                            margin: 10px 0;
                         }
                     }
 
                     @include media-breakpoint-up(sm) {
-                        flex-direction: row;
+                        padding-left: 90px;
                     }
                 }
+                .#{$pre}-detail-utils {
+                    flex-grow: 1;
+                    margin: 15px 0;
+                    ul {
+                        li {
+                            &:before {
+                                content: '- ';
+                            }
+                        }
+                    }
 
-                .#{$pre}-detail {
-                    border-top: 1px solid $horizontal-header-date;
-                    margin: 0 15px;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 15px 0;
-                    display: none;
-
-                    .#{$pre}-detail-card {
-                        display: flex;
-                        flex-direction: column;
+                    @include media-breakpoint-up(sm) {
                         
-                        .#{$pre}-detail-brand {
-                            margin-bottom: 15px;
-                            text-align: center;
-                            img {
-                                height: $airline-logo-size-mobile;
-
-                                @include media-breakpoint-up(sm) {
-                                    height: $airline-logo-size;
-                                }
-                            }
-                            h4, p {
-                                margin: 0
-                            }
-
-                            @include media-breakpoint-up(sm) {
-                                margin-bottom: 0;
-                            }
-                        }
-                        .#{$pre}-detail-info {
-                            flex-grow: 1;
-                            position: relative;
-                            padding-left: 15px;
-
-                            .#{$pre}-detail-vertical-line {
-                                position: absolute;
-                                top: 5px;
-                                left: 0px;
-
-                                span {
-                                    width: 2px;
-                                    height: 90px;
-                                    background-color: $horizontal-header-date;
-                                    display: inline-block;
-                                    position: relative;
-
-                                    &:before, &:after {
-                                        content: '';
-                                        position: absolute;
-                                        left: -5px;
-                                        top: 0;
-                                        width: 11px;
-                                        height: 11px;
-                                        border-radius: 50%;
-                                        background-color: $horizontal-header-date;
-                                    }
-
-                                    &:after {
-                                        top: auto;
-                                        bottom: 0;
-                                    }
-                                }
-
-                                @include media-breakpoint-up(sm) {
-                                    left: 70px;
-                                }
-                            }
-
-                            .#{$pre}-detail-sub-info {
-                                display: flex;
-                                flex-direction: row;
-
-                                .#{$pre}-detail-info-left {
-                                    h4 {
-                                        margin: 0;
-                                    }
-                                    p {
-                                        margin: 0;
-                                        font-size: $small-font-size;
-                                        color: $dark-gray;
-                                    }
-                                }
-
-                                .#{$pre}-detail-info-right {
-                                    flex-grow: 1;
-                                    padding-left: 20px;
-                                    p {
-                                        margin: 0;
-                                        line-height: 1.3;
-
-                                        span {
-                                            margin-left: 5px;
-                                        }
-                                    }
-                                }
-                            }
-                            .#{$pre}-detail-info-middle {
-                                p {
-                                    font-size: $small-font-size;
-                                    margin: 10px 0;
-                                }
-                            }
-
-                            @include media-breakpoint-up(sm) {
-                                padding-left: 90px;
-                            }
-                        }
-                        .#{$pre}-detail-utils {
-                            flex-grow: 1;
-                            margin: 15px 0;
-                            ul {
-                                li {
-                                    &:before {
-                                        content: '- ';
-                                    }
-                                }
-                            }
-
-                            @include media-breakpoint-up(sm) {
-                                
-                            }
-                        }
-
-                        @include media-breakpoint-up(sm) {
-                            flex-direction: row;
-                        }
-                    }
-
-                    .#{$pre}-detail-stopover {
-                        padding: 10px;
-                        margin: 15px 0;
-                        border-top: 2px solid $primary-yellow;
-                        border-bottom: 2px solid $primary-yellow;
-                        p {
-                            margin: 0;
-                            strong {
-                                color: $primary-yellow;
-                            }
-
-                            span {
-
-                            }
-                        }
                     }
                 }
 
-                &.active {
-                    border: 1px solid $primary-black;
+                @include media-breakpoint-up(sm) {
+                    flex-direction: row;
+                }
+            }
 
-                    .#{$pre}-detail {
-                        display: block;
+            .#{$pre}-detail-stopover {
+                padding: 10px;
+                margin: 15px 0;
+                border-top: 2px solid $primary-yellow;
+                border-bottom: 2px solid $primary-yellow;
+                p {
+                    margin: 0;
+                    strong {
+                        color: $primary-yellow;
+                    }
+
+                    span {
+
                     }
                 }
+            }
+        }
+
+        &.active {
+            border: 1px solid $primary-black;
+
+            .#{$pre}-detail {
+                display: block;
             }
         }
     }

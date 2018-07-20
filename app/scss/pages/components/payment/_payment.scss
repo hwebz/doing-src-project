@@ -7,48 +7,12 @@ $tab-size: 110px;
 $tab-size-mobile: 90px;
 $terms-height: 300px;
 
-%block-box {
-    background-color: $white;
-    box-shadow: 2px 4px 10px $shadow-button;
-}
-
 .#{$parent} {
     @extend %block-padding;
     background-color: $results-background;
 }
 
 .#{$pre} {
-    .#{$pre}-passengers {
-        margin-bottom: $block-margin;
-        > h2 {
-            margin-bottom: $block-margin;
-            position: relative;
-        }
-        .#{$pre}-passengers-wrapper {
-            @extend %block-box;
-            padding: 15px;
-            max-width: 100%;
-            overflow: hidden;
-            overflow-x: visible;
-
-            table {
-                border: none;
-                min-width: $table-min-width;
-                tr {
-                    th, td {
-                        border: none;
-                        padding: 2px 5px;
-                        text-align: center;
-
-                        &:nth-child(2) {
-                            text-align: left;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .#{$pre}-methods {
         margin-bottom: $block-margin;
         >h2 {
@@ -211,6 +175,40 @@ $terms-height: 300px;
 
         .btn {
             text-transform: uppercase;
+        }
+    }
+}
+
+.#{$pre}-passengers {
+    margin-bottom: $block-margin;
+    > h2 {
+        margin-bottom: $block-margin;
+        position: relative;
+    }
+    .#{$pre}-passengers-wrapper {
+        @extend %block-box;
+        padding: 15px;
+        max-width: 100%;
+        overflow: hidden;
+        overflow-x: visible;
+
+        .table {
+            border: none;
+            tr {
+                th, td {
+                    border: none;
+                    padding: 2px 5px;
+                    text-align: center;
+
+                    &:nth-child(2) {
+                        text-align: left;
+                    }
+                }
+            }
+
+            &.fixed-width {
+                min-width: $table-min-width;
+            }
         }
     }
 }
