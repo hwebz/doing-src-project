@@ -725,6 +725,53 @@ $icon-size: 25px;
                 }
             }
         }     
+
+        .#{$review}-form {
+            border-top: 1px solid $horizontal-header-date;
+            margin-top: 15px;
+            padding-top: 15px;
+            > h2 {
+
+            }
+
+            > h4 {
+
+            }
+
+            .#{$review}-stars {
+                margin: 15px 0 15px 25px;
+                .tcd__star {
+                    display: flex;
+                    flex-direction: row;
+
+                    .tcd__radio {
+                        width: 150px;
+                        
+                        label {
+                            margin: 0;
+                        }
+                    }
+                    > p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            > .form-group {
+                textarea {
+                    height: 150px !important;
+                    resize: none;
+                }
+            }
+
+            .#{$review}-btn {
+                text-align: right;
+                .btn {
+
+                }
+            }
+
+        }
     } 
 }
 

@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 .tcd__detail.col-12.col-lg-9
     .tcd__contact-details-hotels
         h2.type-2= hotel_title
@@ -171,6 +173,54 @@
                         a(href="#")
                             each i in [0, 1]
                                 span.icon-right-thin-chevron
+            .tcd__detail-comments-form
+                h2= card_review_title
+                .tcd__detail-comments-stars
+                    .tcd__star
+                        .tcd__radio
+                            input(type="radio", name="commentStars", value="1", id="passengerMale-1")
+                            label(for="passengerMale-1")
+                                .tcd__stars
+                                    img(src="img/svg/star.svg")
+                        p= reviews_texts[4]
+                    .tcd__star
+                        .tcd__radio
+                            input(type="radio", name="commentStars", value="2", id="passengerMale-2")
+                            label(for="passengerMale-2")
+                                .tcd__stars
+                                    each i in [0, 1]
+                                        img(src="img/svg/star.svg")
+                        p= reviews_texts[3]
+                    .tcd__star
+                        .tcd__radio
+                            input(type="radio", name="commentStars", value="3", id="passengerMale-3")
+                            label(for="passengerMale-3")
+                                .tcd__stars
+                                    each i in [0, 1, 2]
+                                        img(src="img/svg/star.svg")
+                        p= reviews_texts[2]
+                    .tcd__star
+                        .tcd__radio
+                            input(type="radio", name="commentStars", value="4", id="passengerMale-4")
+                            label(for="passengerMale-4")
+                                .tcd__stars
+                                    each i in [0, 1, 2, 3]
+                                        img(src="img/svg/star.svg")
+                        p= reviews_texts[1]
+                    .tcd__star
+                        .tcd__radio
+                            input(type="radio", name="commentStars", value="5", id="passengerMale-5", checked="checked")
+                            label(for="passengerMale-5")
+                                .tcd__stars
+                                    each i in [0, 1, 2, 3, 4]
+                                        img(src="img/svg/star.svg")
+                        p= reviews_texts[0]
+                +form-input(card_review_pname, "text", '', '', '', false)
+                +form-input(card_review_pcomment, "textarea", '', '', '', false)
+                .tcd__detail-comments-btn
+                    button.btn.btn-primary(type="button")= card_review_title
+                
+
 
 
                                 
