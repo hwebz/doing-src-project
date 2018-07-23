@@ -88,10 +88,12 @@ $field-tablet-width: calc(50% - 10px);
             }
 
             .form-group {
-                border-color: $form-control-border;
+                //border-color: $form-control-border;
+                border-color: transparent;
         
                 &.is-invalid {
-                    border-color: $primary-red;
+                    //border-color: $primary-red;
+                    border-color: transparent;
                 }
 
                 label {
