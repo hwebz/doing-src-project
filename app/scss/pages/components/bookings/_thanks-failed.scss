@@ -1,0 +1,47 @@
+$pre: 'tcd__bookings';
+
+$block-margin: 20px;
+
+.#{$pre} {
+    @extend %block-padding;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .#{$pre}-header {
+        text-align: center;
+        > img {
+            width: 70px ;
+
+            @include media-breakpoint-up(md) {
+                width: 100px;
+            }
+        }
+
+        > h2 {
+            margin: 15px 0;
+            span {
+                display: block;
+
+                &:last-child {
+                    font-size: $heading-3;
+                    color: $dark-gray;
+                }
+            }
+        }
+
+        .#{$pre}-description {
+            @extend %block-box;
+            margin-bottom: $block-margin;
+            padding: 15px;
+            p {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .tcd__summary-btns {
+        text-align: center;
+    }
+}

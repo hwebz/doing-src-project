@@ -1,0 +1,37 @@
+.tcd__bookings.col-12.col-lg-8.offset-md-2
+    .tcd__bookings-header
+        img(src="img/svg/warning-2.svg", alt="Failed")
+        h2
+            span= thanks_title
+            span= thanks_title_2
+        .tcd__bookings-description
+            p!= thanks_description
+    .tcd__summary-price
+        .tcd__summary-price-wrapper
+            ul.tcd__summary-price-out
+                each i in [0, 1, 2]
+                    li
+                        strong= price_list[i]
+                        ul
+                            if i == 0
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= price_adult[j]
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= price_child[j]
+                            else if i == 1
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= tour_price[j]
+                            else
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= tax_price[j]
+                                li
+                                    each j in [0, 1, 2]
+                                        span(class={'text-right': j == 2})!= fee_price[j]
+        .tcd__summary-price-total
+            p!= total_price
+    .tcd__summary-btns
+        button.btn.btn-primary.big(type="button")= home_page

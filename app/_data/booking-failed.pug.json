@@ -1,0 +1,83 @@
+{
+    "navigation": [
+      "Sản phẩm",
+      "Tuyển dụng",
+      "Liên hệ",
+      "Giới thiệu"
+    ],
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+
+    "modal_title": "Đăng nhập",
+    "modal_title_2": "Đăng ký",
+    "modal_usernam": "Email hoặc tên người dùng",
+    "modal_password": "Mật khẩu",
+    "modal_confirm_password": "Nhập lại mật khẩu",
+    "modal_remember": "Nhớ tài khoản",
+    "or_login_by": "Hoặc đăng nhập bằng tài khoản:",
+    "btn_facebook": "Facebook",
+    "btn_googleplus": "Instagram",
+    "btn_twitter": "Twitter",
+
+    "detail_title": "",
+    "detail_description": "Đặt vé tour của bạn chưa được hệ thống ghi nhận và thanh toán. Quý khách sẽ nhận được thông tin chi tiết được gửi qua email.",
+    "thanks_title": "Bạn đặt vé chưa thành công!",
+    "thanks_title_2": "Bạn hãy vui lòng kiểm tra lại qua thông tin được gửi về email của ban!!",
+    "thanks_description": "Hệ thống chưa ghi nhận đặt vé của bạn và đã gửi cho bạn để xác nhận lại thông tin. Tất cả thông tin liên quan chúng tôi sẽ gửi email qua địa chỉ <a href='mailto:example@gmail.com'>example@gmail.com</a>. Xin chân thành cảm ơn!!",
+    "home_page": "Về trang chủ",
+    "price_list": [
+        "Vé máy bay (khứ hồi)",
+        "Tour",
+        "Phí và thuế"
+    ],
+    "price_adult": [
+        "2 người lớn",
+        "<strong>4,500,000đ</strong>/người",
+        "<strong>9,000,000đ</strong>"
+    ],
+    "price_child": [
+        "2 trẻ em",
+        "<strong>4,500,000đ</strong>/người",
+        "<strong>9,000,000đ</strong>"
+    ],
+    "tour_price": [
+        "Tham quan di tích lịch sử Đà Nẵng và tắm biển",
+        "<strong>10,800,000đ</strong>/gói",
+        "<strong>10,800,000đ</strong>"
+    ],
+    "tax_price": [
+        "Phí sân bay",
+        "<strong>850,000đ</strong>/gói",
+        "<strong>3,500,000đ</strong>"
+    ],
+    "fee_price": [
+        "Thuế",
+        "10% VAT",
+        "<strong>1,450,000đ</strong>"
+    ],
+    "total_price": "<strong>Tổng:</strong><strong>29,350,000đ</strong>",
+
+    "description": "TaChuDu cung cấp giải pháp đặt vé máy bay, đặt tour chất lượng cao, đảm bảo uy tín 100%. Rất nhiều đánh giá tích cực từ khách hàng về chúng tôi. Chúng tôi ngày càng nỗ lực và cố gắng để đưa đến cho khách hàng nhiều lựa chọn tốt nhất.",
+    "popular_hotel": "Khách sạn phổ biến",
+    "tag": "Thẻ",
+    "hotel_name": "Grand Hotel",
+    "from_price": "chỉ từ",
+    "hotel_price": "450,000đ",
+    "hotel_address": "Hoàn Kiếm, Hà Nội",
+    "tags": [
+        "Hà Nội",
+        "Hoàn Kiếm",
+        "Đà Nẵng",
+        "Đà Lạt",
+        "Vịnh Hạ Long",
+        "Cát Bà",
+        "Sài Gòn",
+        "Mũi Né"
+    ],
+    "company_address": "tầng 5, tòa nhà Victoria, Nguyễn Chánh, Trung Hòa, Cầu Giấy, Hà Nội",
+    "company_phone": "+8493 725 0110",
+    "company_email": "admin@tachudu.com",
+    "company_website": "www.tachudu.com",
+    "copyright": "Bản quyền thuộc về TaChuDu © 2018.",
+    "own_design": "Bản quyền thiết kế của TaChuDu"
+}

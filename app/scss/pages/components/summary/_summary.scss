@@ -49,68 +49,68 @@ $block-margin: 20px;
         margin-bottom: $block-margin;
         @extend %header-block;
     }
+}
 
-    .#{$pre}-price {
-        @extend %block-box;
-        margin-bottom: $block-margin;
-        .#{$pre}-price-wrapper {
-            padding: 15px;
-            max-width: 100%;
-            overflow: hidden;
-            overflow-x: visible;
-            .#{$pre}-price-out {
-                min-width: 550px;
-                > li {
-                    >strong {
-    
-                    }
-    
-                    ul {
-                        margin: 10px 0 10px 25px;
-                        li {
-                            display: flex;
-                            flex-direction: row;
-                            border-bottom: 1px solid $horizontal-header-date;
-                            margin: 3px 0;
-    
-                            &:last-child {
-                                border: none;
-                            }
-                            
-                            span {
-                                flex-grow: 1;
-    
-                                &:first-child {
-                                    width: 200px;
-                                }
+.#{$pre}-price {
+    @extend %block-box;
+    margin-bottom: $block-margin;
+    .#{$pre}-price-wrapper {
+        padding: 15px;
+        max-width: 100%;
+        overflow: hidden;
+        overflow-x: visible;
+        .#{$pre}-price-out {
+            min-width: 550px;
+            > li {
+                >strong {
+
+                }
+
+                ul {
+                    margin: 10px 0 10px 25px;
+                    li {
+                        display: flex;
+                        flex-direction: row;
+                        border-bottom: 1px solid $horizontal-header-date;
+                        margin: 3px 0;
+
+                        &:last-child {
+                            border: none;
+                        }
+                        
+                        span {
+                            flex-grow: 1;
+
+                            &:first-child {
+                                width: 200px;
                             }
                         }
                     }
                 }
             }
         }
-        .#{$pre}-price-total {
-            text-align: right;
-            padding: 15px;
-            border-top: 1px solid $horizontal-header-date;
-            p {
-                margin: 0;
-                strong {
-                    &:first-child {
-                        margin-right: 50px;
-                    }
-                    &:last-child {
-                        color: $primary-yellow;
-                    }
+    }
+    .#{$pre}-price-total {
+        text-align: right;
+        padding: 15px;
+        border-top: 1px solid $horizontal-header-date;
+        p {
+            margin: 0;
+            strong {
+                &:first-child {
+                    margin-right: 50px;
+                }
+                &:last-child {
+                    color: $primary-yellow;
                 }
             }
         }
     }
+}
 
-    .#{$pre}-btns {
-        text-align: right;
-        .btn {
-            text-transform: uppercase;
-        }
+.#{$pre}-btns {
+    text-align: right;
+    .btn {
+        text-transform: uppercase;
     }
 }
