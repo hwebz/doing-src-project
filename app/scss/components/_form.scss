@@ -97,7 +97,7 @@ input, select, textarea {
 
 .tcd__checkbox {
     position: relative;
-    cursor: pointer;
+    
     label {
         padding-left: 25px;
         position: relative;
@@ -105,6 +105,7 @@ input, select, textarea {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        cursor: pointer;
 
         &:before {
             content: '';

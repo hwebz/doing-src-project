@@ -1,3 +1,5 @@
+include ../mixins/_mixins
+
 .tcd__header
     .container
         .tcd__header-content.navbar
@@ -14,6 +16,50 @@
                         li.nav-item
                             a.nav-link(href="#")= item
                     li.nav-item
-                        button.btn.btn-primary.small= register
+                        button.btn.btn-primary.small(data-target="#register-form", data-toggle="modal")= register
                     li.nav-item
-                        button.btn.btn-primary.small= login
+                        button.btn.btn-primary.small(data-target="#login-form", data-toggle="modal")= login
+#login-form.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= modal_title
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                .tcd__login-form
+                    .tcd__login-form-field
+                        +form-input(modal_usernam, "text", '', '', '', false)
+                    .tcd__login-form-field
+                        +form-input(modal_password, "password", '', '', '', false)
+                    .tcd__login-form-field
+                        .tcd__checkbox
+                            input(type="checkbox", id="remember-me")
+                            label(for="remember-me")= modal_remember
+                    .tcd__login-form-btns
+                        button.btn.btn-primary.big(type="submit")= modal_title
+                    .tcd__login-form-social
+                        p= or_login_by
+                        button.btn.btn-primary.facebook(type="button")= btn_facebook
+                            span.icon-facebook
+                        button.btn.btn-primary.instagram(type="button")= btn_googleplus
+                            span.icon-instagram
+                        button.btn.btn-primary.twitter(type="button")= btn_twitter
+                            span.icon-twitter-1
+#register-form.tcd__modal.tcd__map-modal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title= modal_title_2
+                button(type="button", data-dismiss="modal")
+                    span.icon-cancel-music
+            .modal-body
+                .tcd__login-form
+                    .tcd__login-form-field
+                        +form-input(modal_usernam, "text", '', '', '', false)
+                    .tcd__login-form-field
+                        +form-input(modal_password, "password", '', '', '', false)
+                    .tcd__login-form-field
+                        +form-input(modal_confirm_password, "password", '', '', '', false)
+                    .tcd__login-form-btns
+                        button.btn.btn-primary.big(type="submit")= modal_title_2

@@ -8,6 +8,17 @@
     "register": "Đăng ký",
     "login": "Đăng nhập",
 
+    "modal_title": "Đăng nhập",
+    "modal_title_2": "Đăng ký",
+    "modal_usernam": "Email hoặc tên người dùng",
+    "modal_password": "Mật khẩu",
+    "modal_confirm_password": "Nhập lại mật khẩu",
+    "modal_remember": "Nhớ tài khoản",
+    "or_login_by": "Hoặc đăng nhập bằng tài khoản:",
+    "btn_facebook": "Facebook",
+    "btn_googleplus": "Instagram",
+    "btn_twitter": "Twitter",
+
     "detail_title": "Tham quan cầu Ngọc Sơn, Tam Đảo, Cát Bà, Hạ Long",
     "detail_start": "Xuất phát",
     "detail_start_value": "Hà Nội",

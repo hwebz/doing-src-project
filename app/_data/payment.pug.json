@@ -7,6 +7,17 @@
     ],
     "register": "Đăng ký",
     "login": "Đăng nhập",
+    
+    "modal_title": "Đăng nhập",
+    "modal_title_2": "Đăng ký",
+    "modal_usernam": "Email hoặc tên người dùng",
+    "modal_password": "Mật khẩu",
+    "modal_confirm_password": "Nhập lại mật khẩu",
+    "modal_remember": "Nhớ tài khoản",
+    "or_login_by": "Hoặc đăng nhập bằng tài khoản:",
+    "btn_facebook": "Facebook",
+    "btn_googleplus": "Instagram",
+    "btn_twitter": "Twitter",
 
     "detail_title": "Tiện ích",
     "detail_description": "Để cho chuyến đi của bạn thêm phần thoải mái, bạn có thể đặt chỗ ngồi, đặt thức ăn và thậm chí là mua thêm một hoặc nhiều gói hành lý. Đơn giản chỉ cần chọn những gì bạn muốn và thanh toán",

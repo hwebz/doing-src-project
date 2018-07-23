@@ -1,4 +1,6 @@
 $pre: 'tcd__header';
+$login: 'tcd__login-form';
+
 $logo-height-mobile: 50px;
 $logo-height-desktop: 100px;
 $logo-height-scroll: 40px;
@@ -198,6 +200,86 @@ $header-height-scroll: 50px;
 
         &.black {
             background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+        }
+    }
+}
+
+.#{$login} {
+    .#{$login}-field {
+        .form-group {
+
+        }
+
+        .tcd__checkbox {
+            margin-bottom: 15px;
+        }
+    }
+
+    .#{$login}-btns {
+        .btn {
+            width: 100%;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    .#{$login}-social {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        > p {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            flex-grow: 1;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            @include media-breakpoint-up(sm) {
+                width: auto;
+                margin: 0 10px 0 0;
+            }
+
+            > span[class^='icon-'] {
+                margin-left: 10px;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+
+            &.facebook, &.facebook:active {
+                background-color: $facebook-color !important;
+                border-color: $facebook-color !important;
+                
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem $facebook-color !important;
+                }
+            }
+
+            &.instagram, &.instagram:active {
+                background-color: $googleplus-color !important;
+                border-color: $googleplus-color !important;
+                
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem $googleplus-color !important;
+                }
+            }
+
+            &.twitter, &.twitter:active {
+                background-color: $twitter-color !important;
+                border-color: $twitter-color !important;
+                
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem $twitter-color !important;
+                }
+            }
         }
     }
 }
