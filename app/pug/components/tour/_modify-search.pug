@@ -16,6 +16,14 @@ include ../../mixins/_mixins
                                 a.tcd__search-form-dropdown-item(href="#")
                                     span(class=icon ? 'icon-' + icon : '')
                                     span= val
+                    .tcd__search-form-field.have-dropdown
+                        +form-input(ms_at, "text", '', '', '')
+                        .tcd__search-form-dropdown-results
+                            .arrow-icon
+                            each val, icon in {'maps-and-flags': result_location, 'appartment': result_city, 'takeoff': result_airport, 'departures': result_airport2}
+                                a.tcd__search-form-dropdown-item(href="#")
+                                    span(class=icon ? 'icon-' + icon : '')
+                                    span= val
                     .tcd__search-form-field.single-daterange-picker
                         +form-input(ms_departure, "text", '', '', ms_date)
                     .tcd__search-form-field.have-dropdown
@@ -42,7 +50,7 @@ include ../../mixins/_mixins
                                                 button.btn.btn-primary.plus(type="button")= plus
                     .tcd__search-form-btn
                         button.btn.btn-primary.tcd__search-btn(type="submit")= ms_btn
-            .tcd__adv-slider.initializing
+            .tcd__adv-slider.initializing(style="display: none")
                 each i in [0, 1, 2, 3]
                     .tcd__adv
                         h4= adv_title

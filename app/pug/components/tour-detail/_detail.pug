@@ -17,7 +17,7 @@ include ../../mixins/_mixins
     h2= tour_title
         button.navbar-toggler(type="button", data-target=".tcd__price-summary", data-parent=".tcd__detail-wrapper")
             span.navbar-toggler-icon.black
-        span= tour_sub
+        span!= tour_sub
     .tcd__detail-reviews
         .tcd__reviews
             strong.reviews-score.excellent= tour_score

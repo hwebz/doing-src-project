@@ -163,10 +163,20 @@ margin-bottom: $bottom-distance;
                 flex-grow: 1;
                 p {
                     margin-bottom: 5px;
+
+                    &:first-child {
+                        @extend %tcd-bold;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        background-color: $review-perfect;
+                        text-align: center;
+                        color: $white;
+                        display: inline-block;
+                    }
                 }
             }
         }
-
+ 
         .detail-btn {
             text-decoration: underline;
         }

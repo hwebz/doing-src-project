@@ -231,6 +231,15 @@ $padding-mobile: 20px 0 0 0;
         @include media-breakpoint-up(sm) {
             display: inline;
         }
+
+        strong {
+            padding: 2px 5px;
+            border-radius: 5px;
+            background-color: $review-perfect;
+            text-align: center;
+            color: $white;
+            display: inline-block;
+        }
     }
 
     &.type-2 {
