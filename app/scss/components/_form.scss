@@ -11,8 +11,7 @@ input, select, textarea {
 }
 
 .form-group {
-    //border: 1px solid $primary-black;
-    border: 1px solid transparent;
+    border: 1px solid $primary-black;
     @extend %rounded-input;
 
     label {
