@@ -191,7 +191,10 @@
     "item_price_per_day": "950,000đ/ngày",
     "item_included": "giá đã bao gồm thuế và phí",
     "item_included2": "giá tốt nhất cho gia đình",
-    "item_btn": "Chi tiết",
+    "item_choose_startdate": "Chọn ngày",
+    "item_btn": "Chi tiết tour...",
+    "item_dropdown_date": "26 Th06 2018 9:00",
+    "item_dropdown_price": "+ 1,500,000đ",
     "item_more": "Tải thêm tour...",
     "pagination": [
         "1",

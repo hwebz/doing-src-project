@@ -56,7 +56,15 @@
                             span.icon-checked
                             span= item_included2
                     .tcd__results-card-btn
-                        a.btn.btn-primary(href="#")= item_btn
+                        .tcd__results-card-btns
+                            .dropdown.tcd__results-card-dropdown
+                                button.btn.btn-primary.dropdown-toggle(type="button", data-toggle="dropdown")= item_choose_startdate
+                                .dropdown-menu.dropdown-menu-right
+                                    each i in [0, 1, 2, 3]
+                                        a.dropdown-item(href="#", class={'active': i == 1})
+                                            span= item_dropdown_date
+                                            strong= item_dropdown_price
+                            a.detail-link(href="#")= item_btn
         .tcd__pagination
             ul
                 li.tcd__pagination-prev-all

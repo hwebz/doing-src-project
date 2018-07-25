@@ -17,6 +17,10 @@ $(document).ready(function () {
     var smallMapTourChildClass = null;
     var smallMapTourChild = null;
 
+    var dateDropdownClass = '.tcd__results-card-dropdown';
+    var dateDropdownToggleClass = '.dropdown-toggle';
+    var dateDropdown = $(dateDropdownClass + ' ' + dateDropdownToggleClass);
+
     // Tour list slider
     advSlider(advListSlider, 1);
     advSlider(advsListSlider, 3);
@@ -65,5 +69,25 @@ $(document).ready(function () {
     }
     if (isDefined(mapTour)) {
         initMap(mapTourClass, 7)
+    }
+
+    if (isDefined(dateDropdown)) {
+        dateDropdown.on('click', function() {
+            var $this = $(this);
+            var pane = $this.next();
+
+            if (isDefined(pane)) {
+                pane.toggleClass('show');
+            }
+        });
+
+        $('body').on('click', function(e) {
+            var target = $(e.target);
+            
+            if (target.parents(dateDropdownClass).length == 0) {
+                console.log(2222);
+                $(dateDropdownClass).find('.dropdown-menu').removeClass('show');
+            }
+        })
     }
 });
