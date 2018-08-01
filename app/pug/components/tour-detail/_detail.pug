@@ -143,7 +143,8 @@ include ../../mixins/_mixins
                     .tcd__stars
                         each val in [0, 1, 2, 3, 4]
                             img(src="img/svg/star.svg", alt="Star")
-                    .tcd__progress-bar(class=reviews_classes[z])= reviews_scores[z]
+                    .tcd__progress-bar= reviews_scores[z]
+                        span(style={'width': reviews_scores[z]})
         .tcd__detail-comments-box
             each i in [0, 1, 2, 3]
                 .tcd__detail-comments-wrapper

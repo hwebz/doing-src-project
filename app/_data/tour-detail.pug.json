@@ -219,13 +219,6 @@
     "exclusion_title": "Các dịch vụ phải trả phí <span>Các dịch vụ không bao gồm trong gói tour</span>",
     "cancellation_title": "Chính sách hủy tour <span>Khoản tiền phải bồi thường và được nhận lại.</span>",
     "reviews_label": "Đánh giá <span>150 đánh giá</span>",
-    "reviews_classes": [
-        "seventy-four",
-        "twenty-one",
-        "four",
-        "one",
-        "zero"
-    ],
     "reviews_texts": [
         "Tuyệt Vời",
         "Tốt",

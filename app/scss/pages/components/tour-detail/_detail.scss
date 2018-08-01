@@ -790,7 +790,7 @@ $progress-bar-width-mobile: 70px;
         padding-left: $progress-bar-width;
     }
     
-    &:after, &:before {
+    > span, &:before {
         content: '';
         position: absolute;
         top: 0;
@@ -804,19 +804,19 @@ $progress-bar-width-mobile: 70px;
         width: 100%;
     }
 
-    &.seventy-four:after {
+    &.seventy-four > span {
         width: 74%;
     }
 
-    &.twenty-one:after {
+    &.twenty-one > span {
         width: 21%;
     }
 
-    &.four:after {
+    &.four > span {
         width: 4%;
     }
 
-    &.one:after {
+    &.one > span {
         width: 1%;
     }
 }
