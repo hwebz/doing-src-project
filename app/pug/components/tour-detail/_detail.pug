@@ -1,6 +1,11 @@
 include ../../mixins/_mixins
 
 .tcd__detail.col-12.col-lg-9
+    .tcd__detail-info-tab-content.gallery.active
+        .tcd__detail-info-big-thumb(style="background-image:url(img/slide-2.jpg)")
+        .tcd__detail-info-gallery
+            each i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+                .tcd__detail-info-image(class={'active': i == 1}, style="background-image:url(" + card_gallery_images[i] + ")")
     .tcd__contact-details-hotels
         h2.type-2= hotel_title
             button.navbar-toggler(type="button", data-target=".tcd__price-summary", data-parent=".tcd__detail-wrapper")

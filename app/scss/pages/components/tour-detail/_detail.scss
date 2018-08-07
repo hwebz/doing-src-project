@@ -10,9 +10,9 @@ $icon-size: 26px;
 $hotel-util-width: 33.33%;
 $hotel-icon-size: 40px;
 $tab-content-height: 460px;
-$gallery-image-width: calc(33.33% - 10px);
-$gallery-image-height: 110px;
-$gallery-image-width-mobile: calc(50% - 10px);
+$gallery-image-width: 13%;
+$gallery-image-height: 70px;
+$gallery-image-width-mobile: calc(33.33% - 10px);
 $gallery-image-height-mobile: 80px;
 $review-avatar-size: 35px;
 $icon-size: 25px;
@@ -306,212 +306,6 @@ $icon-size: 25px;
                             }
                         }
                     }
-                    .#{$pre}-info-tab-content {
-                        padding: 15px;
-                        display: none;
-                        min-height: $tab-content-height;
-    
-                        &.active {
-                            display: block;
-                        }
-    
-                        .#{$pre}-info-hotel-info {
-                            display: flex;
-                            flex-direction: row;
-                            flex-wrap: wrap;
-                            
-                            .#{$pre}-info-hotel-info-thumbnail {
-                                width: 100%;
-                                background-size: cover;
-                                background-repeat: no-repeat;
-                                background-position: center center;
-                                height: 150px;
-    
-                                @include media-breakpoint-up(sm) {
-                                    width: 30%;
-                                    height: auto;
-                                }
-                            }
-                            .#{$pre}-info-hotel-information {
-                                margin-top: 15px;
-                                h2 {
-    
-                                }
-                                p {
-                                    margin-bottom: 2px;
-                                    color: $dark-gray;
-    
-                                    span[class^='icon-'] {
-                                        margin-right: 7px;
-                                    }
-    
-                                    &:last-child {
-                                        margin-bottom: 0;
-                                        margin-top: 10px;
-                                        img {
-                                            max-height: 20px;
-                                            margin-left: 15px;
-                                        }
-                                    }
-                                }
-    
-                                @include media-breakpoint-up(sm) {
-                                    padding-left: 15px;
-                                    margin-top: 0;
-                                }
-                            }
-    
-                            @include media-breakpoint-up(sm) {
-                                flex-wrap: nowrap;
-                            }
-                        }
-                        .#{$pre}-info-utils {
-                            display: flex;
-                            flex-direction: row;
-                            flex-wrap: wrap;
-                            margin-top: 10px;
-                            li {
-                                width: 50%;
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-                                margin: 7px 0;
-                                span {
-                                }
-    
-                                span[class^='icon-'] {
-                                    margin-right: 10px;
-                                    font-size: $heading-2;
-    
-                                    @include media-breakpoint-up(sm) {
-                                        font-size: $hotel-icon-size;
-                                    }
-                                }
-    
-                                @include media-breakpoint-up(sm) {
-                                    width: $hotel-util-width;
-                                }
-                            }
-                        }
-    
-                        &.map {
-                            padding: 0;
-                            > div {
-                                min-height: $tab-content-height;
-                            }
-                        }
-    
-                        &.gallery {
-                            &.active {
-                                display: flex;
-                                flex-wrap: wrap;
-    
-                                @include media-breakpoint-up(sm) {
-                                    flex-wrap: nowrap;
-                                }
-                            }
-    
-                            .#{$pre}-info-big-thumb {
-                                width: 100%;
-                                background-size: cover;
-                                background-position: center center;
-                                background-repeat: no-repeat;
-                                height: 150px;
-                                margin-right: 10px;
-                                margin-bottom: 10px;
-    
-                                @include media-breakpoint-up(sm) {
-                                    width: 50%;
-                                    height: auto;
-                                    margin: 0;
-                                }
-                            }
-        
-                            .#{$pre}-info-gallery {
-                                display: flex;
-                                flex-direction: row;
-                                flex-wrap: wrap;
-                                width: 100%;
-                                max-height: $tab-content-height;
-                                overflow: hidden;
-                                overflow-y: visible;
-        
-                                .#{$pre}-info-image {
-                                    margin: 0 10px 10px 0;
-                                    width: $gallery-image-width-mobile;
-                                    height: $gallery-image-height-mobile;
-                                    background-size: cover;
-                                    background-position: center center;
-                                    background-repeat: no-repeat;
-                                    border: 3px solid transparent;
-                                    
-                                    &.active {
-                                        border: 3px solid $primary-red;
-                                    }
-    
-                                    @include media-breakpoint-up(sm) {
-                                        width: $gallery-image-width;
-                                        height: $gallery-image-height;
-                                    }
-                                }
-    
-                                @include media-breakpoint-up(sm) {
-                                    width: 50%;
-                                    margin-left: 10px;
-                                    margin-top: -5px;
-                                }
-                            }
-                        }
-    
-                        &.description,
-                        &.reviews {
-                            max-height: $tab-content-height;
-                            overflow: hidden;
-                            overflow-y: visible;
-                        }
-    
-                        &.reviews {
-                            .#{$pre}-info-review {
-                                display: flex;
-                                flex-direction: row;
-                                padding: 10px;
-                                border-bottom: 1px solid $horizontal-header-date;
-    
-                                &:last-child {
-                                    border: none;
-                                }
-    
-                                .#{$pre}-info-review-avatar {
-                                    text-align: center;
-                                    img {
-                                        width: $review-avatar-size;
-                                        height: $review-avatar-size;
-                                        border-radius: 50%;
-                                        margin-bottom: 5px;
-                                    }
-    
-                                    p {
-                                        font-size: $small-font-size;
-                                        margin: 0;
-                                    }
-                                }
-    
-                                .#{$pre}-info-review-info {
-                                    flex-grow: 1;
-                                    padding-left: 15px;
-    
-                                    p {
-                                        margin: 0;
-    
-                                        &:last-child {
-                                            font-size: $small-font-size;
-                                            color: $dark-gray;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -520,6 +314,210 @@ $icon-size: 25px;
             .#{$pre}-info {
                 background-size: 40%;
                 background-position: center center;
+            }
+        }
+    }
+}
+
+.#{$pre}-info-tab-content {
+    padding: 15px;
+    display: none;
+    min-height: $tab-content-height;
+
+    &.active {
+        display: block;
+    }
+
+    .#{$pre}-info-hotel-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        .#{$pre}-info-hotel-info-thumbnail {
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 150px;
+
+            @include media-breakpoint-up(sm) {
+                width: 30%;
+                height: auto;
+            }
+        }
+        .#{$pre}-info-hotel-information {
+            margin-top: 15px;
+            h2 {
+
+            }
+            p {
+                margin-bottom: 2px;
+                color: $dark-gray;
+
+                span[class^='icon-'] {
+                    margin-right: 7px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    margin-top: 10px;
+                    img {
+                        max-height: 20px;
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                padding-left: 15px;
+                margin-top: 0;
+            }
+        }
+
+        @include media-breakpoint-up(sm) {
+            flex-wrap: nowrap;
+        }
+    }
+    .#{$pre}-info-utils {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        li {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 7px 0;
+            span {
+            }
+
+            span[class^='icon-'] {
+                margin-right: 10px;
+                font-size: $heading-2;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: $hotel-icon-size;
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                width: $hotel-util-width;
+            }
+        }
+    }
+
+    &.map {
+        padding: 0;
+        > div {
+            min-height: $tab-content-height;
+        }
+    }
+
+    &.gallery {
+        &.active {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            @include media-breakpoint-up(sm) {
+                flex-wrap: nowrap;
+            }
+        }
+
+        .#{$pre}-info-big-thumb {
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 260px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up(sm) {
+                height: 350px;
+            }
+        }
+
+        .#{$pre}-info-gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            max-height: $gallery-image-height-mobile * 2;
+            overflow: hidden;
+            overflow-y: visible;
+            margin: 0 -5px;
+
+            .#{$pre}-info-image {
+                margin: 5px;
+                width: $gallery-image-width-mobile;
+                height: $gallery-image-height-mobile;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                border: 3px solid transparent;
+                
+                &.active {
+                    border: 3px solid $primary-red;
+                }
+
+                @include media-breakpoint-up(sm) {
+                    width: $gallery-image-width;
+                    height: $gallery-image-height;
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+            }
+        }
+    }
+
+    &.description,
+    &.reviews {
+        max-height: $tab-content-height;
+        overflow: hidden;
+        overflow-y: visible;
+    }
+
+    &.reviews {
+        .#{$pre}-info-review {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            border-bottom: 1px solid $horizontal-header-date;
+
+            &:last-child {
+                border: none;
+            }
+
+            .#{$pre}-info-review-avatar {
+                text-align: center;
+                img {
+                    width: $review-avatar-size;
+                    height: $review-avatar-size;
+                    border-radius: 50%;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: $small-font-size;
+                    margin: 0;
+                }
+            }
+
+            .#{$pre}-info-review-info {
+                flex-grow: 1;
+                padding-left: 15px;
+
+                p {
+                    margin: 0;
+
+                    &:last-child {
+                        font-size: $small-font-size;
+                        color: $dark-gray;
+                    }
+                }
             }
         }
     }
